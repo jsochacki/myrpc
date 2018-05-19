@@ -10,6 +10,8 @@ option optimize_for = SPEED;
 //right now so it is commented out
 //import "CommonTypes.proto";
 
+//The name of the package below is the name of the namespace for your functions
+//except . is replaced with :: obviously
 package sp.ste;
 
 service sp_ste_control

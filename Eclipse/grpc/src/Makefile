@@ -22,12 +22,12 @@ PROTOS_PATH = ../protos
 
 vpath %.proto $(PROTOS_PATH)
 
-all: system-check greeter_client greeter_server
+all: system-check sp_ste_client sp_ste_server
 
-greeter_client: sp_ste.pb.o sp_ste.grpc.pb.o greeter_client.o
+sp_ste_client: sp_ste.pb.o sp_ste.grpc.pb.o sp_ste_client.o
 	$(CXX) $^ $(LDFLAGS) -o $@
 
-greeter_server: sp_ste.pb.o sp_ste.grpc.pb.o greeter_server.o
+sp_ste_server: sp_ste.pb.o sp_ste.grpc.pb.o sp_ste_server.o
 	$(CXX) $^ $(LDFLAGS) -o $@
 
 .PRECIOUS: %.grpc.pb.cc
