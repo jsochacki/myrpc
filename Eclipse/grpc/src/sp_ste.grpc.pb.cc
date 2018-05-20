@@ -17,7 +17,10 @@ namespace sp {
 namespace ste {
 
 static const char* sp_ste_control_method_names[] = {
-  "/sp.ste.sp_ste_control/setup",
+  "/sp.ste.sp_ste_control/loopback",
+  "/sp.ste.sp_ste_control/check_current_values",
+  "/sp.ste.sp_ste_control/issue_new_values_and_read_old",
+  "/sp.ste.sp_ste_control/issue_new_values_and_read_new",
 };
 
 std::unique_ptr< sp_ste_control::Stub> sp_ste_control::NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options) {
@@ -27,19 +30,58 @@ std::unique_ptr< sp_ste_control::Stub> sp_ste_control::NewStub(const std::shared
 }
 
 sp_ste_control::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel)
-  : channel_(channel), rpcmethod_setup_(sp_ste_control_method_names[0], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  : channel_(channel), rpcmethod_loopback_(sp_ste_control_method_names[0], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_check_current_values_(sp_ste_control_method_names[1], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_issue_new_values_and_read_old_(sp_ste_control_method_names[2], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_issue_new_values_and_read_new_(sp_ste_control_method_names[3], ::grpc::internal::RpcMethod::NORMAL_RPC, channel)
   {}
 
-::grpc::Status sp_ste_control::Stub::setup(::grpc::ClientContext* context, const ::sp::ste::set_parameters& request, ::sp::ste::parameter_values* response) {
-  return ::grpc::internal::BlockingUnaryCall(channel_.get(), rpcmethod_setup_, context, request, response);
+::grpc::Status sp_ste_control::Stub::loopback(::grpc::ClientContext* context, const ::sp::ste::set_parameters& request, ::sp::ste::parameter_values* response) {
+  return ::grpc::internal::BlockingUnaryCall(channel_.get(), rpcmethod_loopback_, context, request, response);
 }
 
-::grpc::ClientAsyncResponseReader< ::sp::ste::parameter_values>* sp_ste_control::Stub::AsyncsetupRaw(::grpc::ClientContext* context, const ::sp::ste::set_parameters& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::sp::ste::parameter_values>::Create(channel_.get(), cq, rpcmethod_setup_, context, request, true);
+::grpc::ClientAsyncResponseReader< ::sp::ste::parameter_values>* sp_ste_control::Stub::AsyncloopbackRaw(::grpc::ClientContext* context, const ::sp::ste::set_parameters& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::sp::ste::parameter_values>::Create(channel_.get(), cq, rpcmethod_loopback_, context, request, true);
 }
 
-::grpc::ClientAsyncResponseReader< ::sp::ste::parameter_values>* sp_ste_control::Stub::PrepareAsyncsetupRaw(::grpc::ClientContext* context, const ::sp::ste::set_parameters& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::sp::ste::parameter_values>::Create(channel_.get(), cq, rpcmethod_setup_, context, request, false);
+::grpc::ClientAsyncResponseReader< ::sp::ste::parameter_values>* sp_ste_control::Stub::PrepareAsyncloopbackRaw(::grpc::ClientContext* context, const ::sp::ste::set_parameters& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::sp::ste::parameter_values>::Create(channel_.get(), cq, rpcmethod_loopback_, context, request, false);
+}
+
+::grpc::Status sp_ste_control::Stub::check_current_values(::grpc::ClientContext* context, const ::sp::ste::null_message& request, ::sp::ste::parameter_values* response) {
+  return ::grpc::internal::BlockingUnaryCall(channel_.get(), rpcmethod_check_current_values_, context, request, response);
+}
+
+::grpc::ClientAsyncResponseReader< ::sp::ste::parameter_values>* sp_ste_control::Stub::Asynccheck_current_valuesRaw(::grpc::ClientContext* context, const ::sp::ste::null_message& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::sp::ste::parameter_values>::Create(channel_.get(), cq, rpcmethod_check_current_values_, context, request, true);
+}
+
+::grpc::ClientAsyncResponseReader< ::sp::ste::parameter_values>* sp_ste_control::Stub::PrepareAsynccheck_current_valuesRaw(::grpc::ClientContext* context, const ::sp::ste::null_message& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::sp::ste::parameter_values>::Create(channel_.get(), cq, rpcmethod_check_current_values_, context, request, false);
+}
+
+::grpc::Status sp_ste_control::Stub::issue_new_values_and_read_old(::grpc::ClientContext* context, const ::sp::ste::set_parameters& request, ::sp::ste::parameter_values* response) {
+  return ::grpc::internal::BlockingUnaryCall(channel_.get(), rpcmethod_issue_new_values_and_read_old_, context, request, response);
+}
+
+::grpc::ClientAsyncResponseReader< ::sp::ste::parameter_values>* sp_ste_control::Stub::Asyncissue_new_values_and_read_oldRaw(::grpc::ClientContext* context, const ::sp::ste::set_parameters& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::sp::ste::parameter_values>::Create(channel_.get(), cq, rpcmethod_issue_new_values_and_read_old_, context, request, true);
+}
+
+::grpc::ClientAsyncResponseReader< ::sp::ste::parameter_values>* sp_ste_control::Stub::PrepareAsyncissue_new_values_and_read_oldRaw(::grpc::ClientContext* context, const ::sp::ste::set_parameters& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::sp::ste::parameter_values>::Create(channel_.get(), cq, rpcmethod_issue_new_values_and_read_old_, context, request, false);
+}
+
+::grpc::Status sp_ste_control::Stub::issue_new_values_and_read_new(::grpc::ClientContext* context, const ::sp::ste::set_parameters& request, ::sp::ste::parameter_values* response) {
+  return ::grpc::internal::BlockingUnaryCall(channel_.get(), rpcmethod_issue_new_values_and_read_new_, context, request, response);
+}
+
+::grpc::ClientAsyncResponseReader< ::sp::ste::parameter_values>* sp_ste_control::Stub::Asyncissue_new_values_and_read_newRaw(::grpc::ClientContext* context, const ::sp::ste::set_parameters& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::sp::ste::parameter_values>::Create(channel_.get(), cq, rpcmethod_issue_new_values_and_read_new_, context, request, true);
+}
+
+::grpc::ClientAsyncResponseReader< ::sp::ste::parameter_values>* sp_ste_control::Stub::PrepareAsyncissue_new_values_and_read_newRaw(::grpc::ClientContext* context, const ::sp::ste::set_parameters& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncResponseReaderFactory< ::sp::ste::parameter_values>::Create(channel_.get(), cq, rpcmethod_issue_new_values_and_read_new_, context, request, false);
 }
 
 sp_ste_control::Service::Service() {
@@ -47,13 +89,49 @@ sp_ste_control::Service::Service() {
       sp_ste_control_method_names[0],
       ::grpc::internal::RpcMethod::NORMAL_RPC,
       new ::grpc::internal::RpcMethodHandler< sp_ste_control::Service, ::sp::ste::set_parameters, ::sp::ste::parameter_values>(
-          std::mem_fn(&sp_ste_control::Service::setup), this)));
+          std::mem_fn(&sp_ste_control::Service::loopback), this)));
+  AddMethod(new ::grpc::internal::RpcServiceMethod(
+      sp_ste_control_method_names[1],
+      ::grpc::internal::RpcMethod::NORMAL_RPC,
+      new ::grpc::internal::RpcMethodHandler< sp_ste_control::Service, ::sp::ste::null_message, ::sp::ste::parameter_values>(
+          std::mem_fn(&sp_ste_control::Service::check_current_values), this)));
+  AddMethod(new ::grpc::internal::RpcServiceMethod(
+      sp_ste_control_method_names[2],
+      ::grpc::internal::RpcMethod::NORMAL_RPC,
+      new ::grpc::internal::RpcMethodHandler< sp_ste_control::Service, ::sp::ste::set_parameters, ::sp::ste::parameter_values>(
+          std::mem_fn(&sp_ste_control::Service::issue_new_values_and_read_old), this)));
+  AddMethod(new ::grpc::internal::RpcServiceMethod(
+      sp_ste_control_method_names[3],
+      ::grpc::internal::RpcMethod::NORMAL_RPC,
+      new ::grpc::internal::RpcMethodHandler< sp_ste_control::Service, ::sp::ste::set_parameters, ::sp::ste::parameter_values>(
+          std::mem_fn(&sp_ste_control::Service::issue_new_values_and_read_new), this)));
 }
 
 sp_ste_control::Service::~Service() {
 }
 
-::grpc::Status sp_ste_control::Service::setup(::grpc::ServerContext* context, const ::sp::ste::set_parameters* request, ::sp::ste::parameter_values* response) {
+::grpc::Status sp_ste_control::Service::loopback(::grpc::ServerContext* context, const ::sp::ste::set_parameters* request, ::sp::ste::parameter_values* response) {
+  (void) context;
+  (void) request;
+  (void) response;
+  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+}
+
+::grpc::Status sp_ste_control::Service::check_current_values(::grpc::ServerContext* context, const ::sp::ste::null_message* request, ::sp::ste::parameter_values* response) {
+  (void) context;
+  (void) request;
+  (void) response;
+  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+}
+
+::grpc::Status sp_ste_control::Service::issue_new_values_and_read_old(::grpc::ServerContext* context, const ::sp::ste::set_parameters* request, ::sp::ste::parameter_values* response) {
+  (void) context;
+  (void) request;
+  (void) response;
+  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+}
+
+::grpc::Status sp_ste_control::Service::issue_new_values_and_read_new(::grpc::ServerContext* context, const ::sp::ste::set_parameters* request, ::sp::ste::parameter_values* response) {
   (void) context;
   (void) request;
   (void) response;

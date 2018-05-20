@@ -16,12 +16,18 @@ package sp.ste;
 
 service sp_ste_control
 {
-    //This does the setup for a single measurement
-    rpc setup (set_parameters) returns (parameter_values) {}
-    //This launches a single measurement
-    //rpc single_measurement (start_single) returns (single_ack) {}
-    //This launches multiple measurements
-    //rpc multiple_measurements (start_multiple) returns (multiple_ack) {}
+   //This just checks that the connection is working and reads the sent values back
+   rpc loopback(set_parameters) returns (parameter_values) {}
+   //This just checks the current values of the parameter set
+   rpc check_current_values(null_message) returns (parameter_values) {}
+   //This does the setup for a single measurement and reads old values
+   rpc issue_new_values_and_read_old(set_parameters) returns (parameter_values) {}
+   //This does the setup for a single measurement and reads new values
+   rpc issue_new_values_and_read_new(set_parameters) returns (parameter_values) {}
+   //This launches a single measurement
+   //rpc single_measurement (start_single) returns (single_ack) {}
+   //This launches multiple measurements
+   //rpc multiple_measurements (start_multiple) returns (multiple_ack) {}
 }
 
 /*
@@ -51,55 +57,67 @@ enum state
 //COMPOSITE TOP LEVEL MESSAGES
 message set_parameters
 {
-    sp.ste.state_parameters state_parameters = 1;
-    sp.ste.tx_parameters tx_parameters = 2;
-    sp.ste.fft_parameters fft_parameters = 3;
-    sp.ste.other_parameters other_parameters = 4;
+   sp.ste.num_params num_params = 1;
+   sp.ste.state_parameters state_parameters = 2;
+   sp.ste.tx_parameters tx_parameters = 3;
+   sp.ste.fft_parameters fft_parameters = 4;
+   sp.ste.other_parameters other_parameters = 5;
 }
 
 message parameter_values
 {
-    sp.ste.state_parameters state_parameters = 1;
-    sp.ste.tx_parameters tx_parameters = 2;
-    sp.ste.fft_parameters fft_parameters = 3;
-    sp.ste.other_parameters other_parameters = 4;
+   sp.ste.num_params num_params = 1;
+   sp.ste.state_parameters state_parameters = 2;
+   sp.ste.tx_parameters tx_parameters = 3;
+   sp.ste.fft_parameters fft_parameters = 4;
+   sp.ste.other_parameters other_parameters = 5;
 }
 
 //SUB MESSAGE DEFINITIONS
+message num_params
+{
+   uint32 count = 1;
+}
+
 message state_parameters
 {
-    bool save_iq = 1;
-    state parameter_estimate_enable = 2;
-    state awgn_enable = 3;
-    state notch_enable = 4;
-    state fft_a_enable = 5;
-    state fft_b_enable = 6;
+   bool save_iq = 1;
+   state parameter_estimate_enable = 2;
+   state awgn_enable = 3;
+   state notch_enable = 4;
+   state fft_a_enable = 5;
+   state fft_b_enable = 6;
 }
 
 message tx_parameters
 {
-    double num_tx_samples_total = 1;
-    double tx_freq1_Hz = 2;
-    double tx_freq2_Hz = 3;
-    double tx_phase1_rot = 4;
-    double tx_phase2_rot = 5;
+   double num_tx_samples_total = 1;
+   double tx_freq1_Hz = 2;
+   double tx_freq2_Hz = 3;
+   double tx_phase1_rot = 4;
+   double tx_phase2_rot = 5;
 }
 
 message fft_parameters
 {
-    uint32 fft_length_a = 1;
-    uint32 fft_batches_a = 2;
-    uint32 fft_length_b = 3;
-    uint32 fft_batches_b = 4;
+   uint32 fft_length_a = 1;
+   uint32 fft_batches_a = 2;
+   uint32 fft_length_b = 3;
+   uint32 fft_batches_b = 4;
 }
 
 message other_parameters
 {
-    double num_rx_samples = 1;
-    double rx_rot_freq_Hz = 2;
-    uint32 decimation = 3;
-    uint32 gain1 = 4;
-    uint32 gain2 = 5;
-    double nextTxStartTime = 6;
-    double nextRxStartTime = 7;
+   double num_rx_samples = 1;
+   double rx_rot_freq_Hz = 2;
+   uint32 decimation = 3;
+   uint32 gain1 = 4;
+   uint32 gain2 = 5;
+   double nextTxStartTime = 6;
+   double nextRxStartTime = 7;
+}
+
+message null_message
+{
+
 }

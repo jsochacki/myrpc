@@ -34,34 +34,94 @@ class sp_ste_control final {
   class StubInterface {
    public:
     virtual ~StubInterface() {}
-    // This does the setup for a single measurement
-    virtual ::grpc::Status setup(::grpc::ClientContext* context, const ::sp::ste::set_parameters& request, ::sp::ste::parameter_values* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::sp::ste::parameter_values>> Asyncsetup(::grpc::ClientContext* context, const ::sp::ste::set_parameters& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::sp::ste::parameter_values>>(AsyncsetupRaw(context, request, cq));
+    // This just checks that the connection is working and reads the sent values back
+    virtual ::grpc::Status loopback(::grpc::ClientContext* context, const ::sp::ste::set_parameters& request, ::sp::ste::parameter_values* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::sp::ste::parameter_values>> Asyncloopback(::grpc::ClientContext* context, const ::sp::ste::set_parameters& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::sp::ste::parameter_values>>(AsyncloopbackRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::sp::ste::parameter_values>> PrepareAsyncsetup(::grpc::ClientContext* context, const ::sp::ste::set_parameters& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::sp::ste::parameter_values>>(PrepareAsyncsetupRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::sp::ste::parameter_values>> PrepareAsyncloopback(::grpc::ClientContext* context, const ::sp::ste::set_parameters& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::sp::ste::parameter_values>>(PrepareAsyncloopbackRaw(context, request, cq));
+    }
+    // This just checks the current values of the parameter set
+    virtual ::grpc::Status check_current_values(::grpc::ClientContext* context, const ::sp::ste::null_message& request, ::sp::ste::parameter_values* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::sp::ste::parameter_values>> Asynccheck_current_values(::grpc::ClientContext* context, const ::sp::ste::null_message& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::sp::ste::parameter_values>>(Asynccheck_current_valuesRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::sp::ste::parameter_values>> PrepareAsynccheck_current_values(::grpc::ClientContext* context, const ::sp::ste::null_message& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::sp::ste::parameter_values>>(PrepareAsynccheck_current_valuesRaw(context, request, cq));
+    }
+    // This does the setup for a single measurement and reads old values
+    virtual ::grpc::Status issue_new_values_and_read_old(::grpc::ClientContext* context, const ::sp::ste::set_parameters& request, ::sp::ste::parameter_values* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::sp::ste::parameter_values>> Asyncissue_new_values_and_read_old(::grpc::ClientContext* context, const ::sp::ste::set_parameters& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::sp::ste::parameter_values>>(Asyncissue_new_values_and_read_oldRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::sp::ste::parameter_values>> PrepareAsyncissue_new_values_and_read_old(::grpc::ClientContext* context, const ::sp::ste::set_parameters& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::sp::ste::parameter_values>>(PrepareAsyncissue_new_values_and_read_oldRaw(context, request, cq));
+    }
+    // This does the setup for a single measurement and reads new values
+    virtual ::grpc::Status issue_new_values_and_read_new(::grpc::ClientContext* context, const ::sp::ste::set_parameters& request, ::sp::ste::parameter_values* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::sp::ste::parameter_values>> Asyncissue_new_values_and_read_new(::grpc::ClientContext* context, const ::sp::ste::set_parameters& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::sp::ste::parameter_values>>(Asyncissue_new_values_and_read_newRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::sp::ste::parameter_values>> PrepareAsyncissue_new_values_and_read_new(::grpc::ClientContext* context, const ::sp::ste::set_parameters& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::sp::ste::parameter_values>>(PrepareAsyncissue_new_values_and_read_newRaw(context, request, cq));
     }
   private:
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::sp::ste::parameter_values>* AsyncsetupRaw(::grpc::ClientContext* context, const ::sp::ste::set_parameters& request, ::grpc::CompletionQueue* cq) = 0;
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::sp::ste::parameter_values>* PrepareAsyncsetupRaw(::grpc::ClientContext* context, const ::sp::ste::set_parameters& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::sp::ste::parameter_values>* AsyncloopbackRaw(::grpc::ClientContext* context, const ::sp::ste::set_parameters& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::sp::ste::parameter_values>* PrepareAsyncloopbackRaw(::grpc::ClientContext* context, const ::sp::ste::set_parameters& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::sp::ste::parameter_values>* Asynccheck_current_valuesRaw(::grpc::ClientContext* context, const ::sp::ste::null_message& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::sp::ste::parameter_values>* PrepareAsynccheck_current_valuesRaw(::grpc::ClientContext* context, const ::sp::ste::null_message& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::sp::ste::parameter_values>* Asyncissue_new_values_and_read_oldRaw(::grpc::ClientContext* context, const ::sp::ste::set_parameters& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::sp::ste::parameter_values>* PrepareAsyncissue_new_values_and_read_oldRaw(::grpc::ClientContext* context, const ::sp::ste::set_parameters& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::sp::ste::parameter_values>* Asyncissue_new_values_and_read_newRaw(::grpc::ClientContext* context, const ::sp::ste::set_parameters& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::sp::ste::parameter_values>* PrepareAsyncissue_new_values_and_read_newRaw(::grpc::ClientContext* context, const ::sp::ste::set_parameters& request, ::grpc::CompletionQueue* cq) = 0;
   };
   class Stub final : public StubInterface {
    public:
     Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel);
-    ::grpc::Status setup(::grpc::ClientContext* context, const ::sp::ste::set_parameters& request, ::sp::ste::parameter_values* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::sp::ste::parameter_values>> Asyncsetup(::grpc::ClientContext* context, const ::sp::ste::set_parameters& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::sp::ste::parameter_values>>(AsyncsetupRaw(context, request, cq));
+    ::grpc::Status loopback(::grpc::ClientContext* context, const ::sp::ste::set_parameters& request, ::sp::ste::parameter_values* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::sp::ste::parameter_values>> Asyncloopback(::grpc::ClientContext* context, const ::sp::ste::set_parameters& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::sp::ste::parameter_values>>(AsyncloopbackRaw(context, request, cq));
     }
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::sp::ste::parameter_values>> PrepareAsyncsetup(::grpc::ClientContext* context, const ::sp::ste::set_parameters& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::sp::ste::parameter_values>>(PrepareAsyncsetupRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::sp::ste::parameter_values>> PrepareAsyncloopback(::grpc::ClientContext* context, const ::sp::ste::set_parameters& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::sp::ste::parameter_values>>(PrepareAsyncloopbackRaw(context, request, cq));
+    }
+    ::grpc::Status check_current_values(::grpc::ClientContext* context, const ::sp::ste::null_message& request, ::sp::ste::parameter_values* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::sp::ste::parameter_values>> Asynccheck_current_values(::grpc::ClientContext* context, const ::sp::ste::null_message& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::sp::ste::parameter_values>>(Asynccheck_current_valuesRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::sp::ste::parameter_values>> PrepareAsynccheck_current_values(::grpc::ClientContext* context, const ::sp::ste::null_message& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::sp::ste::parameter_values>>(PrepareAsynccheck_current_valuesRaw(context, request, cq));
+    }
+    ::grpc::Status issue_new_values_and_read_old(::grpc::ClientContext* context, const ::sp::ste::set_parameters& request, ::sp::ste::parameter_values* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::sp::ste::parameter_values>> Asyncissue_new_values_and_read_old(::grpc::ClientContext* context, const ::sp::ste::set_parameters& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::sp::ste::parameter_values>>(Asyncissue_new_values_and_read_oldRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::sp::ste::parameter_values>> PrepareAsyncissue_new_values_and_read_old(::grpc::ClientContext* context, const ::sp::ste::set_parameters& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::sp::ste::parameter_values>>(PrepareAsyncissue_new_values_and_read_oldRaw(context, request, cq));
+    }
+    ::grpc::Status issue_new_values_and_read_new(::grpc::ClientContext* context, const ::sp::ste::set_parameters& request, ::sp::ste::parameter_values* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::sp::ste::parameter_values>> Asyncissue_new_values_and_read_new(::grpc::ClientContext* context, const ::sp::ste::set_parameters& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::sp::ste::parameter_values>>(Asyncissue_new_values_and_read_newRaw(context, request, cq));
+    }
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::sp::ste::parameter_values>> PrepareAsyncissue_new_values_and_read_new(::grpc::ClientContext* context, const ::sp::ste::set_parameters& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::sp::ste::parameter_values>>(PrepareAsyncissue_new_values_and_read_newRaw(context, request, cq));
     }
 
    private:
     std::shared_ptr< ::grpc::ChannelInterface> channel_;
-    ::grpc::ClientAsyncResponseReader< ::sp::ste::parameter_values>* AsyncsetupRaw(::grpc::ClientContext* context, const ::sp::ste::set_parameters& request, ::grpc::CompletionQueue* cq) override;
-    ::grpc::ClientAsyncResponseReader< ::sp::ste::parameter_values>* PrepareAsyncsetupRaw(::grpc::ClientContext* context, const ::sp::ste::set_parameters& request, ::grpc::CompletionQueue* cq) override;
-    const ::grpc::internal::RpcMethod rpcmethod_setup_;
+    ::grpc::ClientAsyncResponseReader< ::sp::ste::parameter_values>* AsyncloopbackRaw(::grpc::ClientContext* context, const ::sp::ste::set_parameters& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::sp::ste::parameter_values>* PrepareAsyncloopbackRaw(::grpc::ClientContext* context, const ::sp::ste::set_parameters& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::sp::ste::parameter_values>* Asynccheck_current_valuesRaw(::grpc::ClientContext* context, const ::sp::ste::null_message& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::sp::ste::parameter_values>* PrepareAsynccheck_current_valuesRaw(::grpc::ClientContext* context, const ::sp::ste::null_message& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::sp::ste::parameter_values>* Asyncissue_new_values_and_read_oldRaw(::grpc::ClientContext* context, const ::sp::ste::set_parameters& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::sp::ste::parameter_values>* PrepareAsyncissue_new_values_and_read_oldRaw(::grpc::ClientContext* context, const ::sp::ste::set_parameters& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::sp::ste::parameter_values>* Asyncissue_new_values_and_read_newRaw(::grpc::ClientContext* context, const ::sp::ste::set_parameters& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::sp::ste::parameter_values>* PrepareAsyncissue_new_values_and_read_newRaw(::grpc::ClientContext* context, const ::sp::ste::set_parameters& request, ::grpc::CompletionQueue* cq) override;
+    const ::grpc::internal::RpcMethod rpcmethod_loopback_;
+    const ::grpc::internal::RpcMethod rpcmethod_check_current_values_;
+    const ::grpc::internal::RpcMethod rpcmethod_issue_new_values_and_read_old_;
+    const ::grpc::internal::RpcMethod rpcmethod_issue_new_values_and_read_new_;
   };
   static std::unique_ptr<Stub> NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options = ::grpc::StubOptions());
 
@@ -69,70 +129,247 @@ class sp_ste_control final {
    public:
     Service();
     virtual ~Service();
-    // This does the setup for a single measurement
-    virtual ::grpc::Status setup(::grpc::ServerContext* context, const ::sp::ste::set_parameters* request, ::sp::ste::parameter_values* response);
+    // This just checks that the connection is working and reads the sent values back
+    virtual ::grpc::Status loopback(::grpc::ServerContext* context, const ::sp::ste::set_parameters* request, ::sp::ste::parameter_values* response);
+    // This just checks the current values of the parameter set
+    virtual ::grpc::Status check_current_values(::grpc::ServerContext* context, const ::sp::ste::null_message* request, ::sp::ste::parameter_values* response);
+    // This does the setup for a single measurement and reads old values
+    virtual ::grpc::Status issue_new_values_and_read_old(::grpc::ServerContext* context, const ::sp::ste::set_parameters* request, ::sp::ste::parameter_values* response);
+    // This does the setup for a single measurement and reads new values
+    virtual ::grpc::Status issue_new_values_and_read_new(::grpc::ServerContext* context, const ::sp::ste::set_parameters* request, ::sp::ste::parameter_values* response);
   };
   template <class BaseClass>
-  class WithAsyncMethod_setup : public BaseClass {
+  class WithAsyncMethod_loopback : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
-    WithAsyncMethod_setup() {
+    WithAsyncMethod_loopback() {
       ::grpc::Service::MarkMethodAsync(0);
     }
-    ~WithAsyncMethod_setup() override {
+    ~WithAsyncMethod_loopback() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status setup(::grpc::ServerContext* context, const ::sp::ste::set_parameters* request, ::sp::ste::parameter_values* response) final override {
+    ::grpc::Status loopback(::grpc::ServerContext* context, const ::sp::ste::set_parameters* request, ::sp::ste::parameter_values* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void Requestsetup(::grpc::ServerContext* context, ::sp::ste::set_parameters* request, ::grpc::ServerAsyncResponseWriter< ::sp::ste::parameter_values>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void Requestloopback(::grpc::ServerContext* context, ::sp::ste::set_parameters* request, ::grpc::ServerAsyncResponseWriter< ::sp::ste::parameter_values>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(0, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
-  typedef WithAsyncMethod_setup<Service > AsyncService;
   template <class BaseClass>
-  class WithGenericMethod_setup : public BaseClass {
+  class WithAsyncMethod_check_current_values : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
-    WithGenericMethod_setup() {
-      ::grpc::Service::MarkMethodGeneric(0);
+    WithAsyncMethod_check_current_values() {
+      ::grpc::Service::MarkMethodAsync(1);
     }
-    ~WithGenericMethod_setup() override {
+    ~WithAsyncMethod_check_current_values() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status setup(::grpc::ServerContext* context, const ::sp::ste::set_parameters* request, ::sp::ste::parameter_values* response) final override {
+    ::grpc::Status check_current_values(::grpc::ServerContext* context, const ::sp::ste::null_message* request, ::sp::ste::parameter_values* response) final override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void Requestcheck_current_values(::grpc::ServerContext* context, ::sp::ste::null_message* request, ::grpc::ServerAsyncResponseWriter< ::sp::ste::parameter_values>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(1, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithAsyncMethod_issue_new_values_and_read_old : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithAsyncMethod_issue_new_values_and_read_old() {
+      ::grpc::Service::MarkMethodAsync(2);
+    }
+    ~WithAsyncMethod_issue_new_values_and_read_old() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status issue_new_values_and_read_old(::grpc::ServerContext* context, const ::sp::ste::set_parameters* request, ::sp::ste::parameter_values* response) final override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void Requestissue_new_values_and_read_old(::grpc::ServerContext* context, ::sp::ste::set_parameters* request, ::grpc::ServerAsyncResponseWriter< ::sp::ste::parameter_values>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(2, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  template <class BaseClass>
+  class WithAsyncMethod_issue_new_values_and_read_new : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithAsyncMethod_issue_new_values_and_read_new() {
+      ::grpc::Service::MarkMethodAsync(3);
+    }
+    ~WithAsyncMethod_issue_new_values_and_read_new() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status issue_new_values_and_read_new(::grpc::ServerContext* context, const ::sp::ste::set_parameters* request, ::sp::ste::parameter_values* response) final override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void Requestissue_new_values_and_read_new(::grpc::ServerContext* context, ::sp::ste::set_parameters* request, ::grpc::ServerAsyncResponseWriter< ::sp::ste::parameter_values>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(3, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  typedef WithAsyncMethod_loopback<WithAsyncMethod_check_current_values<WithAsyncMethod_issue_new_values_and_read_old<WithAsyncMethod_issue_new_values_and_read_new<Service > > > > AsyncService;
+  template <class BaseClass>
+  class WithGenericMethod_loopback : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithGenericMethod_loopback() {
+      ::grpc::Service::MarkMethodGeneric(0);
+    }
+    ~WithGenericMethod_loopback() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status loopback(::grpc::ServerContext* context, const ::sp::ste::set_parameters* request, ::sp::ste::parameter_values* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
   };
   template <class BaseClass>
-  class WithStreamedUnaryMethod_setup : public BaseClass {
+  class WithGenericMethod_check_current_values : public BaseClass {
    private:
     void BaseClassMustBeDerivedFromService(const Service *service) {}
    public:
-    WithStreamedUnaryMethod_setup() {
-      ::grpc::Service::MarkMethodStreamed(0,
-        new ::grpc::internal::StreamedUnaryHandler< ::sp::ste::set_parameters, ::sp::ste::parameter_values>(std::bind(&WithStreamedUnaryMethod_setup<BaseClass>::Streamedsetup, this, std::placeholders::_1, std::placeholders::_2)));
+    WithGenericMethod_check_current_values() {
+      ::grpc::Service::MarkMethodGeneric(1);
     }
-    ~WithStreamedUnaryMethod_setup() override {
+    ~WithGenericMethod_check_current_values() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status check_current_values(::grpc::ServerContext* context, const ::sp::ste::null_message* request, ::sp::ste::parameter_values* response) final override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+  };
+  template <class BaseClass>
+  class WithGenericMethod_issue_new_values_and_read_old : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithGenericMethod_issue_new_values_and_read_old() {
+      ::grpc::Service::MarkMethodGeneric(2);
+    }
+    ~WithGenericMethod_issue_new_values_and_read_old() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status issue_new_values_and_read_old(::grpc::ServerContext* context, const ::sp::ste::set_parameters* request, ::sp::ste::parameter_values* response) final override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+  };
+  template <class BaseClass>
+  class WithGenericMethod_issue_new_values_and_read_new : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithGenericMethod_issue_new_values_and_read_new() {
+      ::grpc::Service::MarkMethodGeneric(3);
+    }
+    ~WithGenericMethod_issue_new_values_and_read_new() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status issue_new_values_and_read_new(::grpc::ServerContext* context, const ::sp::ste::set_parameters* request, ::sp::ste::parameter_values* response) final override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+  };
+  template <class BaseClass>
+  class WithStreamedUnaryMethod_loopback : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithStreamedUnaryMethod_loopback() {
+      ::grpc::Service::MarkMethodStreamed(0,
+        new ::grpc::internal::StreamedUnaryHandler< ::sp::ste::set_parameters, ::sp::ste::parameter_values>(std::bind(&WithStreamedUnaryMethod_loopback<BaseClass>::Streamedloopback, this, std::placeholders::_1, std::placeholders::_2)));
+    }
+    ~WithStreamedUnaryMethod_loopback() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status setup(::grpc::ServerContext* context, const ::sp::ste::set_parameters* request, ::sp::ste::parameter_values* response) final override {
+    ::grpc::Status loopback(::grpc::ServerContext* context, const ::sp::ste::set_parameters* request, ::sp::ste::parameter_values* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with streamed unary
-    virtual ::grpc::Status Streamedsetup(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::sp::ste::set_parameters,::sp::ste::parameter_values>* server_unary_streamer) = 0;
+    virtual ::grpc::Status Streamedloopback(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::sp::ste::set_parameters,::sp::ste::parameter_values>* server_unary_streamer) = 0;
   };
-  typedef WithStreamedUnaryMethod_setup<Service > StreamedUnaryService;
+  template <class BaseClass>
+  class WithStreamedUnaryMethod_check_current_values : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithStreamedUnaryMethod_check_current_values() {
+      ::grpc::Service::MarkMethodStreamed(1,
+        new ::grpc::internal::StreamedUnaryHandler< ::sp::ste::null_message, ::sp::ste::parameter_values>(std::bind(&WithStreamedUnaryMethod_check_current_values<BaseClass>::Streamedcheck_current_values, this, std::placeholders::_1, std::placeholders::_2)));
+    }
+    ~WithStreamedUnaryMethod_check_current_values() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable regular version of this method
+    ::grpc::Status check_current_values(::grpc::ServerContext* context, const ::sp::ste::null_message* request, ::sp::ste::parameter_values* response) final override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    // replace default version of method with streamed unary
+    virtual ::grpc::Status Streamedcheck_current_values(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::sp::ste::null_message,::sp::ste::parameter_values>* server_unary_streamer) = 0;
+  };
+  template <class BaseClass>
+  class WithStreamedUnaryMethod_issue_new_values_and_read_old : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithStreamedUnaryMethod_issue_new_values_and_read_old() {
+      ::grpc::Service::MarkMethodStreamed(2,
+        new ::grpc::internal::StreamedUnaryHandler< ::sp::ste::set_parameters, ::sp::ste::parameter_values>(std::bind(&WithStreamedUnaryMethod_issue_new_values_and_read_old<BaseClass>::Streamedissue_new_values_and_read_old, this, std::placeholders::_1, std::placeholders::_2)));
+    }
+    ~WithStreamedUnaryMethod_issue_new_values_and_read_old() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable regular version of this method
+    ::grpc::Status issue_new_values_and_read_old(::grpc::ServerContext* context, const ::sp::ste::set_parameters* request, ::sp::ste::parameter_values* response) final override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    // replace default version of method with streamed unary
+    virtual ::grpc::Status Streamedissue_new_values_and_read_old(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::sp::ste::set_parameters,::sp::ste::parameter_values>* server_unary_streamer) = 0;
+  };
+  template <class BaseClass>
+  class WithStreamedUnaryMethod_issue_new_values_and_read_new : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithStreamedUnaryMethod_issue_new_values_and_read_new() {
+      ::grpc::Service::MarkMethodStreamed(3,
+        new ::grpc::internal::StreamedUnaryHandler< ::sp::ste::set_parameters, ::sp::ste::parameter_values>(std::bind(&WithStreamedUnaryMethod_issue_new_values_and_read_new<BaseClass>::Streamedissue_new_values_and_read_new, this, std::placeholders::_1, std::placeholders::_2)));
+    }
+    ~WithStreamedUnaryMethod_issue_new_values_and_read_new() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable regular version of this method
+    ::grpc::Status issue_new_values_and_read_new(::grpc::ServerContext* context, const ::sp::ste::set_parameters* request, ::sp::ste::parameter_values* response) final override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    // replace default version of method with streamed unary
+    virtual ::grpc::Status Streamedissue_new_values_and_read_new(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::sp::ste::set_parameters,::sp::ste::parameter_values>* server_unary_streamer) = 0;
+  };
+  typedef WithStreamedUnaryMethod_loopback<WithStreamedUnaryMethod_check_current_values<WithStreamedUnaryMethod_issue_new_values_and_read_old<WithStreamedUnaryMethod_issue_new_values_and_read_new<Service > > > > StreamedUnaryService;
   typedef Service SplitStreamedService;
-  typedef WithStreamedUnaryMethod_setup<Service > StreamedService;
+  typedef WithStreamedUnaryMethod_loopback<WithStreamedUnaryMethod_check_current_values<WithStreamedUnaryMethod_issue_new_values_and_read_old<WithStreamedUnaryMethod_issue_new_values_and_read_new<Service > > > > StreamedService;
 };
 
 }  // namespace ste

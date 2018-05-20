@@ -37,7 +37,7 @@ namespace protobuf_sp_5fste_2eproto {
 struct TableStruct {
   static const ::google::protobuf::internal::ParseTableField entries[];
   static const ::google::protobuf::internal::AuxillaryParseTableField aux[];
-  static const ::google::protobuf::internal::ParseTable schema[6];
+  static const ::google::protobuf::internal::ParseTable schema[8];
   static const ::google::protobuf::internal::FieldMetadata field_metadata[];
   static const ::google::protobuf::internal::SerializationTable serialization_table[];
   static const ::google::protobuf::uint32 offsets[];
@@ -47,6 +47,8 @@ void InitDefaultsset_parametersImpl();
 void InitDefaultsset_parameters();
 void InitDefaultsparameter_valuesImpl();
 void InitDefaultsparameter_values();
+void InitDefaultsnum_paramsImpl();
+void InitDefaultsnum_params();
 void InitDefaultsstate_parametersImpl();
 void InitDefaultsstate_parameters();
 void InitDefaultstx_parametersImpl();
@@ -55,13 +57,17 @@ void InitDefaultsfft_parametersImpl();
 void InitDefaultsfft_parameters();
 void InitDefaultsother_parametersImpl();
 void InitDefaultsother_parameters();
+void InitDefaultsnull_messageImpl();
+void InitDefaultsnull_message();
 inline void InitDefaults() {
   InitDefaultsset_parameters();
   InitDefaultsparameter_values();
+  InitDefaultsnum_params();
   InitDefaultsstate_parameters();
   InitDefaultstx_parameters();
   InitDefaultsfft_parameters();
   InitDefaultsother_parameters();
+  InitDefaultsnull_message();
 }
 }  // namespace protobuf_sp_5fste_2eproto
 namespace sp {
@@ -69,6 +75,12 @@ namespace ste {
 class fft_parameters;
 class fft_parametersDefaultTypeInternal;
 extern fft_parametersDefaultTypeInternal _fft_parameters_default_instance_;
+class null_message;
+class null_messageDefaultTypeInternal;
+extern null_messageDefaultTypeInternal _null_message_default_instance_;
+class num_params;
+class num_paramsDefaultTypeInternal;
+extern num_paramsDefaultTypeInternal _num_params_default_instance_;
 class other_parameters;
 class other_parametersDefaultTypeInternal;
 extern other_parametersDefaultTypeInternal _other_parameters_default_instance_;
@@ -200,37 +212,46 @@ class set_parameters : public ::google::protobuf::Message /* @@protoc_insertion_
 
   // accessors -------------------------------------------------------
 
-  // .sp.ste.state_parameters state_parameters = 1;
+  // .sp.ste.num_params num_params = 1;
+  bool has_num_params() const;
+  void clear_num_params();
+  static const int kNumParamsFieldNumber = 1;
+  const ::sp::ste::num_params& num_params() const;
+  ::sp::ste::num_params* release_num_params();
+  ::sp::ste::num_params* mutable_num_params();
+  void set_allocated_num_params(::sp::ste::num_params* num_params);
+
+  // .sp.ste.state_parameters state_parameters = 2;
   bool has_state_parameters() const;
   void clear_state_parameters();
-  static const int kStateParametersFieldNumber = 1;
+  static const int kStateParametersFieldNumber = 2;
   const ::sp::ste::state_parameters& state_parameters() const;
   ::sp::ste::state_parameters* release_state_parameters();
   ::sp::ste::state_parameters* mutable_state_parameters();
   void set_allocated_state_parameters(::sp::ste::state_parameters* state_parameters);
 
-  // .sp.ste.tx_parameters tx_parameters = 2;
+  // .sp.ste.tx_parameters tx_parameters = 3;
   bool has_tx_parameters() const;
   void clear_tx_parameters();
-  static const int kTxParametersFieldNumber = 2;
+  static const int kTxParametersFieldNumber = 3;
   const ::sp::ste::tx_parameters& tx_parameters() const;
   ::sp::ste::tx_parameters* release_tx_parameters();
   ::sp::ste::tx_parameters* mutable_tx_parameters();
   void set_allocated_tx_parameters(::sp::ste::tx_parameters* tx_parameters);
 
-  // .sp.ste.fft_parameters fft_parameters = 3;
+  // .sp.ste.fft_parameters fft_parameters = 4;
   bool has_fft_parameters() const;
   void clear_fft_parameters();
-  static const int kFftParametersFieldNumber = 3;
+  static const int kFftParametersFieldNumber = 4;
   const ::sp::ste::fft_parameters& fft_parameters() const;
   ::sp::ste::fft_parameters* release_fft_parameters();
   ::sp::ste::fft_parameters* mutable_fft_parameters();
   void set_allocated_fft_parameters(::sp::ste::fft_parameters* fft_parameters);
 
-  // .sp.ste.other_parameters other_parameters = 4;
+  // .sp.ste.other_parameters other_parameters = 5;
   bool has_other_parameters() const;
   void clear_other_parameters();
-  static const int kOtherParametersFieldNumber = 4;
+  static const int kOtherParametersFieldNumber = 5;
   const ::sp::ste::other_parameters& other_parameters() const;
   ::sp::ste::other_parameters* release_other_parameters();
   ::sp::ste::other_parameters* mutable_other_parameters();
@@ -240,6 +261,7 @@ class set_parameters : public ::google::protobuf::Message /* @@protoc_insertion_
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::sp::ste::num_params* num_params_;
   ::sp::ste::state_parameters* state_parameters_;
   ::sp::ste::tx_parameters* tx_parameters_;
   ::sp::ste::fft_parameters* fft_parameters_;
@@ -332,37 +354,46 @@ class parameter_values : public ::google::protobuf::Message /* @@protoc_insertio
 
   // accessors -------------------------------------------------------
 
-  // .sp.ste.state_parameters state_parameters = 1;
+  // .sp.ste.num_params num_params = 1;
+  bool has_num_params() const;
+  void clear_num_params();
+  static const int kNumParamsFieldNumber = 1;
+  const ::sp::ste::num_params& num_params() const;
+  ::sp::ste::num_params* release_num_params();
+  ::sp::ste::num_params* mutable_num_params();
+  void set_allocated_num_params(::sp::ste::num_params* num_params);
+
+  // .sp.ste.state_parameters state_parameters = 2;
   bool has_state_parameters() const;
   void clear_state_parameters();
-  static const int kStateParametersFieldNumber = 1;
+  static const int kStateParametersFieldNumber = 2;
   const ::sp::ste::state_parameters& state_parameters() const;
   ::sp::ste::state_parameters* release_state_parameters();
   ::sp::ste::state_parameters* mutable_state_parameters();
   void set_allocated_state_parameters(::sp::ste::state_parameters* state_parameters);
 
-  // .sp.ste.tx_parameters tx_parameters = 2;
+  // .sp.ste.tx_parameters tx_parameters = 3;
   bool has_tx_parameters() const;
   void clear_tx_parameters();
-  static const int kTxParametersFieldNumber = 2;
+  static const int kTxParametersFieldNumber = 3;
   const ::sp::ste::tx_parameters& tx_parameters() const;
   ::sp::ste::tx_parameters* release_tx_parameters();
   ::sp::ste::tx_parameters* mutable_tx_parameters();
   void set_allocated_tx_parameters(::sp::ste::tx_parameters* tx_parameters);
 
-  // .sp.ste.fft_parameters fft_parameters = 3;
+  // .sp.ste.fft_parameters fft_parameters = 4;
   bool has_fft_parameters() const;
   void clear_fft_parameters();
-  static const int kFftParametersFieldNumber = 3;
+  static const int kFftParametersFieldNumber = 4;
   const ::sp::ste::fft_parameters& fft_parameters() const;
   ::sp::ste::fft_parameters* release_fft_parameters();
   ::sp::ste::fft_parameters* mutable_fft_parameters();
   void set_allocated_fft_parameters(::sp::ste::fft_parameters* fft_parameters);
 
-  // .sp.ste.other_parameters other_parameters = 4;
+  // .sp.ste.other_parameters other_parameters = 5;
   bool has_other_parameters() const;
   void clear_other_parameters();
-  static const int kOtherParametersFieldNumber = 4;
+  static const int kOtherParametersFieldNumber = 5;
   const ::sp::ste::other_parameters& other_parameters() const;
   ::sp::ste::other_parameters* release_other_parameters();
   ::sp::ste::other_parameters* mutable_other_parameters();
@@ -372,6 +403,7 @@ class parameter_values : public ::google::protobuf::Message /* @@protoc_insertio
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::sp::ste::num_params* num_params_;
   ::sp::ste::state_parameters* state_parameters_;
   ::sp::ste::tx_parameters* tx_parameters_;
   ::sp::ste::fft_parameters* fft_parameters_;
@@ -379,6 +411,105 @@ class parameter_values : public ::google::protobuf::Message /* @@protoc_insertio
   mutable int _cached_size_;
   friend struct ::protobuf_sp_5fste_2eproto::TableStruct;
   friend void ::protobuf_sp_5fste_2eproto::InitDefaultsparameter_valuesImpl();
+};
+// -------------------------------------------------------------------
+
+class num_params : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:sp.ste.num_params) */ {
+ public:
+  num_params();
+  virtual ~num_params();
+
+  num_params(const num_params& from);
+
+  inline num_params& operator=(const num_params& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  num_params(num_params&& from) noexcept
+    : num_params() {
+    *this = ::std::move(from);
+  }
+
+  inline num_params& operator=(num_params&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const num_params& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const num_params* internal_default_instance() {
+    return reinterpret_cast<const num_params*>(
+               &_num_params_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    2;
+
+  void Swap(num_params* other);
+  friend void swap(num_params& a, num_params& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline num_params* New() const PROTOBUF_FINAL { return New(NULL); }
+
+  num_params* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const num_params& from);
+  void MergeFrom(const num_params& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
+
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(num_params* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // uint32 count = 1;
+  void clear_count();
+  static const int kCountFieldNumber = 1;
+  ::google::protobuf::uint32 count() const;
+  void set_count(::google::protobuf::uint32 value);
+
+  // @@protoc_insertion_point(class_scope:sp.ste.num_params)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::uint32 count_;
+  mutable int _cached_size_;
+  friend struct ::protobuf_sp_5fste_2eproto::TableStruct;
+  friend void ::protobuf_sp_5fste_2eproto::InitDefaultsnum_paramsImpl();
 };
 // -------------------------------------------------------------------
 
@@ -417,7 +548,7 @@ class state_parameters : public ::google::protobuf::Message /* @@protoc_insertio
                &_state_parameters_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    2;
+    3;
 
   void Swap(state_parameters* other);
   friend void swap(state_parameters& a, state_parameters& b) {
@@ -551,7 +682,7 @@ class tx_parameters : public ::google::protobuf::Message /* @@protoc_insertion_p
                &_tx_parameters_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    3;
+    4;
 
   void Swap(tx_parameters* other);
   friend void swap(tx_parameters& a, tx_parameters& b) {
@@ -678,7 +809,7 @@ class fft_parameters : public ::google::protobuf::Message /* @@protoc_insertion_
                &_fft_parameters_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    4;
+    5;
 
   void Swap(fft_parameters* other);
   friend void swap(fft_parameters& a, fft_parameters& b) {
@@ -798,7 +929,7 @@ class other_parameters : public ::google::protobuf::Message /* @@protoc_insertio
                &_other_parameters_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    5;
+    6;
 
   void Swap(other_parameters* other);
   friend void swap(other_parameters& a, other_parameters& b) {
@@ -902,6 +1033,98 @@ class other_parameters : public ::google::protobuf::Message /* @@protoc_insertio
   friend struct ::protobuf_sp_5fste_2eproto::TableStruct;
   friend void ::protobuf_sp_5fste_2eproto::InitDefaultsother_parametersImpl();
 };
+// -------------------------------------------------------------------
+
+class null_message : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:sp.ste.null_message) */ {
+ public:
+  null_message();
+  virtual ~null_message();
+
+  null_message(const null_message& from);
+
+  inline null_message& operator=(const null_message& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  null_message(null_message&& from) noexcept
+    : null_message() {
+    *this = ::std::move(from);
+  }
+
+  inline null_message& operator=(null_message&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const null_message& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const null_message* internal_default_instance() {
+    return reinterpret_cast<const null_message*>(
+               &_null_message_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    7;
+
+  void Swap(null_message* other);
+  friend void swap(null_message& a, null_message& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline null_message* New() const PROTOBUF_FINAL { return New(NULL); }
+
+  null_message* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const null_message& from);
+  void MergeFrom(const null_message& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
+
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(null_message* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // @@protoc_insertion_point(class_scope:sp.ste.null_message)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  mutable int _cached_size_;
+  friend struct ::protobuf_sp_5fste_2eproto::TableStruct;
+  friend void ::protobuf_sp_5fste_2eproto::InitDefaultsnull_messageImpl();
+};
 // ===================================================================
 
 
@@ -913,7 +1136,57 @@ class other_parameters : public ::google::protobuf::Message /* @@protoc_insertio
 #endif  // __GNUC__
 // set_parameters
 
-// .sp.ste.state_parameters state_parameters = 1;
+// .sp.ste.num_params num_params = 1;
+inline bool set_parameters::has_num_params() const {
+  return this != internal_default_instance() && num_params_ != NULL;
+}
+inline void set_parameters::clear_num_params() {
+  if (GetArenaNoVirtual() == NULL && num_params_ != NULL) {
+    delete num_params_;
+  }
+  num_params_ = NULL;
+}
+inline const ::sp::ste::num_params& set_parameters::num_params() const {
+  const ::sp::ste::num_params* p = num_params_;
+  // @@protoc_insertion_point(field_get:sp.ste.set_parameters.num_params)
+  return p != NULL ? *p : *reinterpret_cast<const ::sp::ste::num_params*>(
+      &::sp::ste::_num_params_default_instance_);
+}
+inline ::sp::ste::num_params* set_parameters::release_num_params() {
+  // @@protoc_insertion_point(field_release:sp.ste.set_parameters.num_params)
+  
+  ::sp::ste::num_params* temp = num_params_;
+  num_params_ = NULL;
+  return temp;
+}
+inline ::sp::ste::num_params* set_parameters::mutable_num_params() {
+  
+  if (num_params_ == NULL) {
+    num_params_ = new ::sp::ste::num_params;
+  }
+  // @@protoc_insertion_point(field_mutable:sp.ste.set_parameters.num_params)
+  return num_params_;
+}
+inline void set_parameters::set_allocated_num_params(::sp::ste::num_params* num_params) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete num_params_;
+  }
+  if (num_params) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      num_params = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, num_params, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  num_params_ = num_params;
+  // @@protoc_insertion_point(field_set_allocated:sp.ste.set_parameters.num_params)
+}
+
+// .sp.ste.state_parameters state_parameters = 2;
 inline bool set_parameters::has_state_parameters() const {
   return this != internal_default_instance() && state_parameters_ != NULL;
 }
@@ -963,7 +1236,7 @@ inline void set_parameters::set_allocated_state_parameters(::sp::ste::state_para
   // @@protoc_insertion_point(field_set_allocated:sp.ste.set_parameters.state_parameters)
 }
 
-// .sp.ste.tx_parameters tx_parameters = 2;
+// .sp.ste.tx_parameters tx_parameters = 3;
 inline bool set_parameters::has_tx_parameters() const {
   return this != internal_default_instance() && tx_parameters_ != NULL;
 }
@@ -1013,7 +1286,7 @@ inline void set_parameters::set_allocated_tx_parameters(::sp::ste::tx_parameters
   // @@protoc_insertion_point(field_set_allocated:sp.ste.set_parameters.tx_parameters)
 }
 
-// .sp.ste.fft_parameters fft_parameters = 3;
+// .sp.ste.fft_parameters fft_parameters = 4;
 inline bool set_parameters::has_fft_parameters() const {
   return this != internal_default_instance() && fft_parameters_ != NULL;
 }
@@ -1063,7 +1336,7 @@ inline void set_parameters::set_allocated_fft_parameters(::sp::ste::fft_paramete
   // @@protoc_insertion_point(field_set_allocated:sp.ste.set_parameters.fft_parameters)
 }
 
-// .sp.ste.other_parameters other_parameters = 4;
+// .sp.ste.other_parameters other_parameters = 5;
 inline bool set_parameters::has_other_parameters() const {
   return this != internal_default_instance() && other_parameters_ != NULL;
 }
@@ -1117,7 +1390,57 @@ inline void set_parameters::set_allocated_other_parameters(::sp::ste::other_para
 
 // parameter_values
 
-// .sp.ste.state_parameters state_parameters = 1;
+// .sp.ste.num_params num_params = 1;
+inline bool parameter_values::has_num_params() const {
+  return this != internal_default_instance() && num_params_ != NULL;
+}
+inline void parameter_values::clear_num_params() {
+  if (GetArenaNoVirtual() == NULL && num_params_ != NULL) {
+    delete num_params_;
+  }
+  num_params_ = NULL;
+}
+inline const ::sp::ste::num_params& parameter_values::num_params() const {
+  const ::sp::ste::num_params* p = num_params_;
+  // @@protoc_insertion_point(field_get:sp.ste.parameter_values.num_params)
+  return p != NULL ? *p : *reinterpret_cast<const ::sp::ste::num_params*>(
+      &::sp::ste::_num_params_default_instance_);
+}
+inline ::sp::ste::num_params* parameter_values::release_num_params() {
+  // @@protoc_insertion_point(field_release:sp.ste.parameter_values.num_params)
+  
+  ::sp::ste::num_params* temp = num_params_;
+  num_params_ = NULL;
+  return temp;
+}
+inline ::sp::ste::num_params* parameter_values::mutable_num_params() {
+  
+  if (num_params_ == NULL) {
+    num_params_ = new ::sp::ste::num_params;
+  }
+  // @@protoc_insertion_point(field_mutable:sp.ste.parameter_values.num_params)
+  return num_params_;
+}
+inline void parameter_values::set_allocated_num_params(::sp::ste::num_params* num_params) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete num_params_;
+  }
+  if (num_params) {
+    ::google::protobuf::Arena* submessage_arena = NULL;
+    if (message_arena != submessage_arena) {
+      num_params = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, num_params, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  num_params_ = num_params;
+  // @@protoc_insertion_point(field_set_allocated:sp.ste.parameter_values.num_params)
+}
+
+// .sp.ste.state_parameters state_parameters = 2;
 inline bool parameter_values::has_state_parameters() const {
   return this != internal_default_instance() && state_parameters_ != NULL;
 }
@@ -1167,7 +1490,7 @@ inline void parameter_values::set_allocated_state_parameters(::sp::ste::state_pa
   // @@protoc_insertion_point(field_set_allocated:sp.ste.parameter_values.state_parameters)
 }
 
-// .sp.ste.tx_parameters tx_parameters = 2;
+// .sp.ste.tx_parameters tx_parameters = 3;
 inline bool parameter_values::has_tx_parameters() const {
   return this != internal_default_instance() && tx_parameters_ != NULL;
 }
@@ -1217,7 +1540,7 @@ inline void parameter_values::set_allocated_tx_parameters(::sp::ste::tx_paramete
   // @@protoc_insertion_point(field_set_allocated:sp.ste.parameter_values.tx_parameters)
 }
 
-// .sp.ste.fft_parameters fft_parameters = 3;
+// .sp.ste.fft_parameters fft_parameters = 4;
 inline bool parameter_values::has_fft_parameters() const {
   return this != internal_default_instance() && fft_parameters_ != NULL;
 }
@@ -1267,7 +1590,7 @@ inline void parameter_values::set_allocated_fft_parameters(::sp::ste::fft_parame
   // @@protoc_insertion_point(field_set_allocated:sp.ste.parameter_values.fft_parameters)
 }
 
-// .sp.ste.other_parameters other_parameters = 4;
+// .sp.ste.other_parameters other_parameters = 5;
 inline bool parameter_values::has_other_parameters() const {
   return this != internal_default_instance() && other_parameters_ != NULL;
 }
@@ -1315,6 +1638,24 @@ inline void parameter_values::set_allocated_other_parameters(::sp::ste::other_pa
   }
   other_parameters_ = other_parameters;
   // @@protoc_insertion_point(field_set_allocated:sp.ste.parameter_values.other_parameters)
+}
+
+// -------------------------------------------------------------------
+
+// num_params
+
+// uint32 count = 1;
+inline void num_params::clear_count() {
+  count_ = 0u;
+}
+inline ::google::protobuf::uint32 num_params::count() const {
+  // @@protoc_insertion_point(field_get:sp.ste.num_params.count)
+  return count_;
+}
+inline void num_params::set_count(::google::protobuf::uint32 value) {
+  
+  count_ = value;
+  // @@protoc_insertion_point(field_set:sp.ste.num_params.count)
 }
 
 // -------------------------------------------------------------------
@@ -1641,9 +1982,17 @@ inline void other_parameters::set_nextrxstarttime(double value) {
   // @@protoc_insertion_point(field_set:sp.ste.other_parameters.nextRxStartTime)
 }
 
+// -------------------------------------------------------------------
+
+// null_message
+
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------
