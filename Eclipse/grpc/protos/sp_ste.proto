@@ -76,12 +76,15 @@ message parameter_values
 //SUB MESSAGE DEFINITIONS
 message num_params
 {
-   uint32 count = 1;
+   uint32 state_count = 1;
+   uint32 tx_count = 2;
+   uint32 fft_count = 3;
+   uint32 other_count = 4;
 }
 
 message state_parameters
 {
-   bool save_iq = 1;
+   state save_iq = 1;
    state parameter_estimate_enable = 2;
    state awgn_enable = 3;
    state notch_enable = 4;

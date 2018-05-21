@@ -271,7 +271,10 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sp::ste::num_params, count_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sp::ste::num_params, state_count_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sp::ste::num_params, tx_count_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sp::ste::num_params, fft_count_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sp::ste::num_params, other_count_),
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sp::ste::state_parameters, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -324,11 +327,11 @@ static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_PROT
   { 0, -1, sizeof(::sp::ste::set_parameters)},
   { 10, -1, sizeof(::sp::ste::parameter_values)},
   { 20, -1, sizeof(::sp::ste::num_params)},
-  { 26, -1, sizeof(::sp::ste::state_parameters)},
-  { 37, -1, sizeof(::sp::ste::tx_parameters)},
-  { 47, -1, sizeof(::sp::ste::fft_parameters)},
-  { 56, -1, sizeof(::sp::ste::other_parameters)},
-  { 68, -1, sizeof(::sp::ste::null_message)},
+  { 29, -1, sizeof(::sp::ste::state_parameters)},
+  { 40, -1, sizeof(::sp::ste::tx_parameters)},
+  { 50, -1, sizeof(::sp::ste::fft_parameters)},
+  { 59, -1, sizeof(::sp::ste::other_parameters)},
+  { 71, -1, sizeof(::sp::ste::null_message)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
@@ -377,40 +380,42 @@ void AddDescriptorsImpl() {
       "arameters\030\003 \001(\0132\025.sp.ste.tx_parameters\022."
       "\n\016fft_parameters\030\004 \001(\0132\026.sp.ste.fft_para"
       "meters\0222\n\020other_parameters\030\005 \001(\0132\030.sp.st"
-      "e.other_parameters\"\033\n\nnum_params\022\r\n\005coun"
-      "t\030\001 \001(\r\"\350\001\n\020state_parameters\022\017\n\007save_iq\030"
-      "\001 \001(\010\0220\n\031parameter_estimate_enable\030\002 \001(\016"
-      "2\r.sp.ste.state\022\"\n\013awgn_enable\030\003 \001(\0162\r.s"
-      "p.ste.state\022#\n\014notch_enable\030\004 \001(\0162\r.sp.s"
-      "te.state\022#\n\014fft_a_enable\030\005 \001(\0162\r.sp.ste."
-      "state\022#\n\014fft_b_enable\030\006 \001(\0162\r.sp.ste.sta"
-      "te\"\205\001\n\rtx_parameters\022\034\n\024num_tx_samples_t"
-      "otal\030\001 \001(\001\022\023\n\013tx_freq1_Hz\030\002 \001(\001\022\023\n\013tx_fr"
-      "eq2_Hz\030\003 \001(\001\022\025\n\rtx_phase1_rot\030\004 \001(\001\022\025\n\rt"
-      "x_phase2_rot\030\005 \001(\001\"j\n\016fft_parameters\022\024\n\014"
-      "fft_length_a\030\001 \001(\r\022\025\n\rfft_batches_a\030\002 \001("
-      "\r\022\024\n\014fft_length_b\030\003 \001(\r\022\025\n\rfft_batches_b"
-      "\030\004 \001(\r\"\246\001\n\020other_parameters\022\026\n\016num_rx_sa"
-      "mples\030\001 \001(\001\022\026\n\016rx_rot_freq_Hz\030\002 \001(\001\022\022\n\nd"
-      "ecimation\030\003 \001(\r\022\r\n\005gain1\030\004 \001(\r\022\r\n\005gain2\030"
-      "\005 \001(\r\022\027\n\017nextTxStartTime\030\006 \001(\001\022\027\n\017nextRx"
-      "StartTime\030\007 \001(\001\"\016\n\014null_message*r\n\005state"
-      "\022\014\n\010DISABLED\020\000\022\007\n\003OFF\020\000\022\016\n\nNOTRUNNING\020\000\022"
-      "\014\n\010COMPLETE\020\000\022\013\n\007ENABLED\020\001\022\006\n\002ON\020\001\022\013\n\007RU"
-      "NNING\020\001\022\016\n\nINCOMPLETE\020\001\032\002\020\0012\304\002\n\016sp_ste_c"
-      "ontrol\022>\n\010loopback\022\026.sp.ste.set_paramete"
-      "rs\032\030.sp.ste.parameter_values\"\000\022H\n\024check_"
-      "current_values\022\024.sp.ste.null_message\032\030.s"
-      "p.ste.parameter_values\"\000\022S\n\035issue_new_va"
-      "lues_and_read_old\022\026.sp.ste.set_parameter"
-      "s\032\030.sp.ste.parameter_values\"\000\022S\n\035issue_n"
-      "ew_values_and_read_new\022\026.sp.ste.set_para"
-      "meters\032\030.sp.ste.parameter_values\"\000B+\n\027io"
-      ".grpc.examples.sp_steB\014sp_ste_protoH\001P\001b"
-      "\006proto3"
+      "e.other_parameters\"[\n\nnum_params\022\023\n\013stat"
+      "e_count\030\001 \001(\r\022\020\n\010tx_count\030\002 \001(\r\022\021\n\tfft_c"
+      "ount\030\003 \001(\r\022\023\n\013other_count\030\004 \001(\r\"\367\001\n\020stat"
+      "e_parameters\022\036\n\007save_iq\030\001 \001(\0162\r.sp.ste.s"
+      "tate\0220\n\031parameter_estimate_enable\030\002 \001(\0162"
+      "\r.sp.ste.state\022\"\n\013awgn_enable\030\003 \001(\0162\r.sp"
+      ".ste.state\022#\n\014notch_enable\030\004 \001(\0162\r.sp.st"
+      "e.state\022#\n\014fft_a_enable\030\005 \001(\0162\r.sp.ste.s"
+      "tate\022#\n\014fft_b_enable\030\006 \001(\0162\r.sp.ste.stat"
+      "e\"\205\001\n\rtx_parameters\022\034\n\024num_tx_samples_to"
+      "tal\030\001 \001(\001\022\023\n\013tx_freq1_Hz\030\002 \001(\001\022\023\n\013tx_fre"
+      "q2_Hz\030\003 \001(\001\022\025\n\rtx_phase1_rot\030\004 \001(\001\022\025\n\rtx"
+      "_phase2_rot\030\005 \001(\001\"j\n\016fft_parameters\022\024\n\014f"
+      "ft_length_a\030\001 \001(\r\022\025\n\rfft_batches_a\030\002 \001(\r"
+      "\022\024\n\014fft_length_b\030\003 \001(\r\022\025\n\rfft_batches_b\030"
+      "\004 \001(\r\"\246\001\n\020other_parameters\022\026\n\016num_rx_sam"
+      "ples\030\001 \001(\001\022\026\n\016rx_rot_freq_Hz\030\002 \001(\001\022\022\n\nde"
+      "cimation\030\003 \001(\r\022\r\n\005gain1\030\004 \001(\r\022\r\n\005gain2\030\005"
+      " \001(\r\022\027\n\017nextTxStartTime\030\006 \001(\001\022\027\n\017nextRxS"
+      "tartTime\030\007 \001(\001\"\016\n\014null_message*r\n\005state\022"
+      "\014\n\010DISABLED\020\000\022\007\n\003OFF\020\000\022\016\n\nNOTRUNNING\020\000\022\014"
+      "\n\010COMPLETE\020\000\022\013\n\007ENABLED\020\001\022\006\n\002ON\020\001\022\013\n\007RUN"
+      "NING\020\001\022\016\n\nINCOMPLETE\020\001\032\002\020\0012\304\002\n\016sp_ste_co"
+      "ntrol\022>\n\010loopback\022\026.sp.ste.set_parameter"
+      "s\032\030.sp.ste.parameter_values\"\000\022H\n\024check_c"
+      "urrent_values\022\024.sp.ste.null_message\032\030.sp"
+      ".ste.parameter_values\"\000\022S\n\035issue_new_val"
+      "ues_and_read_old\022\026.sp.ste.set_parameters"
+      "\032\030.sp.ste.parameter_values\"\000\022S\n\035issue_ne"
+      "w_values_and_read_new\022\026.sp.ste.set_param"
+      "eters\032\030.sp.ste.parameter_values\"\000B+\n\027io."
+      "grpc.examples.sp_steB\014sp_ste_protoH\001P\001b\006"
+      "proto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 1727);
+      descriptor, 1806);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "sp_ste.proto", &protobuf_RegisterTypes);
 }
@@ -1342,7 +1347,10 @@ void parameter_values::InternalSwap(parameter_values* other) {
 void num_params::InitAsDefaultInstance() {
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int num_params::kCountFieldNumber;
+const int num_params::kStateCountFieldNumber;
+const int num_params::kTxCountFieldNumber;
+const int num_params::kFftCountFieldNumber;
+const int num_params::kOtherCountFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 num_params::num_params()
@@ -1358,12 +1366,16 @@ num_params::num_params(const num_params& from)
       _internal_metadata_(NULL),
       _cached_size_(0) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  count_ = from.count_;
+  ::memcpy(&state_count_, &from.state_count_,
+    static_cast<size_t>(reinterpret_cast<char*>(&other_count_) -
+    reinterpret_cast<char*>(&state_count_)) + sizeof(other_count_));
   // @@protoc_insertion_point(copy_constructor:sp.ste.num_params)
 }
 
 void num_params::SharedCtor() {
-  count_ = 0u;
+  ::memset(&state_count_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&other_count_) -
+      reinterpret_cast<char*>(&state_count_)) + sizeof(other_count_));
   _cached_size_ = 0;
 }
 
@@ -1404,7 +1416,9 @@ void num_params::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  count_ = 0u;
+  ::memset(&state_count_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&other_count_) -
+      reinterpret_cast<char*>(&state_count_)) + sizeof(other_count_));
   _internal_metadata_.Clear();
 }
 
@@ -1418,14 +1432,56 @@ bool num_params::MergePartialFromCodedStream(
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // uint32 count = 1;
+      // uint32 state_count = 1;
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(8u /* 8 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
-                 input, &count_)));
+                 input, &state_count_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // uint32 tx_count = 2;
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(16u /* 16 & 0xFF */)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &tx_count_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // uint32 fft_count = 3;
+      case 3: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(24u /* 24 & 0xFF */)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &fft_count_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // uint32 other_count = 4;
+      case 4: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(32u /* 32 & 0xFF */)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &other_count_)));
         } else {
           goto handle_unusual;
         }
@@ -1458,9 +1514,24 @@ void num_params::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // uint32 count = 1;
-  if (this->count() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteUInt32(1, this->count(), output);
+  // uint32 state_count = 1;
+  if (this->state_count() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(1, this->state_count(), output);
+  }
+
+  // uint32 tx_count = 2;
+  if (this->tx_count() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(2, this->tx_count(), output);
+  }
+
+  // uint32 fft_count = 3;
+  if (this->fft_count() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(3, this->fft_count(), output);
+  }
+
+  // uint32 other_count = 4;
+  if (this->other_count() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(4, this->other_count(), output);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -1477,9 +1548,24 @@ void num_params::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // uint32 count = 1;
-  if (this->count() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(1, this->count(), target);
+  // uint32 state_count = 1;
+  if (this->state_count() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(1, this->state_count(), target);
+  }
+
+  // uint32 tx_count = 2;
+  if (this->tx_count() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(2, this->tx_count(), target);
+  }
+
+  // uint32 fft_count = 3;
+  if (this->fft_count() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(3, this->fft_count(), target);
+  }
+
+  // uint32 other_count = 4;
+  if (this->other_count() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(4, this->other_count(), target);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -1499,11 +1585,32 @@ size_t num_params::ByteSizeLong() const {
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
-  // uint32 count = 1;
-  if (this->count() != 0) {
+  // uint32 state_count = 1;
+  if (this->state_count() != 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::UInt32Size(
-        this->count());
+        this->state_count());
+  }
+
+  // uint32 tx_count = 2;
+  if (this->tx_count() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::UInt32Size(
+        this->tx_count());
+  }
+
+  // uint32 fft_count = 3;
+  if (this->fft_count() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::UInt32Size(
+        this->fft_count());
+  }
+
+  // uint32 other_count = 4;
+  if (this->other_count() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::UInt32Size(
+        this->other_count());
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
@@ -1535,8 +1642,17 @@ void num_params::MergeFrom(const num_params& from) {
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.count() != 0) {
-    set_count(from.count());
+  if (from.state_count() != 0) {
+    set_state_count(from.state_count());
+  }
+  if (from.tx_count() != 0) {
+    set_tx_count(from.tx_count());
+  }
+  if (from.fft_count() != 0) {
+    set_fft_count(from.fft_count());
+  }
+  if (from.other_count() != 0) {
+    set_other_count(from.other_count());
   }
 }
 
@@ -1564,7 +1680,10 @@ void num_params::Swap(num_params* other) {
 }
 void num_params::InternalSwap(num_params* other) {
   using std::swap;
-  swap(count_, other->count_);
+  swap(state_count_, other->state_count_);
+  swap(tx_count_, other->tx_count_);
+  swap(fft_count_, other->fft_count_);
+  swap(other_count_, other->other_count_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
   swap(_cached_size_, other->_cached_size_);
 }
@@ -1667,14 +1786,15 @@ bool state_parameters::MergePartialFromCodedStream(
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // bool save_iq = 1;
+      // .sp.ste.state save_iq = 1;
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(8u /* 8 & 0xFF */)) {
-
+          int value;
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
-                 input, &save_iq_)));
+                   int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
+                 input, &value)));
+          set_save_iq(static_cast< ::sp::ste::state >(value));
         } else {
           goto handle_unusual;
         }
@@ -1782,9 +1902,10 @@ void state_parameters::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bool save_iq = 1;
+  // .sp.ste.state save_iq = 1;
   if (this->save_iq() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteBool(1, this->save_iq(), output);
+    ::google::protobuf::internal::WireFormatLite::WriteEnum(
+      1, this->save_iq(), output);
   }
 
   // .sp.ste.state parameter_estimate_enable = 2;
@@ -1831,9 +1952,10 @@ void state_parameters::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // bool save_iq = 1;
+  // .sp.ste.state save_iq = 1;
   if (this->save_iq() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(1, this->save_iq(), target);
+    target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
+      1, this->save_iq(), target);
   }
 
   // .sp.ste.state parameter_estimate_enable = 2;
@@ -1883,9 +2005,10 @@ size_t state_parameters::ByteSizeLong() const {
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
-  // bool save_iq = 1;
+  // .sp.ste.state save_iq = 1;
   if (this->save_iq() != 0) {
-    total_size += 1 + 1;
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::EnumSize(this->save_iq());
   }
 
   // .sp.ste.state parameter_estimate_enable = 2;

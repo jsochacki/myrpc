@@ -496,17 +496,38 @@ class num_params : public ::google::protobuf::Message /* @@protoc_insertion_poin
 
   // accessors -------------------------------------------------------
 
-  // uint32 count = 1;
-  void clear_count();
-  static const int kCountFieldNumber = 1;
-  ::google::protobuf::uint32 count() const;
-  void set_count(::google::protobuf::uint32 value);
+  // uint32 state_count = 1;
+  void clear_state_count();
+  static const int kStateCountFieldNumber = 1;
+  ::google::protobuf::uint32 state_count() const;
+  void set_state_count(::google::protobuf::uint32 value);
+
+  // uint32 tx_count = 2;
+  void clear_tx_count();
+  static const int kTxCountFieldNumber = 2;
+  ::google::protobuf::uint32 tx_count() const;
+  void set_tx_count(::google::protobuf::uint32 value);
+
+  // uint32 fft_count = 3;
+  void clear_fft_count();
+  static const int kFftCountFieldNumber = 3;
+  ::google::protobuf::uint32 fft_count() const;
+  void set_fft_count(::google::protobuf::uint32 value);
+
+  // uint32 other_count = 4;
+  void clear_other_count();
+  static const int kOtherCountFieldNumber = 4;
+  ::google::protobuf::uint32 other_count() const;
+  void set_other_count(::google::protobuf::uint32 value);
 
   // @@protoc_insertion_point(class_scope:sp.ste.num_params)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::google::protobuf::uint32 count_;
+  ::google::protobuf::uint32 state_count_;
+  ::google::protobuf::uint32 tx_count_;
+  ::google::protobuf::uint32 fft_count_;
+  ::google::protobuf::uint32 other_count_;
   mutable int _cached_size_;
   friend struct ::protobuf_sp_5fste_2eproto::TableStruct;
   friend void ::protobuf_sp_5fste_2eproto::InitDefaultsnum_paramsImpl();
@@ -595,11 +616,11 @@ class state_parameters : public ::google::protobuf::Message /* @@protoc_insertio
 
   // accessors -------------------------------------------------------
 
-  // bool save_iq = 1;
+  // .sp.ste.state save_iq = 1;
   void clear_save_iq();
   static const int kSaveIqFieldNumber = 1;
-  bool save_iq() const;
-  void set_save_iq(bool value);
+  ::sp::ste::state save_iq() const;
+  void set_save_iq(::sp::ste::state value);
 
   // .sp.ste.state parameter_estimate_enable = 2;
   void clear_parameter_estimate_enable();
@@ -635,7 +656,7 @@ class state_parameters : public ::google::protobuf::Message /* @@protoc_insertio
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  bool save_iq_;
+  int save_iq_;
   int parameter_estimate_enable_;
   int awgn_enable_;
   int notch_enable_;
@@ -1644,33 +1665,75 @@ inline void parameter_values::set_allocated_other_parameters(::sp::ste::other_pa
 
 // num_params
 
-// uint32 count = 1;
-inline void num_params::clear_count() {
-  count_ = 0u;
+// uint32 state_count = 1;
+inline void num_params::clear_state_count() {
+  state_count_ = 0u;
 }
-inline ::google::protobuf::uint32 num_params::count() const {
-  // @@protoc_insertion_point(field_get:sp.ste.num_params.count)
-  return count_;
+inline ::google::protobuf::uint32 num_params::state_count() const {
+  // @@protoc_insertion_point(field_get:sp.ste.num_params.state_count)
+  return state_count_;
 }
-inline void num_params::set_count(::google::protobuf::uint32 value) {
+inline void num_params::set_state_count(::google::protobuf::uint32 value) {
   
-  count_ = value;
-  // @@protoc_insertion_point(field_set:sp.ste.num_params.count)
+  state_count_ = value;
+  // @@protoc_insertion_point(field_set:sp.ste.num_params.state_count)
+}
+
+// uint32 tx_count = 2;
+inline void num_params::clear_tx_count() {
+  tx_count_ = 0u;
+}
+inline ::google::protobuf::uint32 num_params::tx_count() const {
+  // @@protoc_insertion_point(field_get:sp.ste.num_params.tx_count)
+  return tx_count_;
+}
+inline void num_params::set_tx_count(::google::protobuf::uint32 value) {
+  
+  tx_count_ = value;
+  // @@protoc_insertion_point(field_set:sp.ste.num_params.tx_count)
+}
+
+// uint32 fft_count = 3;
+inline void num_params::clear_fft_count() {
+  fft_count_ = 0u;
+}
+inline ::google::protobuf::uint32 num_params::fft_count() const {
+  // @@protoc_insertion_point(field_get:sp.ste.num_params.fft_count)
+  return fft_count_;
+}
+inline void num_params::set_fft_count(::google::protobuf::uint32 value) {
+  
+  fft_count_ = value;
+  // @@protoc_insertion_point(field_set:sp.ste.num_params.fft_count)
+}
+
+// uint32 other_count = 4;
+inline void num_params::clear_other_count() {
+  other_count_ = 0u;
+}
+inline ::google::protobuf::uint32 num_params::other_count() const {
+  // @@protoc_insertion_point(field_get:sp.ste.num_params.other_count)
+  return other_count_;
+}
+inline void num_params::set_other_count(::google::protobuf::uint32 value) {
+  
+  other_count_ = value;
+  // @@protoc_insertion_point(field_set:sp.ste.num_params.other_count)
 }
 
 // -------------------------------------------------------------------
 
 // state_parameters
 
-// bool save_iq = 1;
+// .sp.ste.state save_iq = 1;
 inline void state_parameters::clear_save_iq() {
-  save_iq_ = false;
+  save_iq_ = 0;
 }
-inline bool state_parameters::save_iq() const {
+inline ::sp::ste::state state_parameters::save_iq() const {
   // @@protoc_insertion_point(field_get:sp.ste.state_parameters.save_iq)
-  return save_iq_;
+  return static_cast< ::sp::ste::state >(save_iq_);
 }
-inline void state_parameters::set_save_iq(bool value) {
+inline void state_parameters::set_save_iq(::sp::ste::state value) {
   
   save_iq_ = value;
   // @@protoc_insertion_point(field_set:sp.ste.state_parameters.save_iq)

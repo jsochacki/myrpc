@@ -22,12 +22,12 @@ PROTOS_PATH = ../protos
 
 vpath %.proto $(PROTOS_PATH)
 
-all: system-check sp_ste_client sp_ste_server
+all: system-check server client
 
-sp_ste_client: sp_ste.pb.o sp_ste.grpc.pb.o sp_ste_client.o
+client: sp_ste.pb.o sp_ste.grpc.pb.o sp_ste_client.o sp_ste_client.h client.o
 	$(CXX) $^ $(LDFLAGS) -o $@
 
-sp_ste_server: sp_ste.pb.o sp_ste.grpc.pb.o sp_ste_server.o
+server: sp_ste.pb.o sp_ste.grpc.pb.o sp_ste_server.o sp_ste_server.h server.o
 	$(CXX) $^ $(LDFLAGS) -o $@
 
 .PRECIOUS: %.grpc.pb.cc
