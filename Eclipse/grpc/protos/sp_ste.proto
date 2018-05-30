@@ -6,6 +6,8 @@ option java_outer_classname = "sp_ste_proto";
 
 option optimize_for = SPEED;
 
+//import "../Reference/CommonTypes.proto";
+
 //This imports definitions from the commontypes.proto file, i don't need this
 //right now so it is commented out
 //import "CommonTypes.proto";
@@ -39,86 +41,76 @@ For enums, the default value is the first defined enum value, which must be 0.
 For message fields, the field is not set. Its exact value is language-dependent. See the generated code guide for details.
 */
 
-//ENUMS
-//enum values must be a int32 value
-enum state
+enum TxIdlePattern
 {
-    option allow_alias = true;
-    DISABLED = 0;
-    OFF = 0;
-    NOTRUNNING = 0;
-    COMPLETE = 0;
-    ENABLED = 1;
-    ON = 1;
-    RUNNING = 1;
-    INCOMPLETE = 1;
+   TX_IDLE_PATTERN_ZERO = 0;
+   TX_IDLE_PATTERN_RAMP = 1;
+   TX_IDLE_PATTERN_CW = 2; // Uses normal tone1 and tone2 parameters
 }
 
 //COMPOSITE TOP LEVEL MESSAGES
 message set_parameters
 {
-   sp.ste.num_params num_params = 1;
-   sp.ste.state_parameters state_parameters = 2;
-   sp.ste.tx_parameters tx_parameters = 3;
-   sp.ste.fft_parameters fft_parameters = 4;
-   sp.ste.other_parameters other_parameters = 5;
+   sp.ste.TestBedRpcHeader hdr = 1;
+   sp.ste.PayloadSteSingleMeasurementRxParams rx = 2;
+   sp.ste.PayloadSteSingleMeasurementTxParams tx = 3;
 }
 
 message parameter_values
 {
-   sp.ste.num_params num_params = 1;
-   sp.ste.state_parameters state_parameters = 2;
-   sp.ste.tx_parameters tx_parameters = 3;
-   sp.ste.fft_parameters fft_parameters = 4;
-   sp.ste.other_parameters other_parameters = 5;
+   sp.ste.TestBedRpcHeader hdr = 1;
+   sp.ste.PayloadSteSingleMeasurementRxParams rx = 2;
+   sp.ste.PayloadSteSingleMeasurementTxParams tx = 3;
+}
+
+message TestBedRpcHeader
+{
+   string module = 1;
+   int32  core = 2;
+}
+
+//LOWER LEVEL MESSAGES
+message PayloadSteSingleMeasurementTxParams
+{
+   float tx_freq1_Hz = 1;
+   float tx_phase1_rot = 2;
+   float tx_freq2_Hz = 3;
+   float tx_phase2_rot = 4;
+   float gain1 = 5;
+   float gain2 = 6;
+   float gain3 = 7; // For setting AWGN standard deviation
+   bool awgn_enable = 8;
+   bool notch_enable = 9; // AWGN has 50 MHz notch in center, for NPR testing
+   uint32 num_tx_samples_total = 10;
+   uint32 num_tx_samples_per_batch = 11;
+   string filebasename = 12;
+   string filename_tx_samples = 13;
+   uint64 nextTxStartTime = 14;
+   TxIdlePattern tx_idle_pattern = 15;
+   //bool save_tx_iq = 11; //not yet implemented
 }
 
 //SUB MESSAGE DEFINITIONS
-message num_params
-{
-   uint32 state_count = 1;
-   uint32 tx_count = 2;
-   uint32 fft_count = 3;
-   uint32 other_count = 4;
-}
-
-message state_parameters
-{
-   state save_iq = 1;
-   state parameter_estimate_enable = 2;
-   state awgn_enable = 3;
-   state notch_enable = 4;
-   state fft_a_enable = 5;
-   state fft_b_enable = 6;
-}
-
-message tx_parameters
-{
-   double num_tx_samples_total = 1;
-   double tx_freq1_Hz = 2;
-   double tx_freq2_Hz = 3;
-   double tx_phase1_rot = 4;
-   double tx_phase2_rot = 5;
-}
-
-message fft_parameters
+message PayloadSteSingleMeasurementRxParams
 {
    uint32 fft_length_a = 1;
-   uint32 fft_batches_a = 2;
-   uint32 fft_length_b = 3;
+   uint32 fft_length_b = 2;
+   uint32 fft_batches_a = 3;
    uint32 fft_batches_b = 4;
+   float rx_rot_freq_Hz = 5;
+   uint32 decimation = 6;
+   uint32 num_rx_samples = 7;
+   bool save_iq = 8;
+   bool fft_a_enable = 9;
+   bool fft_b_enable = 10;
+   bool parameter_estimate_enable = 11;
+   string filebasename = 12;
+   string filename_fft_a = 13;
+   string filename_fft_b = 14;
+   string filename_rx_samples = 15;
+   uint64 nextRxStartTime = 16;
 }
 
-message other_parameters
-{
-   double num_rx_samples = 1;
-   double rx_rot_freq_Hz = 2;
-   uint32 decimation = 3;
-   uint32 gain1 = 4;
-   uint32 gain2 = 5;
-   double nextTxStartTime = 6;
-   double nextRxStartTime = 7;
-}
 
 message null_message
 {

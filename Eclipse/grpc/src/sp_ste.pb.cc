@@ -31,31 +31,21 @@ class parameter_valuesDefaultTypeInternal {
   ::google::protobuf::internal::ExplicitlyConstructed<parameter_values>
       _instance;
 } _parameter_values_default_instance_;
-class num_paramsDefaultTypeInternal {
+class TestBedRpcHeaderDefaultTypeInternal {
  public:
-  ::google::protobuf::internal::ExplicitlyConstructed<num_params>
+  ::google::protobuf::internal::ExplicitlyConstructed<TestBedRpcHeader>
       _instance;
-} _num_params_default_instance_;
-class state_parametersDefaultTypeInternal {
+} _TestBedRpcHeader_default_instance_;
+class PayloadSteSingleMeasurementTxParamsDefaultTypeInternal {
  public:
-  ::google::protobuf::internal::ExplicitlyConstructed<state_parameters>
+  ::google::protobuf::internal::ExplicitlyConstructed<PayloadSteSingleMeasurementTxParams>
       _instance;
-} _state_parameters_default_instance_;
-class tx_parametersDefaultTypeInternal {
+} _PayloadSteSingleMeasurementTxParams_default_instance_;
+class PayloadSteSingleMeasurementRxParamsDefaultTypeInternal {
  public:
-  ::google::protobuf::internal::ExplicitlyConstructed<tx_parameters>
+  ::google::protobuf::internal::ExplicitlyConstructed<PayloadSteSingleMeasurementRxParams>
       _instance;
-} _tx_parameters_default_instance_;
-class fft_parametersDefaultTypeInternal {
- public:
-  ::google::protobuf::internal::ExplicitlyConstructed<fft_parameters>
-      _instance;
-} _fft_parameters_default_instance_;
-class other_parametersDefaultTypeInternal {
- public:
-  ::google::protobuf::internal::ExplicitlyConstructed<other_parameters>
-      _instance;
-} _other_parameters_default_instance_;
+} _PayloadSteSingleMeasurementRxParams_default_instance_;
 class null_messageDefaultTypeInternal {
  public:
   ::google::protobuf::internal::ExplicitlyConstructed<null_message>
@@ -72,11 +62,9 @@ void InitDefaultsset_parametersImpl() {
 #else
   ::google::protobuf::internal::InitProtobufDefaults();
 #endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  protobuf_sp_5fste_2eproto::InitDefaultsnum_params();
-  protobuf_sp_5fste_2eproto::InitDefaultsstate_parameters();
-  protobuf_sp_5fste_2eproto::InitDefaultstx_parameters();
-  protobuf_sp_5fste_2eproto::InitDefaultsfft_parameters();
-  protobuf_sp_5fste_2eproto::InitDefaultsother_parameters();
+  protobuf_sp_5fste_2eproto::InitDefaultsTestBedRpcHeader();
+  protobuf_sp_5fste_2eproto::InitDefaultsPayloadSteSingleMeasurementRxParams();
+  protobuf_sp_5fste_2eproto::InitDefaultsPayloadSteSingleMeasurementTxParams();
   {
     void* ptr = &::sp::ste::_set_parameters_default_instance_;
     new (ptr) ::sp::ste::set_parameters();
@@ -98,11 +86,9 @@ void InitDefaultsparameter_valuesImpl() {
 #else
   ::google::protobuf::internal::InitProtobufDefaults();
 #endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  protobuf_sp_5fste_2eproto::InitDefaultsnum_params();
-  protobuf_sp_5fste_2eproto::InitDefaultsstate_parameters();
-  protobuf_sp_5fste_2eproto::InitDefaultstx_parameters();
-  protobuf_sp_5fste_2eproto::InitDefaultsfft_parameters();
-  protobuf_sp_5fste_2eproto::InitDefaultsother_parameters();
+  protobuf_sp_5fste_2eproto::InitDefaultsTestBedRpcHeader();
+  protobuf_sp_5fste_2eproto::InitDefaultsPayloadSteSingleMeasurementRxParams();
+  protobuf_sp_5fste_2eproto::InitDefaultsPayloadSteSingleMeasurementTxParams();
   {
     void* ptr = &::sp::ste::_parameter_values_default_instance_;
     new (ptr) ::sp::ste::parameter_values();
@@ -116,7 +102,7 @@ void InitDefaultsparameter_values() {
   ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsparameter_valuesImpl);
 }
 
-void InitDefaultsnum_paramsImpl() {
+void InitDefaultsTestBedRpcHeaderImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
 #ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
@@ -125,19 +111,19 @@ void InitDefaultsnum_paramsImpl() {
   ::google::protobuf::internal::InitProtobufDefaults();
 #endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   {
-    void* ptr = &::sp::ste::_num_params_default_instance_;
-    new (ptr) ::sp::ste::num_params();
+    void* ptr = &::sp::ste::_TestBedRpcHeader_default_instance_;
+    new (ptr) ::sp::ste::TestBedRpcHeader();
     ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::sp::ste::num_params::InitAsDefaultInstance();
+  ::sp::ste::TestBedRpcHeader::InitAsDefaultInstance();
 }
 
-void InitDefaultsnum_params() {
+void InitDefaultsTestBedRpcHeader() {
   static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsnum_paramsImpl);
+  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsTestBedRpcHeaderImpl);
 }
 
-void InitDefaultsstate_parametersImpl() {
+void InitDefaultsPayloadSteSingleMeasurementTxParamsImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
 #ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
@@ -146,19 +132,19 @@ void InitDefaultsstate_parametersImpl() {
   ::google::protobuf::internal::InitProtobufDefaults();
 #endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   {
-    void* ptr = &::sp::ste::_state_parameters_default_instance_;
-    new (ptr) ::sp::ste::state_parameters();
+    void* ptr = &::sp::ste::_PayloadSteSingleMeasurementTxParams_default_instance_;
+    new (ptr) ::sp::ste::PayloadSteSingleMeasurementTxParams();
     ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::sp::ste::state_parameters::InitAsDefaultInstance();
+  ::sp::ste::PayloadSteSingleMeasurementTxParams::InitAsDefaultInstance();
 }
 
-void InitDefaultsstate_parameters() {
+void InitDefaultsPayloadSteSingleMeasurementTxParams() {
   static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsstate_parametersImpl);
+  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsPayloadSteSingleMeasurementTxParamsImpl);
 }
 
-void InitDefaultstx_parametersImpl() {
+void InitDefaultsPayloadSteSingleMeasurementRxParamsImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
 #ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
@@ -167,58 +153,16 @@ void InitDefaultstx_parametersImpl() {
   ::google::protobuf::internal::InitProtobufDefaults();
 #endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
   {
-    void* ptr = &::sp::ste::_tx_parameters_default_instance_;
-    new (ptr) ::sp::ste::tx_parameters();
+    void* ptr = &::sp::ste::_PayloadSteSingleMeasurementRxParams_default_instance_;
+    new (ptr) ::sp::ste::PayloadSteSingleMeasurementRxParams();
     ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::sp::ste::tx_parameters::InitAsDefaultInstance();
+  ::sp::ste::PayloadSteSingleMeasurementRxParams::InitAsDefaultInstance();
 }
 
-void InitDefaultstx_parameters() {
+void InitDefaultsPayloadSteSingleMeasurementRxParams() {
   static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultstx_parametersImpl);
-}
-
-void InitDefaultsfft_parametersImpl() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  {
-    void* ptr = &::sp::ste::_fft_parameters_default_instance_;
-    new (ptr) ::sp::ste::fft_parameters();
-    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::sp::ste::fft_parameters::InitAsDefaultInstance();
-}
-
-void InitDefaultsfft_parameters() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsfft_parametersImpl);
-}
-
-void InitDefaultsother_parametersImpl() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  ::google::protobuf::internal::InitProtobufDefaultsForceUnique();
-#else
-  ::google::protobuf::internal::InitProtobufDefaults();
-#endif  // GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
-  {
-    void* ptr = &::sp::ste::_other_parameters_default_instance_;
-    new (ptr) ::sp::ste::other_parameters();
-    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::sp::ste::other_parameters::InitAsDefaultInstance();
-}
-
-void InitDefaultsother_parameters() {
-  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
-  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsother_parametersImpl);
+  ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsPayloadSteSingleMeasurementRxParamsImpl);
 }
 
 void InitDefaultsnull_messageImpl() {
@@ -242,7 +186,7 @@ void InitDefaultsnull_message() {
   ::google::protobuf::GoogleOnceInit(&once, &InitDefaultsnull_messageImpl);
 }
 
-::google::protobuf::Metadata file_level_metadata[8];
+::google::protobuf::Metadata file_level_metadata[6];
 const ::google::protobuf::EnumDescriptor* file_level_enum_descriptors[1];
 
 const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
@@ -251,72 +195,65 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sp::ste::set_parameters, num_params_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sp::ste::set_parameters, state_parameters_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sp::ste::set_parameters, tx_parameters_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sp::ste::set_parameters, fft_parameters_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sp::ste::set_parameters, other_parameters_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sp::ste::set_parameters, hdr_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sp::ste::set_parameters, rx_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sp::ste::set_parameters, tx_),
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sp::ste::parameter_values, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sp::ste::parameter_values, num_params_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sp::ste::parameter_values, state_parameters_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sp::ste::parameter_values, tx_parameters_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sp::ste::parameter_values, fft_parameters_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sp::ste::parameter_values, other_parameters_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sp::ste::parameter_values, hdr_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sp::ste::parameter_values, rx_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sp::ste::parameter_values, tx_),
   ~0u,  // no _has_bits_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sp::ste::num_params, _internal_metadata_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sp::ste::TestBedRpcHeader, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sp::ste::num_params, state_count_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sp::ste::num_params, tx_count_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sp::ste::num_params, fft_count_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sp::ste::num_params, other_count_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sp::ste::TestBedRpcHeader, module_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sp::ste::TestBedRpcHeader, core_),
   ~0u,  // no _has_bits_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sp::ste::state_parameters, _internal_metadata_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sp::ste::PayloadSteSingleMeasurementTxParams, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sp::ste::state_parameters, save_iq_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sp::ste::state_parameters, parameter_estimate_enable_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sp::ste::state_parameters, awgn_enable_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sp::ste::state_parameters, notch_enable_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sp::ste::state_parameters, fft_a_enable_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sp::ste::state_parameters, fft_b_enable_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sp::ste::PayloadSteSingleMeasurementTxParams, tx_freq1_hz_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sp::ste::PayloadSteSingleMeasurementTxParams, tx_phase1_rot_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sp::ste::PayloadSteSingleMeasurementTxParams, tx_freq2_hz_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sp::ste::PayloadSteSingleMeasurementTxParams, tx_phase2_rot_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sp::ste::PayloadSteSingleMeasurementTxParams, gain1_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sp::ste::PayloadSteSingleMeasurementTxParams, gain2_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sp::ste::PayloadSteSingleMeasurementTxParams, gain3_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sp::ste::PayloadSteSingleMeasurementTxParams, awgn_enable_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sp::ste::PayloadSteSingleMeasurementTxParams, notch_enable_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sp::ste::PayloadSteSingleMeasurementTxParams, num_tx_samples_total_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sp::ste::PayloadSteSingleMeasurementTxParams, num_tx_samples_per_batch_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sp::ste::PayloadSteSingleMeasurementTxParams, filebasename_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sp::ste::PayloadSteSingleMeasurementTxParams, filename_tx_samples_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sp::ste::PayloadSteSingleMeasurementTxParams, nexttxstarttime_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sp::ste::PayloadSteSingleMeasurementTxParams, tx_idle_pattern_),
   ~0u,  // no _has_bits_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sp::ste::tx_parameters, _internal_metadata_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sp::ste::PayloadSteSingleMeasurementRxParams, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sp::ste::tx_parameters, num_tx_samples_total_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sp::ste::tx_parameters, tx_freq1_hz_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sp::ste::tx_parameters, tx_freq2_hz_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sp::ste::tx_parameters, tx_phase1_rot_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sp::ste::tx_parameters, tx_phase2_rot_),
-  ~0u,  // no _has_bits_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sp::ste::fft_parameters, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sp::ste::fft_parameters, fft_length_a_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sp::ste::fft_parameters, fft_batches_a_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sp::ste::fft_parameters, fft_length_b_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sp::ste::fft_parameters, fft_batches_b_),
-  ~0u,  // no _has_bits_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sp::ste::other_parameters, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sp::ste::other_parameters, num_rx_samples_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sp::ste::other_parameters, rx_rot_freq_hz_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sp::ste::other_parameters, decimation_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sp::ste::other_parameters, gain1_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sp::ste::other_parameters, gain2_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sp::ste::other_parameters, nexttxstarttime_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sp::ste::other_parameters, nextrxstarttime_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sp::ste::PayloadSteSingleMeasurementRxParams, fft_length_a_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sp::ste::PayloadSteSingleMeasurementRxParams, fft_length_b_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sp::ste::PayloadSteSingleMeasurementRxParams, fft_batches_a_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sp::ste::PayloadSteSingleMeasurementRxParams, fft_batches_b_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sp::ste::PayloadSteSingleMeasurementRxParams, rx_rot_freq_hz_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sp::ste::PayloadSteSingleMeasurementRxParams, decimation_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sp::ste::PayloadSteSingleMeasurementRxParams, num_rx_samples_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sp::ste::PayloadSteSingleMeasurementRxParams, save_iq_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sp::ste::PayloadSteSingleMeasurementRxParams, fft_a_enable_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sp::ste::PayloadSteSingleMeasurementRxParams, fft_b_enable_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sp::ste::PayloadSteSingleMeasurementRxParams, parameter_estimate_enable_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sp::ste::PayloadSteSingleMeasurementRxParams, filebasename_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sp::ste::PayloadSteSingleMeasurementRxParams, filename_fft_a_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sp::ste::PayloadSteSingleMeasurementRxParams, filename_fft_b_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sp::ste::PayloadSteSingleMeasurementRxParams, filename_rx_samples_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sp::ste::PayloadSteSingleMeasurementRxParams, nextrxstarttime_),
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::sp::ste::null_message, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -325,23 +262,19 @@ const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUT
 };
 static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::sp::ste::set_parameters)},
-  { 10, -1, sizeof(::sp::ste::parameter_values)},
-  { 20, -1, sizeof(::sp::ste::num_params)},
-  { 29, -1, sizeof(::sp::ste::state_parameters)},
-  { 40, -1, sizeof(::sp::ste::tx_parameters)},
-  { 50, -1, sizeof(::sp::ste::fft_parameters)},
-  { 59, -1, sizeof(::sp::ste::other_parameters)},
-  { 71, -1, sizeof(::sp::ste::null_message)},
+  { 8, -1, sizeof(::sp::ste::parameter_values)},
+  { 16, -1, sizeof(::sp::ste::TestBedRpcHeader)},
+  { 23, -1, sizeof(::sp::ste::PayloadSteSingleMeasurementTxParams)},
+  { 43, -1, sizeof(::sp::ste::PayloadSteSingleMeasurementRxParams)},
+  { 64, -1, sizeof(::sp::ste::null_message)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
   reinterpret_cast<const ::google::protobuf::Message*>(&::sp::ste::_set_parameters_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::sp::ste::_parameter_values_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::sp::ste::_num_params_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::sp::ste::_state_parameters_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::sp::ste::_tx_parameters_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::sp::ste::_fft_parameters_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::sp::ste::_other_parameters_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::sp::ste::_TestBedRpcHeader_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::sp::ste::_PayloadSteSingleMeasurementTxParams_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::sp::ste::_PayloadSteSingleMeasurementRxParams_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::sp::ste::_null_message_default_instance_),
 };
 
@@ -361,61 +294,59 @@ void protobuf_AssignDescriptorsOnce() {
 void protobuf_RegisterTypes(const ::std::string&) GOOGLE_PROTOBUF_ATTRIBUTE_COLD;
 void protobuf_RegisterTypes(const ::std::string&) {
   protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 8);
+  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 6);
 }
 
 void AddDescriptorsImpl() {
   InitDefaults();
   static const char descriptor[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
-      "\n\014sp_ste.proto\022\006sp.ste\"\376\001\n\016set_parameter"
-      "s\022&\n\nnum_params\030\001 \001(\0132\022.sp.ste.num_param"
-      "s\0222\n\020state_parameters\030\002 \001(\0132\030.sp.ste.sta"
-      "te_parameters\022,\n\rtx_parameters\030\003 \001(\0132\025.s"
-      "p.ste.tx_parameters\022.\n\016fft_parameters\030\004 "
-      "\001(\0132\026.sp.ste.fft_parameters\0222\n\020other_par"
-      "ameters\030\005 \001(\0132\030.sp.ste.other_parameters\""
-      "\200\002\n\020parameter_values\022&\n\nnum_params\030\001 \001(\013"
-      "2\022.sp.ste.num_params\0222\n\020state_parameters"
-      "\030\002 \001(\0132\030.sp.ste.state_parameters\022,\n\rtx_p"
-      "arameters\030\003 \001(\0132\025.sp.ste.tx_parameters\022."
-      "\n\016fft_parameters\030\004 \001(\0132\026.sp.ste.fft_para"
-      "meters\0222\n\020other_parameters\030\005 \001(\0132\030.sp.st"
-      "e.other_parameters\"[\n\nnum_params\022\023\n\013stat"
-      "e_count\030\001 \001(\r\022\020\n\010tx_count\030\002 \001(\r\022\021\n\tfft_c"
-      "ount\030\003 \001(\r\022\023\n\013other_count\030\004 \001(\r\"\367\001\n\020stat"
-      "e_parameters\022\036\n\007save_iq\030\001 \001(\0162\r.sp.ste.s"
-      "tate\0220\n\031parameter_estimate_enable\030\002 \001(\0162"
-      "\r.sp.ste.state\022\"\n\013awgn_enable\030\003 \001(\0162\r.sp"
-      ".ste.state\022#\n\014notch_enable\030\004 \001(\0162\r.sp.st"
-      "e.state\022#\n\014fft_a_enable\030\005 \001(\0162\r.sp.ste.s"
-      "tate\022#\n\014fft_b_enable\030\006 \001(\0162\r.sp.ste.stat"
-      "e\"\205\001\n\rtx_parameters\022\034\n\024num_tx_samples_to"
-      "tal\030\001 \001(\001\022\023\n\013tx_freq1_Hz\030\002 \001(\001\022\023\n\013tx_fre"
-      "q2_Hz\030\003 \001(\001\022\025\n\rtx_phase1_rot\030\004 \001(\001\022\025\n\rtx"
-      "_phase2_rot\030\005 \001(\001\"j\n\016fft_parameters\022\024\n\014f"
-      "ft_length_a\030\001 \001(\r\022\025\n\rfft_batches_a\030\002 \001(\r"
-      "\022\024\n\014fft_length_b\030\003 \001(\r\022\025\n\rfft_batches_b\030"
-      "\004 \001(\r\"\246\001\n\020other_parameters\022\026\n\016num_rx_sam"
-      "ples\030\001 \001(\001\022\026\n\016rx_rot_freq_Hz\030\002 \001(\001\022\022\n\nde"
-      "cimation\030\003 \001(\r\022\r\n\005gain1\030\004 \001(\r\022\r\n\005gain2\030\005"
-      " \001(\r\022\027\n\017nextTxStartTime\030\006 \001(\001\022\027\n\017nextRxS"
-      "tartTime\030\007 \001(\001\"\016\n\014null_message*r\n\005state\022"
-      "\014\n\010DISABLED\020\000\022\007\n\003OFF\020\000\022\016\n\nNOTRUNNING\020\000\022\014"
-      "\n\010COMPLETE\020\000\022\013\n\007ENABLED\020\001\022\006\n\002ON\020\001\022\013\n\007RUN"
-      "NING\020\001\022\016\n\nINCOMPLETE\020\001\032\002\020\0012\304\002\n\016sp_ste_co"
-      "ntrol\022>\n\010loopback\022\026.sp.ste.set_parameter"
-      "s\032\030.sp.ste.parameter_values\"\000\022H\n\024check_c"
-      "urrent_values\022\024.sp.ste.null_message\032\030.sp"
-      ".ste.parameter_values\"\000\022S\n\035issue_new_val"
-      "ues_and_read_old\022\026.sp.ste.set_parameters"
-      "\032\030.sp.ste.parameter_values\"\000\022S\n\035issue_ne"
-      "w_values_and_read_new\022\026.sp.ste.set_param"
-      "eters\032\030.sp.ste.parameter_values\"\000B+\n\027io."
-      "grpc.examples.sp_steB\014sp_ste_protoH\001P\001b\006"
-      "proto3"
+      "\n\014sp_ste.proto\022\006sp.ste\"\251\001\n\016set_parameter"
+      "s\022%\n\003hdr\030\001 \001(\0132\030.sp.ste.TestBedRpcHeader"
+      "\0227\n\002rx\030\002 \001(\0132+.sp.ste.PayloadSteSingleMe"
+      "asurementRxParams\0227\n\002tx\030\003 \001(\0132+.sp.ste.P"
+      "ayloadSteSingleMeasurementTxParams\"\253\001\n\020p"
+      "arameter_values\022%\n\003hdr\030\001 \001(\0132\030.sp.ste.Te"
+      "stBedRpcHeader\0227\n\002rx\030\002 \001(\0132+.sp.ste.Payl"
+      "oadSteSingleMeasurementRxParams\0227\n\002tx\030\003 "
+      "\001(\0132+.sp.ste.PayloadSteSingleMeasurement"
+      "TxParams\"0\n\020TestBedRpcHeader\022\016\n\006module\030\001"
+      " \001(\t\022\014\n\004core\030\002 \001(\005\"\221\003\n#PayloadSteSingleM"
+      "easurementTxParams\022\023\n\013tx_freq1_Hz\030\001 \001(\002\022"
+      "\025\n\rtx_phase1_rot\030\002 \001(\002\022\023\n\013tx_freq2_Hz\030\003 "
+      "\001(\002\022\025\n\rtx_phase2_rot\030\004 \001(\002\022\r\n\005gain1\030\005 \001("
+      "\002\022\r\n\005gain2\030\006 \001(\002\022\r\n\005gain3\030\007 \001(\002\022\023\n\013awgn_"
+      "enable\030\010 \001(\010\022\024\n\014notch_enable\030\t \001(\010\022\034\n\024nu"
+      "m_tx_samples_total\030\n \001(\r\022 \n\030num_tx_sampl"
+      "es_per_batch\030\013 \001(\r\022\024\n\014filebasename\030\014 \001(\t"
+      "\022\033\n\023filename_tx_samples\030\r \001(\t\022\027\n\017nextTxS"
+      "tartTime\030\016 \001(\004\022.\n\017tx_idle_pattern\030\017 \001(\0162"
+      "\025.sp.ste.TxIdlePattern\"\237\003\n#PayloadSteSin"
+      "gleMeasurementRxParams\022\024\n\014fft_length_a\030\001"
+      " \001(\r\022\024\n\014fft_length_b\030\002 \001(\r\022\025\n\rfft_batche"
+      "s_a\030\003 \001(\r\022\025\n\rfft_batches_b\030\004 \001(\r\022\026\n\016rx_r"
+      "ot_freq_Hz\030\005 \001(\002\022\022\n\ndecimation\030\006 \001(\r\022\026\n\016"
+      "num_rx_samples\030\007 \001(\r\022\017\n\007save_iq\030\010 \001(\010\022\024\n"
+      "\014fft_a_enable\030\t \001(\010\022\024\n\014fft_b_enable\030\n \001("
+      "\010\022!\n\031parameter_estimate_enable\030\013 \001(\010\022\024\n\014"
+      "filebasename\030\014 \001(\t\022\026\n\016filename_fft_a\030\r \001"
+      "(\t\022\026\n\016filename_fft_b\030\016 \001(\t\022\033\n\023filename_r"
+      "x_samples\030\017 \001(\t\022\027\n\017nextRxStartTime\030\020 \001(\004"
+      "\"\016\n\014null_message*[\n\rTxIdlePattern\022\030\n\024TX_"
+      "IDLE_PATTERN_ZERO\020\000\022\030\n\024TX_IDLE_PATTERN_R"
+      "AMP\020\001\022\026\n\022TX_IDLE_PATTERN_CW\020\0022\304\002\n\016sp_ste"
+      "_control\022>\n\010loopback\022\026.sp.ste.set_parame"
+      "ters\032\030.sp.ste.parameter_values\"\000\022H\n\024chec"
+      "k_current_values\022\024.sp.ste.null_message\032\030"
+      ".sp.ste.parameter_values\"\000\022S\n\035issue_new_"
+      "values_and_read_old\022\026.sp.ste.set_paramet"
+      "ers\032\030.sp.ste.parameter_values\"\000\022S\n\035issue"
+      "_new_values_and_read_new\022\026.sp.ste.set_pa"
+      "rameters\032\030.sp.ste.parameter_values\"\000B+\n\027"
+      "io.grpc.examples.sp_steB\014sp_ste_protoH\001P"
+      "\001b\006proto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 1806);
+      descriptor, 1729);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "sp_ste.proto", &protobuf_RegisterTypes);
 }
@@ -433,14 +364,15 @@ struct StaticDescriptorInitializer {
 }  // namespace protobuf_sp_5fste_2eproto
 namespace sp {
 namespace ste {
-const ::google::protobuf::EnumDescriptor* state_descriptor() {
+const ::google::protobuf::EnumDescriptor* TxIdlePattern_descriptor() {
   protobuf_sp_5fste_2eproto::protobuf_AssignDescriptorsOnce();
   return protobuf_sp_5fste_2eproto::file_level_enum_descriptors[0];
 }
-bool state_IsValid(int value) {
+bool TxIdlePattern_IsValid(int value) {
   switch (value) {
     case 0:
     case 1:
+    case 2:
       return true;
     default:
       return false;
@@ -451,23 +383,17 @@ bool state_IsValid(int value) {
 // ===================================================================
 
 void set_parameters::InitAsDefaultInstance() {
-  ::sp::ste::_set_parameters_default_instance_._instance.get_mutable()->num_params_ = const_cast< ::sp::ste::num_params*>(
-      ::sp::ste::num_params::internal_default_instance());
-  ::sp::ste::_set_parameters_default_instance_._instance.get_mutable()->state_parameters_ = const_cast< ::sp::ste::state_parameters*>(
-      ::sp::ste::state_parameters::internal_default_instance());
-  ::sp::ste::_set_parameters_default_instance_._instance.get_mutable()->tx_parameters_ = const_cast< ::sp::ste::tx_parameters*>(
-      ::sp::ste::tx_parameters::internal_default_instance());
-  ::sp::ste::_set_parameters_default_instance_._instance.get_mutable()->fft_parameters_ = const_cast< ::sp::ste::fft_parameters*>(
-      ::sp::ste::fft_parameters::internal_default_instance());
-  ::sp::ste::_set_parameters_default_instance_._instance.get_mutable()->other_parameters_ = const_cast< ::sp::ste::other_parameters*>(
-      ::sp::ste::other_parameters::internal_default_instance());
+  ::sp::ste::_set_parameters_default_instance_._instance.get_mutable()->hdr_ = const_cast< ::sp::ste::TestBedRpcHeader*>(
+      ::sp::ste::TestBedRpcHeader::internal_default_instance());
+  ::sp::ste::_set_parameters_default_instance_._instance.get_mutable()->rx_ = const_cast< ::sp::ste::PayloadSteSingleMeasurementRxParams*>(
+      ::sp::ste::PayloadSteSingleMeasurementRxParams::internal_default_instance());
+  ::sp::ste::_set_parameters_default_instance_._instance.get_mutable()->tx_ = const_cast< ::sp::ste::PayloadSteSingleMeasurementTxParams*>(
+      ::sp::ste::PayloadSteSingleMeasurementTxParams::internal_default_instance());
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int set_parameters::kNumParamsFieldNumber;
-const int set_parameters::kStateParametersFieldNumber;
-const int set_parameters::kTxParametersFieldNumber;
-const int set_parameters::kFftParametersFieldNumber;
-const int set_parameters::kOtherParametersFieldNumber;
+const int set_parameters::kHdrFieldNumber;
+const int set_parameters::kRxFieldNumber;
+const int set_parameters::kTxFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 set_parameters::set_parameters()
@@ -483,38 +409,28 @@ set_parameters::set_parameters(const set_parameters& from)
       _internal_metadata_(NULL),
       _cached_size_(0) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  if (from.has_num_params()) {
-    num_params_ = new ::sp::ste::num_params(*from.num_params_);
+  if (from.has_hdr()) {
+    hdr_ = new ::sp::ste::TestBedRpcHeader(*from.hdr_);
   } else {
-    num_params_ = NULL;
+    hdr_ = NULL;
   }
-  if (from.has_state_parameters()) {
-    state_parameters_ = new ::sp::ste::state_parameters(*from.state_parameters_);
+  if (from.has_rx()) {
+    rx_ = new ::sp::ste::PayloadSteSingleMeasurementRxParams(*from.rx_);
   } else {
-    state_parameters_ = NULL;
+    rx_ = NULL;
   }
-  if (from.has_tx_parameters()) {
-    tx_parameters_ = new ::sp::ste::tx_parameters(*from.tx_parameters_);
+  if (from.has_tx()) {
+    tx_ = new ::sp::ste::PayloadSteSingleMeasurementTxParams(*from.tx_);
   } else {
-    tx_parameters_ = NULL;
-  }
-  if (from.has_fft_parameters()) {
-    fft_parameters_ = new ::sp::ste::fft_parameters(*from.fft_parameters_);
-  } else {
-    fft_parameters_ = NULL;
-  }
-  if (from.has_other_parameters()) {
-    other_parameters_ = new ::sp::ste::other_parameters(*from.other_parameters_);
-  } else {
-    other_parameters_ = NULL;
+    tx_ = NULL;
   }
   // @@protoc_insertion_point(copy_constructor:sp.ste.set_parameters)
 }
 
 void set_parameters::SharedCtor() {
-  ::memset(&num_params_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&other_parameters_) -
-      reinterpret_cast<char*>(&num_params_)) + sizeof(other_parameters_));
+  ::memset(&hdr_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&tx_) -
+      reinterpret_cast<char*>(&hdr_)) + sizeof(tx_));
   _cached_size_ = 0;
 }
 
@@ -524,11 +440,9 @@ set_parameters::~set_parameters() {
 }
 
 void set_parameters::SharedDtor() {
-  if (this != internal_default_instance()) delete num_params_;
-  if (this != internal_default_instance()) delete state_parameters_;
-  if (this != internal_default_instance()) delete tx_parameters_;
-  if (this != internal_default_instance()) delete fft_parameters_;
-  if (this != internal_default_instance()) delete other_parameters_;
+  if (this != internal_default_instance()) delete hdr_;
+  if (this != internal_default_instance()) delete rx_;
+  if (this != internal_default_instance()) delete tx_;
 }
 
 void set_parameters::SetCachedSize(int size) const {
@@ -560,26 +474,18 @@ void set_parameters::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArenaNoVirtual() == NULL && num_params_ != NULL) {
-    delete num_params_;
+  if (GetArenaNoVirtual() == NULL && hdr_ != NULL) {
+    delete hdr_;
   }
-  num_params_ = NULL;
-  if (GetArenaNoVirtual() == NULL && state_parameters_ != NULL) {
-    delete state_parameters_;
+  hdr_ = NULL;
+  if (GetArenaNoVirtual() == NULL && rx_ != NULL) {
+    delete rx_;
   }
-  state_parameters_ = NULL;
-  if (GetArenaNoVirtual() == NULL && tx_parameters_ != NULL) {
-    delete tx_parameters_;
+  rx_ = NULL;
+  if (GetArenaNoVirtual() == NULL && tx_ != NULL) {
+    delete tx_;
   }
-  tx_parameters_ = NULL;
-  if (GetArenaNoVirtual() == NULL && fft_parameters_ != NULL) {
-    delete fft_parameters_;
-  }
-  fft_parameters_ = NULL;
-  if (GetArenaNoVirtual() == NULL && other_parameters_ != NULL) {
-    delete other_parameters_;
-  }
-  other_parameters_ = NULL;
+  tx_ = NULL;
   _internal_metadata_.Clear();
 }
 
@@ -593,60 +499,36 @@ bool set_parameters::MergePartialFromCodedStream(
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // .sp.ste.num_params num_params = 1;
+      // .sp.ste.TestBedRpcHeader hdr = 1;
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_num_params()));
+               input, mutable_hdr()));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // .sp.ste.state_parameters state_parameters = 2;
+      // .sp.ste.PayloadSteSingleMeasurementRxParams rx = 2;
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_state_parameters()));
+               input, mutable_rx()));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // .sp.ste.tx_parameters tx_parameters = 3;
+      // .sp.ste.PayloadSteSingleMeasurementTxParams tx = 3;
       case 3: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(26u /* 26 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_tx_parameters()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .sp.ste.fft_parameters fft_parameters = 4;
-      case 4: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(34u /* 34 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_fft_parameters()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .sp.ste.other_parameters other_parameters = 5;
-      case 5: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(42u /* 42 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_other_parameters()));
+               input, mutable_tx()));
         } else {
           goto handle_unusual;
         }
@@ -679,34 +561,22 @@ void set_parameters::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .sp.ste.num_params num_params = 1;
-  if (this->has_num_params()) {
+  // .sp.ste.TestBedRpcHeader hdr = 1;
+  if (this->has_hdr()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, *this->num_params_, output);
+      1, *this->hdr_, output);
   }
 
-  // .sp.ste.state_parameters state_parameters = 2;
-  if (this->has_state_parameters()) {
+  // .sp.ste.PayloadSteSingleMeasurementRxParams rx = 2;
+  if (this->has_rx()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2, *this->state_parameters_, output);
+      2, *this->rx_, output);
   }
 
-  // .sp.ste.tx_parameters tx_parameters = 3;
-  if (this->has_tx_parameters()) {
+  // .sp.ste.PayloadSteSingleMeasurementTxParams tx = 3;
+  if (this->has_tx()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      3, *this->tx_parameters_, output);
-  }
-
-  // .sp.ste.fft_parameters fft_parameters = 4;
-  if (this->has_fft_parameters()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      4, *this->fft_parameters_, output);
-  }
-
-  // .sp.ste.other_parameters other_parameters = 5;
-  if (this->has_other_parameters()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      5, *this->other_parameters_, output);
+      3, *this->tx_, output);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -723,39 +593,25 @@ void set_parameters::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .sp.ste.num_params num_params = 1;
-  if (this->has_num_params()) {
+  // .sp.ste.TestBedRpcHeader hdr = 1;
+  if (this->has_hdr()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        1, *this->num_params_, deterministic, target);
+        1, *this->hdr_, deterministic, target);
   }
 
-  // .sp.ste.state_parameters state_parameters = 2;
-  if (this->has_state_parameters()) {
+  // .sp.ste.PayloadSteSingleMeasurementRxParams rx = 2;
+  if (this->has_rx()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        2, *this->state_parameters_, deterministic, target);
+        2, *this->rx_, deterministic, target);
   }
 
-  // .sp.ste.tx_parameters tx_parameters = 3;
-  if (this->has_tx_parameters()) {
+  // .sp.ste.PayloadSteSingleMeasurementTxParams tx = 3;
+  if (this->has_tx()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        3, *this->tx_parameters_, deterministic, target);
-  }
-
-  // .sp.ste.fft_parameters fft_parameters = 4;
-  if (this->has_fft_parameters()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        4, *this->fft_parameters_, deterministic, target);
-  }
-
-  // .sp.ste.other_parameters other_parameters = 5;
-  if (this->has_other_parameters()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        5, *this->other_parameters_, deterministic, target);
+        3, *this->tx_, deterministic, target);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -775,39 +631,25 @@ size_t set_parameters::ByteSizeLong() const {
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
-  // .sp.ste.num_params num_params = 1;
-  if (this->has_num_params()) {
+  // .sp.ste.TestBedRpcHeader hdr = 1;
+  if (this->has_hdr()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *this->num_params_);
+        *this->hdr_);
   }
 
-  // .sp.ste.state_parameters state_parameters = 2;
-  if (this->has_state_parameters()) {
+  // .sp.ste.PayloadSteSingleMeasurementRxParams rx = 2;
+  if (this->has_rx()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *this->state_parameters_);
+        *this->rx_);
   }
 
-  // .sp.ste.tx_parameters tx_parameters = 3;
-  if (this->has_tx_parameters()) {
+  // .sp.ste.PayloadSteSingleMeasurementTxParams tx = 3;
+  if (this->has_tx()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *this->tx_parameters_);
-  }
-
-  // .sp.ste.fft_parameters fft_parameters = 4;
-  if (this->has_fft_parameters()) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *this->fft_parameters_);
-  }
-
-  // .sp.ste.other_parameters other_parameters = 5;
-  if (this->has_other_parameters()) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *this->other_parameters_);
+        *this->tx_);
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
@@ -839,20 +681,14 @@ void set_parameters::MergeFrom(const set_parameters& from) {
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_num_params()) {
-    mutable_num_params()->::sp::ste::num_params::MergeFrom(from.num_params());
+  if (from.has_hdr()) {
+    mutable_hdr()->::sp::ste::TestBedRpcHeader::MergeFrom(from.hdr());
   }
-  if (from.has_state_parameters()) {
-    mutable_state_parameters()->::sp::ste::state_parameters::MergeFrom(from.state_parameters());
+  if (from.has_rx()) {
+    mutable_rx()->::sp::ste::PayloadSteSingleMeasurementRxParams::MergeFrom(from.rx());
   }
-  if (from.has_tx_parameters()) {
-    mutable_tx_parameters()->::sp::ste::tx_parameters::MergeFrom(from.tx_parameters());
-  }
-  if (from.has_fft_parameters()) {
-    mutable_fft_parameters()->::sp::ste::fft_parameters::MergeFrom(from.fft_parameters());
-  }
-  if (from.has_other_parameters()) {
-    mutable_other_parameters()->::sp::ste::other_parameters::MergeFrom(from.other_parameters());
+  if (from.has_tx()) {
+    mutable_tx()->::sp::ste::PayloadSteSingleMeasurementTxParams::MergeFrom(from.tx());
   }
 }
 
@@ -880,11 +716,9 @@ void set_parameters::Swap(set_parameters* other) {
 }
 void set_parameters::InternalSwap(set_parameters* other) {
   using std::swap;
-  swap(num_params_, other->num_params_);
-  swap(state_parameters_, other->state_parameters_);
-  swap(tx_parameters_, other->tx_parameters_);
-  swap(fft_parameters_, other->fft_parameters_);
-  swap(other_parameters_, other->other_parameters_);
+  swap(hdr_, other->hdr_);
+  swap(rx_, other->rx_);
+  swap(tx_, other->tx_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
   swap(_cached_size_, other->_cached_size_);
 }
@@ -898,23 +732,17 @@ void set_parameters::InternalSwap(set_parameters* other) {
 // ===================================================================
 
 void parameter_values::InitAsDefaultInstance() {
-  ::sp::ste::_parameter_values_default_instance_._instance.get_mutable()->num_params_ = const_cast< ::sp::ste::num_params*>(
-      ::sp::ste::num_params::internal_default_instance());
-  ::sp::ste::_parameter_values_default_instance_._instance.get_mutable()->state_parameters_ = const_cast< ::sp::ste::state_parameters*>(
-      ::sp::ste::state_parameters::internal_default_instance());
-  ::sp::ste::_parameter_values_default_instance_._instance.get_mutable()->tx_parameters_ = const_cast< ::sp::ste::tx_parameters*>(
-      ::sp::ste::tx_parameters::internal_default_instance());
-  ::sp::ste::_parameter_values_default_instance_._instance.get_mutable()->fft_parameters_ = const_cast< ::sp::ste::fft_parameters*>(
-      ::sp::ste::fft_parameters::internal_default_instance());
-  ::sp::ste::_parameter_values_default_instance_._instance.get_mutable()->other_parameters_ = const_cast< ::sp::ste::other_parameters*>(
-      ::sp::ste::other_parameters::internal_default_instance());
+  ::sp::ste::_parameter_values_default_instance_._instance.get_mutable()->hdr_ = const_cast< ::sp::ste::TestBedRpcHeader*>(
+      ::sp::ste::TestBedRpcHeader::internal_default_instance());
+  ::sp::ste::_parameter_values_default_instance_._instance.get_mutable()->rx_ = const_cast< ::sp::ste::PayloadSteSingleMeasurementRxParams*>(
+      ::sp::ste::PayloadSteSingleMeasurementRxParams::internal_default_instance());
+  ::sp::ste::_parameter_values_default_instance_._instance.get_mutable()->tx_ = const_cast< ::sp::ste::PayloadSteSingleMeasurementTxParams*>(
+      ::sp::ste::PayloadSteSingleMeasurementTxParams::internal_default_instance());
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int parameter_values::kNumParamsFieldNumber;
-const int parameter_values::kStateParametersFieldNumber;
-const int parameter_values::kTxParametersFieldNumber;
-const int parameter_values::kFftParametersFieldNumber;
-const int parameter_values::kOtherParametersFieldNumber;
+const int parameter_values::kHdrFieldNumber;
+const int parameter_values::kRxFieldNumber;
+const int parameter_values::kTxFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 parameter_values::parameter_values()
@@ -930,38 +758,28 @@ parameter_values::parameter_values(const parameter_values& from)
       _internal_metadata_(NULL),
       _cached_size_(0) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  if (from.has_num_params()) {
-    num_params_ = new ::sp::ste::num_params(*from.num_params_);
+  if (from.has_hdr()) {
+    hdr_ = new ::sp::ste::TestBedRpcHeader(*from.hdr_);
   } else {
-    num_params_ = NULL;
+    hdr_ = NULL;
   }
-  if (from.has_state_parameters()) {
-    state_parameters_ = new ::sp::ste::state_parameters(*from.state_parameters_);
+  if (from.has_rx()) {
+    rx_ = new ::sp::ste::PayloadSteSingleMeasurementRxParams(*from.rx_);
   } else {
-    state_parameters_ = NULL;
+    rx_ = NULL;
   }
-  if (from.has_tx_parameters()) {
-    tx_parameters_ = new ::sp::ste::tx_parameters(*from.tx_parameters_);
+  if (from.has_tx()) {
+    tx_ = new ::sp::ste::PayloadSteSingleMeasurementTxParams(*from.tx_);
   } else {
-    tx_parameters_ = NULL;
-  }
-  if (from.has_fft_parameters()) {
-    fft_parameters_ = new ::sp::ste::fft_parameters(*from.fft_parameters_);
-  } else {
-    fft_parameters_ = NULL;
-  }
-  if (from.has_other_parameters()) {
-    other_parameters_ = new ::sp::ste::other_parameters(*from.other_parameters_);
-  } else {
-    other_parameters_ = NULL;
+    tx_ = NULL;
   }
   // @@protoc_insertion_point(copy_constructor:sp.ste.parameter_values)
 }
 
 void parameter_values::SharedCtor() {
-  ::memset(&num_params_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&other_parameters_) -
-      reinterpret_cast<char*>(&num_params_)) + sizeof(other_parameters_));
+  ::memset(&hdr_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&tx_) -
+      reinterpret_cast<char*>(&hdr_)) + sizeof(tx_));
   _cached_size_ = 0;
 }
 
@@ -971,11 +789,9 @@ parameter_values::~parameter_values() {
 }
 
 void parameter_values::SharedDtor() {
-  if (this != internal_default_instance()) delete num_params_;
-  if (this != internal_default_instance()) delete state_parameters_;
-  if (this != internal_default_instance()) delete tx_parameters_;
-  if (this != internal_default_instance()) delete fft_parameters_;
-  if (this != internal_default_instance()) delete other_parameters_;
+  if (this != internal_default_instance()) delete hdr_;
+  if (this != internal_default_instance()) delete rx_;
+  if (this != internal_default_instance()) delete tx_;
 }
 
 void parameter_values::SetCachedSize(int size) const {
@@ -1007,26 +823,18 @@ void parameter_values::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArenaNoVirtual() == NULL && num_params_ != NULL) {
-    delete num_params_;
+  if (GetArenaNoVirtual() == NULL && hdr_ != NULL) {
+    delete hdr_;
   }
-  num_params_ = NULL;
-  if (GetArenaNoVirtual() == NULL && state_parameters_ != NULL) {
-    delete state_parameters_;
+  hdr_ = NULL;
+  if (GetArenaNoVirtual() == NULL && rx_ != NULL) {
+    delete rx_;
   }
-  state_parameters_ = NULL;
-  if (GetArenaNoVirtual() == NULL && tx_parameters_ != NULL) {
-    delete tx_parameters_;
+  rx_ = NULL;
+  if (GetArenaNoVirtual() == NULL && tx_ != NULL) {
+    delete tx_;
   }
-  tx_parameters_ = NULL;
-  if (GetArenaNoVirtual() == NULL && fft_parameters_ != NULL) {
-    delete fft_parameters_;
-  }
-  fft_parameters_ = NULL;
-  if (GetArenaNoVirtual() == NULL && other_parameters_ != NULL) {
-    delete other_parameters_;
-  }
-  other_parameters_ = NULL;
+  tx_ = NULL;
   _internal_metadata_.Clear();
 }
 
@@ -1040,60 +848,36 @@ bool parameter_values::MergePartialFromCodedStream(
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // .sp.ste.num_params num_params = 1;
+      // .sp.ste.TestBedRpcHeader hdr = 1;
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_num_params()));
+               input, mutable_hdr()));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // .sp.ste.state_parameters state_parameters = 2;
+      // .sp.ste.PayloadSteSingleMeasurementRxParams rx = 2;
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_state_parameters()));
+               input, mutable_rx()));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // .sp.ste.tx_parameters tx_parameters = 3;
+      // .sp.ste.PayloadSteSingleMeasurementTxParams tx = 3;
       case 3: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(26u /* 26 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_tx_parameters()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .sp.ste.fft_parameters fft_parameters = 4;
-      case 4: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(34u /* 34 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_fft_parameters()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .sp.ste.other_parameters other_parameters = 5;
-      case 5: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(42u /* 42 & 0xFF */)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_other_parameters()));
+               input, mutable_tx()));
         } else {
           goto handle_unusual;
         }
@@ -1126,34 +910,22 @@ void parameter_values::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .sp.ste.num_params num_params = 1;
-  if (this->has_num_params()) {
+  // .sp.ste.TestBedRpcHeader hdr = 1;
+  if (this->has_hdr()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, *this->num_params_, output);
+      1, *this->hdr_, output);
   }
 
-  // .sp.ste.state_parameters state_parameters = 2;
-  if (this->has_state_parameters()) {
+  // .sp.ste.PayloadSteSingleMeasurementRxParams rx = 2;
+  if (this->has_rx()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2, *this->state_parameters_, output);
+      2, *this->rx_, output);
   }
 
-  // .sp.ste.tx_parameters tx_parameters = 3;
-  if (this->has_tx_parameters()) {
+  // .sp.ste.PayloadSteSingleMeasurementTxParams tx = 3;
+  if (this->has_tx()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      3, *this->tx_parameters_, output);
-  }
-
-  // .sp.ste.fft_parameters fft_parameters = 4;
-  if (this->has_fft_parameters()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      4, *this->fft_parameters_, output);
-  }
-
-  // .sp.ste.other_parameters other_parameters = 5;
-  if (this->has_other_parameters()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      5, *this->other_parameters_, output);
+      3, *this->tx_, output);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -1170,39 +942,25 @@ void parameter_values::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // .sp.ste.num_params num_params = 1;
-  if (this->has_num_params()) {
+  // .sp.ste.TestBedRpcHeader hdr = 1;
+  if (this->has_hdr()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        1, *this->num_params_, deterministic, target);
+        1, *this->hdr_, deterministic, target);
   }
 
-  // .sp.ste.state_parameters state_parameters = 2;
-  if (this->has_state_parameters()) {
+  // .sp.ste.PayloadSteSingleMeasurementRxParams rx = 2;
+  if (this->has_rx()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        2, *this->state_parameters_, deterministic, target);
+        2, *this->rx_, deterministic, target);
   }
 
-  // .sp.ste.tx_parameters tx_parameters = 3;
-  if (this->has_tx_parameters()) {
+  // .sp.ste.PayloadSteSingleMeasurementTxParams tx = 3;
+  if (this->has_tx()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageToArray(
-        3, *this->tx_parameters_, deterministic, target);
-  }
-
-  // .sp.ste.fft_parameters fft_parameters = 4;
-  if (this->has_fft_parameters()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        4, *this->fft_parameters_, deterministic, target);
-  }
-
-  // .sp.ste.other_parameters other_parameters = 5;
-  if (this->has_other_parameters()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        5, *this->other_parameters_, deterministic, target);
+        3, *this->tx_, deterministic, target);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -1222,39 +980,25 @@ size_t parameter_values::ByteSizeLong() const {
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
-  // .sp.ste.num_params num_params = 1;
-  if (this->has_num_params()) {
+  // .sp.ste.TestBedRpcHeader hdr = 1;
+  if (this->has_hdr()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *this->num_params_);
+        *this->hdr_);
   }
 
-  // .sp.ste.state_parameters state_parameters = 2;
-  if (this->has_state_parameters()) {
+  // .sp.ste.PayloadSteSingleMeasurementRxParams rx = 2;
+  if (this->has_rx()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *this->state_parameters_);
+        *this->rx_);
   }
 
-  // .sp.ste.tx_parameters tx_parameters = 3;
-  if (this->has_tx_parameters()) {
+  // .sp.ste.PayloadSteSingleMeasurementTxParams tx = 3;
+  if (this->has_tx()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *this->tx_parameters_);
-  }
-
-  // .sp.ste.fft_parameters fft_parameters = 4;
-  if (this->has_fft_parameters()) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *this->fft_parameters_);
-  }
-
-  // .sp.ste.other_parameters other_parameters = 5;
-  if (this->has_other_parameters()) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *this->other_parameters_);
+        *this->tx_);
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
@@ -1286,20 +1030,14 @@ void parameter_values::MergeFrom(const parameter_values& from) {
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_num_params()) {
-    mutable_num_params()->::sp::ste::num_params::MergeFrom(from.num_params());
+  if (from.has_hdr()) {
+    mutable_hdr()->::sp::ste::TestBedRpcHeader::MergeFrom(from.hdr());
   }
-  if (from.has_state_parameters()) {
-    mutable_state_parameters()->::sp::ste::state_parameters::MergeFrom(from.state_parameters());
+  if (from.has_rx()) {
+    mutable_rx()->::sp::ste::PayloadSteSingleMeasurementRxParams::MergeFrom(from.rx());
   }
-  if (from.has_tx_parameters()) {
-    mutable_tx_parameters()->::sp::ste::tx_parameters::MergeFrom(from.tx_parameters());
-  }
-  if (from.has_fft_parameters()) {
-    mutable_fft_parameters()->::sp::ste::fft_parameters::MergeFrom(from.fft_parameters());
-  }
-  if (from.has_other_parameters()) {
-    mutable_other_parameters()->::sp::ste::other_parameters::MergeFrom(from.other_parameters());
+  if (from.has_tx()) {
+    mutable_tx()->::sp::ste::PayloadSteSingleMeasurementTxParams::MergeFrom(from.tx());
   }
 }
 
@@ -1327,11 +1065,9 @@ void parameter_values::Swap(parameter_values* other) {
 }
 void parameter_values::InternalSwap(parameter_values* other) {
   using std::swap;
-  swap(num_params_, other->num_params_);
-  swap(state_parameters_, other->state_parameters_);
-  swap(tx_parameters_, other->tx_parameters_);
-  swap(fft_parameters_, other->fft_parameters_);
-  swap(other_parameters_, other->other_parameters_);
+  swap(hdr_, other->hdr_);
+  swap(rx_, other->rx_);
+  swap(tx_, other->tx_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
   swap(_cached_size_, other->_cached_size_);
 }
@@ -1344,144 +1080,117 @@ void parameter_values::InternalSwap(parameter_values* other) {
 
 // ===================================================================
 
-void num_params::InitAsDefaultInstance() {
+void TestBedRpcHeader::InitAsDefaultInstance() {
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int num_params::kStateCountFieldNumber;
-const int num_params::kTxCountFieldNumber;
-const int num_params::kFftCountFieldNumber;
-const int num_params::kOtherCountFieldNumber;
+const int TestBedRpcHeader::kModuleFieldNumber;
+const int TestBedRpcHeader::kCoreFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
-num_params::num_params()
+TestBedRpcHeader::TestBedRpcHeader()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
   if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_sp_5fste_2eproto::InitDefaultsnum_params();
+    ::protobuf_sp_5fste_2eproto::InitDefaultsTestBedRpcHeader();
   }
   SharedCtor();
-  // @@protoc_insertion_point(constructor:sp.ste.num_params)
+  // @@protoc_insertion_point(constructor:sp.ste.TestBedRpcHeader)
 }
-num_params::num_params(const num_params& from)
+TestBedRpcHeader::TestBedRpcHeader(const TestBedRpcHeader& from)
   : ::google::protobuf::Message(),
       _internal_metadata_(NULL),
       _cached_size_(0) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::memcpy(&state_count_, &from.state_count_,
-    static_cast<size_t>(reinterpret_cast<char*>(&other_count_) -
-    reinterpret_cast<char*>(&state_count_)) + sizeof(other_count_));
-  // @@protoc_insertion_point(copy_constructor:sp.ste.num_params)
+  module_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.module().size() > 0) {
+    module_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.module_);
+  }
+  core_ = from.core_;
+  // @@protoc_insertion_point(copy_constructor:sp.ste.TestBedRpcHeader)
 }
 
-void num_params::SharedCtor() {
-  ::memset(&state_count_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&other_count_) -
-      reinterpret_cast<char*>(&state_count_)) + sizeof(other_count_));
+void TestBedRpcHeader::SharedCtor() {
+  module_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  core_ = 0;
   _cached_size_ = 0;
 }
 
-num_params::~num_params() {
-  // @@protoc_insertion_point(destructor:sp.ste.num_params)
+TestBedRpcHeader::~TestBedRpcHeader() {
+  // @@protoc_insertion_point(destructor:sp.ste.TestBedRpcHeader)
   SharedDtor();
 }
 
-void num_params::SharedDtor() {
+void TestBedRpcHeader::SharedDtor() {
+  module_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 
-void num_params::SetCachedSize(int size) const {
+void TestBedRpcHeader::SetCachedSize(int size) const {
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
   _cached_size_ = size;
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
 }
-const ::google::protobuf::Descriptor* num_params::descriptor() {
+const ::google::protobuf::Descriptor* TestBedRpcHeader::descriptor() {
   ::protobuf_sp_5fste_2eproto::protobuf_AssignDescriptorsOnce();
   return ::protobuf_sp_5fste_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
 }
 
-const num_params& num_params::default_instance() {
-  ::protobuf_sp_5fste_2eproto::InitDefaultsnum_params();
+const TestBedRpcHeader& TestBedRpcHeader::default_instance() {
+  ::protobuf_sp_5fste_2eproto::InitDefaultsTestBedRpcHeader();
   return *internal_default_instance();
 }
 
-num_params* num_params::New(::google::protobuf::Arena* arena) const {
-  num_params* n = new num_params;
+TestBedRpcHeader* TestBedRpcHeader::New(::google::protobuf::Arena* arena) const {
+  TestBedRpcHeader* n = new TestBedRpcHeader;
   if (arena != NULL) {
     arena->Own(n);
   }
   return n;
 }
 
-void num_params::Clear() {
-// @@protoc_insertion_point(message_clear_start:sp.ste.num_params)
+void TestBedRpcHeader::Clear() {
+// @@protoc_insertion_point(message_clear_start:sp.ste.TestBedRpcHeader)
   ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  ::memset(&state_count_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&other_count_) -
-      reinterpret_cast<char*>(&state_count_)) + sizeof(other_count_));
+  module_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  core_ = 0;
   _internal_metadata_.Clear();
 }
 
-bool num_params::MergePartialFromCodedStream(
+bool TestBedRpcHeader::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:sp.ste.num_params)
+  // @@protoc_insertion_point(parse_start:sp.ste.TestBedRpcHeader)
   for (;;) {
     ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // uint32 state_count = 1;
+      // string module = 1;
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(8u /* 8 & 0xFF */)) {
-
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
-                 input, &state_count_)));
+            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_module()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->module().data(), static_cast<int>(this->module().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "sp.ste.TestBedRpcHeader.module"));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // uint32 tx_count = 2;
+      // int32 core = 2;
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(16u /* 16 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
-                 input, &tx_count_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // uint32 fft_count = 3;
-      case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(24u /* 24 & 0xFF */)) {
-
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
-                 input, &fft_count_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // uint32 other_count = 4;
-      case 4: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(32u /* 32 & 0xFF */)) {
-
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
-                 input, &other_count_)));
+                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                 input, &core_)));
         } else {
           goto handle_unusual;
         }
@@ -1500,84 +1209,75 @@ bool num_params::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:sp.ste.num_params)
+  // @@protoc_insertion_point(parse_success:sp.ste.TestBedRpcHeader)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:sp.ste.num_params)
+  // @@protoc_insertion_point(parse_failure:sp.ste.TestBedRpcHeader)
   return false;
 #undef DO_
 }
 
-void num_params::SerializeWithCachedSizes(
+void TestBedRpcHeader::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:sp.ste.num_params)
+  // @@protoc_insertion_point(serialize_start:sp.ste.TestBedRpcHeader)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // uint32 state_count = 1;
-  if (this->state_count() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteUInt32(1, this->state_count(), output);
+  // string module = 1;
+  if (this->module().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->module().data(), static_cast<int>(this->module().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "sp.ste.TestBedRpcHeader.module");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      1, this->module(), output);
   }
 
-  // uint32 tx_count = 2;
-  if (this->tx_count() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteUInt32(2, this->tx_count(), output);
-  }
-
-  // uint32 fft_count = 3;
-  if (this->fft_count() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteUInt32(3, this->fft_count(), output);
-  }
-
-  // uint32 other_count = 4;
-  if (this->other_count() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteUInt32(4, this->other_count(), output);
+  // int32 core = 2;
+  if (this->core() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(2, this->core(), output);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
   }
-  // @@protoc_insertion_point(serialize_end:sp.ste.num_params)
+  // @@protoc_insertion_point(serialize_end:sp.ste.TestBedRpcHeader)
 }
 
-::google::protobuf::uint8* num_params::InternalSerializeWithCachedSizesToArray(
+::google::protobuf::uint8* TestBedRpcHeader::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
   (void)deterministic; // Unused
-  // @@protoc_insertion_point(serialize_to_array_start:sp.ste.num_params)
+  // @@protoc_insertion_point(serialize_to_array_start:sp.ste.TestBedRpcHeader)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // uint32 state_count = 1;
-  if (this->state_count() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(1, this->state_count(), target);
+  // string module = 1;
+  if (this->module().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->module().data(), static_cast<int>(this->module().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "sp.ste.TestBedRpcHeader.module");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        1, this->module(), target);
   }
 
-  // uint32 tx_count = 2;
-  if (this->tx_count() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(2, this->tx_count(), target);
-  }
-
-  // uint32 fft_count = 3;
-  if (this->fft_count() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(3, this->fft_count(), target);
-  }
-
-  // uint32 other_count = 4;
-  if (this->other_count() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(4, this->other_count(), target);
+  // int32 core = 2;
+  if (this->core() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(2, this->core(), target);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:sp.ste.num_params)
+  // @@protoc_insertion_point(serialize_to_array_end:sp.ste.TestBedRpcHeader)
   return target;
 }
 
-size_t num_params::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:sp.ste.num_params)
+size_t TestBedRpcHeader::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:sp.ste.TestBedRpcHeader)
   size_t total_size = 0;
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -1585,32 +1285,18 @@ size_t num_params::ByteSizeLong() const {
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
-  // uint32 state_count = 1;
-  if (this->state_count() != 0) {
+  // string module = 1;
+  if (this->module().size() > 0) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::UInt32Size(
-        this->state_count());
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->module());
   }
 
-  // uint32 tx_count = 2;
-  if (this->tx_count() != 0) {
+  // int32 core = 2;
+  if (this->core() != 0) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::UInt32Size(
-        this->tx_count());
-  }
-
-  // uint32 fft_count = 3;
-  if (this->fft_count() != 0) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::UInt32Size(
-        this->fft_count());
-  }
-
-  // uint32 other_count = 4;
-  if (this->other_count() != 0) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::UInt32Size(
-        this->other_count());
+      ::google::protobuf::internal::WireFormatLite::Int32Size(
+        this->core());
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
@@ -1620,75 +1306,68 @@ size_t num_params::ByteSizeLong() const {
   return total_size;
 }
 
-void num_params::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:sp.ste.num_params)
+void TestBedRpcHeader::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:sp.ste.TestBedRpcHeader)
   GOOGLE_DCHECK_NE(&from, this);
-  const num_params* source =
-      ::google::protobuf::internal::DynamicCastToGenerated<const num_params>(
+  const TestBedRpcHeader* source =
+      ::google::protobuf::internal::DynamicCastToGenerated<const TestBedRpcHeader>(
           &from);
   if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:sp.ste.num_params)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:sp.ste.TestBedRpcHeader)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:sp.ste.num_params)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:sp.ste.TestBedRpcHeader)
     MergeFrom(*source);
   }
 }
 
-void num_params::MergeFrom(const num_params& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:sp.ste.num_params)
+void TestBedRpcHeader::MergeFrom(const TestBedRpcHeader& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:sp.ste.TestBedRpcHeader)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.state_count() != 0) {
-    set_state_count(from.state_count());
+  if (from.module().size() > 0) {
+
+    module_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.module_);
   }
-  if (from.tx_count() != 0) {
-    set_tx_count(from.tx_count());
-  }
-  if (from.fft_count() != 0) {
-    set_fft_count(from.fft_count());
-  }
-  if (from.other_count() != 0) {
-    set_other_count(from.other_count());
+  if (from.core() != 0) {
+    set_core(from.core());
   }
 }
 
-void num_params::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:sp.ste.num_params)
+void TestBedRpcHeader::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:sp.ste.TestBedRpcHeader)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-void num_params::CopyFrom(const num_params& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:sp.ste.num_params)
+void TestBedRpcHeader::CopyFrom(const TestBedRpcHeader& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:sp.ste.TestBedRpcHeader)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool num_params::IsInitialized() const {
+bool TestBedRpcHeader::IsInitialized() const {
   return true;
 }
 
-void num_params::Swap(num_params* other) {
+void TestBedRpcHeader::Swap(TestBedRpcHeader* other) {
   if (other == this) return;
   InternalSwap(other);
 }
-void num_params::InternalSwap(num_params* other) {
+void TestBedRpcHeader::InternalSwap(TestBedRpcHeader* other) {
   using std::swap;
-  swap(state_count_, other->state_count_);
-  swap(tx_count_, other->tx_count_);
-  swap(fft_count_, other->fft_count_);
-  swap(other_count_, other->other_count_);
+  module_.Swap(&other->module_);
+  swap(core_, other->core_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
   swap(_cached_size_, other->_cached_size_);
 }
 
-::google::protobuf::Metadata num_params::GetMetadata() const {
+::google::protobuf::Metadata TestBedRpcHeader::GetMetadata() const {
   protobuf_sp_5fste_2eproto::protobuf_AssignDescriptorsOnce();
   return ::protobuf_sp_5fste_2eproto::file_level_metadata[kIndexInFileMessages];
 }
@@ -1696,552 +1375,126 @@ void num_params::InternalSwap(num_params* other) {
 
 // ===================================================================
 
-void state_parameters::InitAsDefaultInstance() {
+void PayloadSteSingleMeasurementTxParams::InitAsDefaultInstance() {
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int state_parameters::kSaveIqFieldNumber;
-const int state_parameters::kParameterEstimateEnableFieldNumber;
-const int state_parameters::kAwgnEnableFieldNumber;
-const int state_parameters::kNotchEnableFieldNumber;
-const int state_parameters::kFftAEnableFieldNumber;
-const int state_parameters::kFftBEnableFieldNumber;
+const int PayloadSteSingleMeasurementTxParams::kTxFreq1HzFieldNumber;
+const int PayloadSteSingleMeasurementTxParams::kTxPhase1RotFieldNumber;
+const int PayloadSteSingleMeasurementTxParams::kTxFreq2HzFieldNumber;
+const int PayloadSteSingleMeasurementTxParams::kTxPhase2RotFieldNumber;
+const int PayloadSteSingleMeasurementTxParams::kGain1FieldNumber;
+const int PayloadSteSingleMeasurementTxParams::kGain2FieldNumber;
+const int PayloadSteSingleMeasurementTxParams::kGain3FieldNumber;
+const int PayloadSteSingleMeasurementTxParams::kAwgnEnableFieldNumber;
+const int PayloadSteSingleMeasurementTxParams::kNotchEnableFieldNumber;
+const int PayloadSteSingleMeasurementTxParams::kNumTxSamplesTotalFieldNumber;
+const int PayloadSteSingleMeasurementTxParams::kNumTxSamplesPerBatchFieldNumber;
+const int PayloadSteSingleMeasurementTxParams::kFilebasenameFieldNumber;
+const int PayloadSteSingleMeasurementTxParams::kFilenameTxSamplesFieldNumber;
+const int PayloadSteSingleMeasurementTxParams::kNextTxStartTimeFieldNumber;
+const int PayloadSteSingleMeasurementTxParams::kTxIdlePatternFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
-state_parameters::state_parameters()
+PayloadSteSingleMeasurementTxParams::PayloadSteSingleMeasurementTxParams()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
   if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_sp_5fste_2eproto::InitDefaultsstate_parameters();
+    ::protobuf_sp_5fste_2eproto::InitDefaultsPayloadSteSingleMeasurementTxParams();
   }
   SharedCtor();
-  // @@protoc_insertion_point(constructor:sp.ste.state_parameters)
+  // @@protoc_insertion_point(constructor:sp.ste.PayloadSteSingleMeasurementTxParams)
 }
-state_parameters::state_parameters(const state_parameters& from)
+PayloadSteSingleMeasurementTxParams::PayloadSteSingleMeasurementTxParams(const PayloadSteSingleMeasurementTxParams& from)
   : ::google::protobuf::Message(),
       _internal_metadata_(NULL),
       _cached_size_(0) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::memcpy(&save_iq_, &from.save_iq_,
-    static_cast<size_t>(reinterpret_cast<char*>(&fft_b_enable_) -
-    reinterpret_cast<char*>(&save_iq_)) + sizeof(fft_b_enable_));
-  // @@protoc_insertion_point(copy_constructor:sp.ste.state_parameters)
+  filebasename_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.filebasename().size() > 0) {
+    filebasename_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.filebasename_);
+  }
+  filename_tx_samples_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.filename_tx_samples().size() > 0) {
+    filename_tx_samples_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.filename_tx_samples_);
+  }
+  ::memcpy(&tx_freq1_hz_, &from.tx_freq1_hz_,
+    static_cast<size_t>(reinterpret_cast<char*>(&tx_idle_pattern_) -
+    reinterpret_cast<char*>(&tx_freq1_hz_)) + sizeof(tx_idle_pattern_));
+  // @@protoc_insertion_point(copy_constructor:sp.ste.PayloadSteSingleMeasurementTxParams)
 }
 
-void state_parameters::SharedCtor() {
-  ::memset(&save_iq_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&fft_b_enable_) -
-      reinterpret_cast<char*>(&save_iq_)) + sizeof(fft_b_enable_));
+void PayloadSteSingleMeasurementTxParams::SharedCtor() {
+  filebasename_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  filename_tx_samples_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  ::memset(&tx_freq1_hz_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&tx_idle_pattern_) -
+      reinterpret_cast<char*>(&tx_freq1_hz_)) + sizeof(tx_idle_pattern_));
   _cached_size_ = 0;
 }
 
-state_parameters::~state_parameters() {
-  // @@protoc_insertion_point(destructor:sp.ste.state_parameters)
+PayloadSteSingleMeasurementTxParams::~PayloadSteSingleMeasurementTxParams() {
+  // @@protoc_insertion_point(destructor:sp.ste.PayloadSteSingleMeasurementTxParams)
   SharedDtor();
 }
 
-void state_parameters::SharedDtor() {
+void PayloadSteSingleMeasurementTxParams::SharedDtor() {
+  filebasename_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  filename_tx_samples_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 
-void state_parameters::SetCachedSize(int size) const {
+void PayloadSteSingleMeasurementTxParams::SetCachedSize(int size) const {
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
   _cached_size_ = size;
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
 }
-const ::google::protobuf::Descriptor* state_parameters::descriptor() {
+const ::google::protobuf::Descriptor* PayloadSteSingleMeasurementTxParams::descriptor() {
   ::protobuf_sp_5fste_2eproto::protobuf_AssignDescriptorsOnce();
   return ::protobuf_sp_5fste_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
 }
 
-const state_parameters& state_parameters::default_instance() {
-  ::protobuf_sp_5fste_2eproto::InitDefaultsstate_parameters();
+const PayloadSteSingleMeasurementTxParams& PayloadSteSingleMeasurementTxParams::default_instance() {
+  ::protobuf_sp_5fste_2eproto::InitDefaultsPayloadSteSingleMeasurementTxParams();
   return *internal_default_instance();
 }
 
-state_parameters* state_parameters::New(::google::protobuf::Arena* arena) const {
-  state_parameters* n = new state_parameters;
+PayloadSteSingleMeasurementTxParams* PayloadSteSingleMeasurementTxParams::New(::google::protobuf::Arena* arena) const {
+  PayloadSteSingleMeasurementTxParams* n = new PayloadSteSingleMeasurementTxParams;
   if (arena != NULL) {
     arena->Own(n);
   }
   return n;
 }
 
-void state_parameters::Clear() {
-// @@protoc_insertion_point(message_clear_start:sp.ste.state_parameters)
+void PayloadSteSingleMeasurementTxParams::Clear() {
+// @@protoc_insertion_point(message_clear_start:sp.ste.PayloadSteSingleMeasurementTxParams)
   ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  ::memset(&save_iq_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&fft_b_enable_) -
-      reinterpret_cast<char*>(&save_iq_)) + sizeof(fft_b_enable_));
+  filebasename_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  filename_tx_samples_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  ::memset(&tx_freq1_hz_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&tx_idle_pattern_) -
+      reinterpret_cast<char*>(&tx_freq1_hz_)) + sizeof(tx_idle_pattern_));
   _internal_metadata_.Clear();
 }
 
-bool state_parameters::MergePartialFromCodedStream(
+bool PayloadSteSingleMeasurementTxParams::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:sp.ste.state_parameters)
+  // @@protoc_insertion_point(parse_start:sp.ste.PayloadSteSingleMeasurementTxParams)
   for (;;) {
     ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // .sp.ste.state save_iq = 1;
+      // float tx_freq1_Hz = 1;
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(8u /* 8 & 0xFF */)) {
-          int value;
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
-                 input, &value)));
-          set_save_iq(static_cast< ::sp::ste::state >(value));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .sp.ste.state parameter_estimate_enable = 2;
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(16u /* 16 & 0xFF */)) {
-          int value;
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
-                 input, &value)));
-          set_parameter_estimate_enable(static_cast< ::sp::ste::state >(value));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .sp.ste.state awgn_enable = 3;
-      case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(24u /* 24 & 0xFF */)) {
-          int value;
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
-                 input, &value)));
-          set_awgn_enable(static_cast< ::sp::ste::state >(value));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .sp.ste.state notch_enable = 4;
-      case 4: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(32u /* 32 & 0xFF */)) {
-          int value;
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
-                 input, &value)));
-          set_notch_enable(static_cast< ::sp::ste::state >(value));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .sp.ste.state fft_a_enable = 5;
-      case 5: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(40u /* 40 & 0xFF */)) {
-          int value;
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
-                 input, &value)));
-          set_fft_a_enable(static_cast< ::sp::ste::state >(value));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .sp.ste.state fft_b_enable = 6;
-      case 6: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(48u /* 48 & 0xFF */)) {
-          int value;
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
-                 input, &value)));
-          set_fft_b_enable(static_cast< ::sp::ste::state >(value));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:sp.ste.state_parameters)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:sp.ste.state_parameters)
-  return false;
-#undef DO_
-}
-
-void state_parameters::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:sp.ste.state_parameters)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .sp.ste.state save_iq = 1;
-  if (this->save_iq() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteEnum(
-      1, this->save_iq(), output);
-  }
-
-  // .sp.ste.state parameter_estimate_enable = 2;
-  if (this->parameter_estimate_enable() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteEnum(
-      2, this->parameter_estimate_enable(), output);
-  }
-
-  // .sp.ste.state awgn_enable = 3;
-  if (this->awgn_enable() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteEnum(
-      3, this->awgn_enable(), output);
-  }
-
-  // .sp.ste.state notch_enable = 4;
-  if (this->notch_enable() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteEnum(
-      4, this->notch_enable(), output);
-  }
-
-  // .sp.ste.state fft_a_enable = 5;
-  if (this->fft_a_enable() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteEnum(
-      5, this->fft_a_enable(), output);
-  }
-
-  // .sp.ste.state fft_b_enable = 6;
-  if (this->fft_b_enable() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteEnum(
-      6, this->fft_b_enable(), output);
-  }
-
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
-  }
-  // @@protoc_insertion_point(serialize_end:sp.ste.state_parameters)
-}
-
-::google::protobuf::uint8* state_parameters::InternalSerializeWithCachedSizesToArray(
-    bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
-  // @@protoc_insertion_point(serialize_to_array_start:sp.ste.state_parameters)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .sp.ste.state save_iq = 1;
-  if (this->save_iq() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
-      1, this->save_iq(), target);
-  }
-
-  // .sp.ste.state parameter_estimate_enable = 2;
-  if (this->parameter_estimate_enable() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
-      2, this->parameter_estimate_enable(), target);
-  }
-
-  // .sp.ste.state awgn_enable = 3;
-  if (this->awgn_enable() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
-      3, this->awgn_enable(), target);
-  }
-
-  // .sp.ste.state notch_enable = 4;
-  if (this->notch_enable() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
-      4, this->notch_enable(), target);
-  }
-
-  // .sp.ste.state fft_a_enable = 5;
-  if (this->fft_a_enable() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
-      5, this->fft_a_enable(), target);
-  }
-
-  // .sp.ste.state fft_b_enable = 6;
-  if (this->fft_b_enable() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
-      6, this->fft_b_enable(), target);
-  }
-
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:sp.ste.state_parameters)
-  return target;
-}
-
-size_t state_parameters::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:sp.ste.state_parameters)
-  size_t total_size = 0;
-
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
-  }
-  // .sp.ste.state save_iq = 1;
-  if (this->save_iq() != 0) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::EnumSize(this->save_iq());
-  }
-
-  // .sp.ste.state parameter_estimate_enable = 2;
-  if (this->parameter_estimate_enable() != 0) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::EnumSize(this->parameter_estimate_enable());
-  }
-
-  // .sp.ste.state awgn_enable = 3;
-  if (this->awgn_enable() != 0) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::EnumSize(this->awgn_enable());
-  }
-
-  // .sp.ste.state notch_enable = 4;
-  if (this->notch_enable() != 0) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::EnumSize(this->notch_enable());
-  }
-
-  // .sp.ste.state fft_a_enable = 5;
-  if (this->fft_a_enable() != 0) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::EnumSize(this->fft_a_enable());
-  }
-
-  // .sp.ste.state fft_b_enable = 6;
-  if (this->fft_b_enable() != 0) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::EnumSize(this->fft_b_enable());
-  }
-
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
-  return total_size;
-}
-
-void state_parameters::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:sp.ste.state_parameters)
-  GOOGLE_DCHECK_NE(&from, this);
-  const state_parameters* source =
-      ::google::protobuf::internal::DynamicCastToGenerated<const state_parameters>(
-          &from);
-  if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:sp.ste.state_parameters)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:sp.ste.state_parameters)
-    MergeFrom(*source);
-  }
-}
-
-void state_parameters::MergeFrom(const state_parameters& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:sp.ste.state_parameters)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  if (from.save_iq() != 0) {
-    set_save_iq(from.save_iq());
-  }
-  if (from.parameter_estimate_enable() != 0) {
-    set_parameter_estimate_enable(from.parameter_estimate_enable());
-  }
-  if (from.awgn_enable() != 0) {
-    set_awgn_enable(from.awgn_enable());
-  }
-  if (from.notch_enable() != 0) {
-    set_notch_enable(from.notch_enable());
-  }
-  if (from.fft_a_enable() != 0) {
-    set_fft_a_enable(from.fft_a_enable());
-  }
-  if (from.fft_b_enable() != 0) {
-    set_fft_b_enable(from.fft_b_enable());
-  }
-}
-
-void state_parameters::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:sp.ste.state_parameters)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-void state_parameters::CopyFrom(const state_parameters& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:sp.ste.state_parameters)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool state_parameters::IsInitialized() const {
-  return true;
-}
-
-void state_parameters::Swap(state_parameters* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
-void state_parameters::InternalSwap(state_parameters* other) {
-  using std::swap;
-  swap(save_iq_, other->save_iq_);
-  swap(parameter_estimate_enable_, other->parameter_estimate_enable_);
-  swap(awgn_enable_, other->awgn_enable_);
-  swap(notch_enable_, other->notch_enable_);
-  swap(fft_a_enable_, other->fft_a_enable_);
-  swap(fft_b_enable_, other->fft_b_enable_);
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
-}
-
-::google::protobuf::Metadata state_parameters::GetMetadata() const {
-  protobuf_sp_5fste_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_sp_5fste_2eproto::file_level_metadata[kIndexInFileMessages];
-}
-
-
-// ===================================================================
-
-void tx_parameters::InitAsDefaultInstance() {
-}
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int tx_parameters::kNumTxSamplesTotalFieldNumber;
-const int tx_parameters::kTxFreq1HzFieldNumber;
-const int tx_parameters::kTxFreq2HzFieldNumber;
-const int tx_parameters::kTxPhase1RotFieldNumber;
-const int tx_parameters::kTxPhase2RotFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-tx_parameters::tx_parameters()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_sp_5fste_2eproto::InitDefaultstx_parameters();
-  }
-  SharedCtor();
-  // @@protoc_insertion_point(constructor:sp.ste.tx_parameters)
-}
-tx_parameters::tx_parameters(const tx_parameters& from)
-  : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _cached_size_(0) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::memcpy(&num_tx_samples_total_, &from.num_tx_samples_total_,
-    static_cast<size_t>(reinterpret_cast<char*>(&tx_phase2_rot_) -
-    reinterpret_cast<char*>(&num_tx_samples_total_)) + sizeof(tx_phase2_rot_));
-  // @@protoc_insertion_point(copy_constructor:sp.ste.tx_parameters)
-}
-
-void tx_parameters::SharedCtor() {
-  ::memset(&num_tx_samples_total_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&tx_phase2_rot_) -
-      reinterpret_cast<char*>(&num_tx_samples_total_)) + sizeof(tx_phase2_rot_));
-  _cached_size_ = 0;
-}
-
-tx_parameters::~tx_parameters() {
-  // @@protoc_insertion_point(destructor:sp.ste.tx_parameters)
-  SharedDtor();
-}
-
-void tx_parameters::SharedDtor() {
-}
-
-void tx_parameters::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
-}
-const ::google::protobuf::Descriptor* tx_parameters::descriptor() {
-  ::protobuf_sp_5fste_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_sp_5fste_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
-}
-
-const tx_parameters& tx_parameters::default_instance() {
-  ::protobuf_sp_5fste_2eproto::InitDefaultstx_parameters();
-  return *internal_default_instance();
-}
-
-tx_parameters* tx_parameters::New(::google::protobuf::Arena* arena) const {
-  tx_parameters* n = new tx_parameters;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
-
-void tx_parameters::Clear() {
-// @@protoc_insertion_point(message_clear_start:sp.ste.tx_parameters)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  ::memset(&num_tx_samples_total_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&tx_phase2_rot_) -
-      reinterpret_cast<char*>(&num_tx_samples_total_)) + sizeof(tx_phase2_rot_));
-  _internal_metadata_.Clear();
-}
-
-bool tx_parameters::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:sp.ste.tx_parameters)
-  for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // double num_tx_samples_total = 1;
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(9u /* 9 & 0xFF */)) {
+            static_cast< ::google::protobuf::uint8>(13u /* 13 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 input, &num_tx_samples_total_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // double tx_freq1_Hz = 2;
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(17u /* 17 & 0xFF */)) {
-
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
+                   float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
                  input, &tx_freq1_hz_)));
         } else {
           goto handle_unusual;
@@ -2249,27 +1502,13 @@ bool tx_parameters::MergePartialFromCodedStream(
         break;
       }
 
-      // double tx_freq2_Hz = 3;
-      case 3: {
+      // float tx_phase1_rot = 2;
+      case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(25u /* 25 & 0xFF */)) {
+            static_cast< ::google::protobuf::uint8>(21u /* 21 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 input, &tx_freq2_hz_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // double tx_phase1_rot = 4;
-      case 4: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(33u /* 33 & 0xFF */)) {
-
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
+                   float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
                  input, &tx_phase1_rot_)));
         } else {
           goto handle_unusual;
@@ -2277,14 +1516,187 @@ bool tx_parameters::MergePartialFromCodedStream(
         break;
       }
 
-      // double tx_phase2_rot = 5;
-      case 5: {
+      // float tx_freq2_Hz = 3;
+      case 3: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(41u /* 41 & 0xFF */)) {
+            static_cast< ::google::protobuf::uint8>(29u /* 29 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
+                   float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
+                 input, &tx_freq2_hz_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // float tx_phase2_rot = 4;
+      case 4: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(37u /* 37 & 0xFF */)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
                  input, &tx_phase2_rot_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // float gain1 = 5;
+      case 5: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(45u /* 45 & 0xFF */)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
+                 input, &gain1_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // float gain2 = 6;
+      case 6: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(53u /* 53 & 0xFF */)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
+                 input, &gain2_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // float gain3 = 7;
+      case 7: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(61u /* 61 & 0xFF */)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
+                 input, &gain3_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // bool awgn_enable = 8;
+      case 8: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(64u /* 64 & 0xFF */)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &awgn_enable_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // bool notch_enable = 9;
+      case 9: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(72u /* 72 & 0xFF */)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &notch_enable_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // uint32 num_tx_samples_total = 10;
+      case 10: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(80u /* 80 & 0xFF */)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &num_tx_samples_total_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // uint32 num_tx_samples_per_batch = 11;
+      case 11: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(88u /* 88 & 0xFF */)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &num_tx_samples_per_batch_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string filebasename = 12;
+      case 12: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(98u /* 98 & 0xFF */)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_filebasename()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->filebasename().data(), static_cast<int>(this->filebasename().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "sp.ste.PayloadSteSingleMeasurementTxParams.filebasename"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string filename_tx_samples = 13;
+      case 13: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(106u /* 106 & 0xFF */)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_filename_tx_samples()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->filename_tx_samples().data(), static_cast<int>(this->filename_tx_samples().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "sp.ste.PayloadSteSingleMeasurementTxParams.filename_tx_samples"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // uint64 nextTxStartTime = 14;
+      case 14: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(112u /* 112 & 0xFF */)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint64, ::google::protobuf::internal::WireFormatLite::TYPE_UINT64>(
+                 input, &nexttxstarttime_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .sp.ste.TxIdlePattern tx_idle_pattern = 15;
+      case 15: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(120u /* 120 & 0xFF */)) {
+          int value;
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
+                 input, &value)));
+          set_tx_idle_pattern(static_cast< ::sp::ste::TxIdlePattern >(value));
         } else {
           goto handle_unusual;
         }
@@ -2303,94 +1715,218 @@ bool tx_parameters::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:sp.ste.tx_parameters)
+  // @@protoc_insertion_point(parse_success:sp.ste.PayloadSteSingleMeasurementTxParams)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:sp.ste.tx_parameters)
+  // @@protoc_insertion_point(parse_failure:sp.ste.PayloadSteSingleMeasurementTxParams)
   return false;
 #undef DO_
 }
 
-void tx_parameters::SerializeWithCachedSizes(
+void PayloadSteSingleMeasurementTxParams::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:sp.ste.tx_parameters)
+  // @@protoc_insertion_point(serialize_start:sp.ste.PayloadSteSingleMeasurementTxParams)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // double num_tx_samples_total = 1;
-  if (this->num_tx_samples_total() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(1, this->num_tx_samples_total(), output);
-  }
-
-  // double tx_freq1_Hz = 2;
+  // float tx_freq1_Hz = 1;
   if (this->tx_freq1_hz() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(2, this->tx_freq1_hz(), output);
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(1, this->tx_freq1_hz(), output);
   }
 
-  // double tx_freq2_Hz = 3;
-  if (this->tx_freq2_hz() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(3, this->tx_freq2_hz(), output);
-  }
-
-  // double tx_phase1_rot = 4;
+  // float tx_phase1_rot = 2;
   if (this->tx_phase1_rot() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(4, this->tx_phase1_rot(), output);
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(2, this->tx_phase1_rot(), output);
   }
 
-  // double tx_phase2_rot = 5;
+  // float tx_freq2_Hz = 3;
+  if (this->tx_freq2_hz() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(3, this->tx_freq2_hz(), output);
+  }
+
+  // float tx_phase2_rot = 4;
   if (this->tx_phase2_rot() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(5, this->tx_phase2_rot(), output);
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(4, this->tx_phase2_rot(), output);
+  }
+
+  // float gain1 = 5;
+  if (this->gain1() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(5, this->gain1(), output);
+  }
+
+  // float gain2 = 6;
+  if (this->gain2() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(6, this->gain2(), output);
+  }
+
+  // float gain3 = 7;
+  if (this->gain3() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(7, this->gain3(), output);
+  }
+
+  // bool awgn_enable = 8;
+  if (this->awgn_enable() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(8, this->awgn_enable(), output);
+  }
+
+  // bool notch_enable = 9;
+  if (this->notch_enable() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(9, this->notch_enable(), output);
+  }
+
+  // uint32 num_tx_samples_total = 10;
+  if (this->num_tx_samples_total() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(10, this->num_tx_samples_total(), output);
+  }
+
+  // uint32 num_tx_samples_per_batch = 11;
+  if (this->num_tx_samples_per_batch() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(11, this->num_tx_samples_per_batch(), output);
+  }
+
+  // string filebasename = 12;
+  if (this->filebasename().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->filebasename().data(), static_cast<int>(this->filebasename().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "sp.ste.PayloadSteSingleMeasurementTxParams.filebasename");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      12, this->filebasename(), output);
+  }
+
+  // string filename_tx_samples = 13;
+  if (this->filename_tx_samples().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->filename_tx_samples().data(), static_cast<int>(this->filename_tx_samples().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "sp.ste.PayloadSteSingleMeasurementTxParams.filename_tx_samples");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      13, this->filename_tx_samples(), output);
+  }
+
+  // uint64 nextTxStartTime = 14;
+  if (this->nexttxstarttime() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt64(14, this->nexttxstarttime(), output);
+  }
+
+  // .sp.ste.TxIdlePattern tx_idle_pattern = 15;
+  if (this->tx_idle_pattern() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteEnum(
+      15, this->tx_idle_pattern(), output);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
   }
-  // @@protoc_insertion_point(serialize_end:sp.ste.tx_parameters)
+  // @@protoc_insertion_point(serialize_end:sp.ste.PayloadSteSingleMeasurementTxParams)
 }
 
-::google::protobuf::uint8* tx_parameters::InternalSerializeWithCachedSizesToArray(
+::google::protobuf::uint8* PayloadSteSingleMeasurementTxParams::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
   (void)deterministic; // Unused
-  // @@protoc_insertion_point(serialize_to_array_start:sp.ste.tx_parameters)
+  // @@protoc_insertion_point(serialize_to_array_start:sp.ste.PayloadSteSingleMeasurementTxParams)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // double num_tx_samples_total = 1;
-  if (this->num_tx_samples_total() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(1, this->num_tx_samples_total(), target);
-  }
-
-  // double tx_freq1_Hz = 2;
+  // float tx_freq1_Hz = 1;
   if (this->tx_freq1_hz() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(2, this->tx_freq1_hz(), target);
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(1, this->tx_freq1_hz(), target);
   }
 
-  // double tx_freq2_Hz = 3;
-  if (this->tx_freq2_hz() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(3, this->tx_freq2_hz(), target);
-  }
-
-  // double tx_phase1_rot = 4;
+  // float tx_phase1_rot = 2;
   if (this->tx_phase1_rot() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(4, this->tx_phase1_rot(), target);
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(2, this->tx_phase1_rot(), target);
   }
 
-  // double tx_phase2_rot = 5;
+  // float tx_freq2_Hz = 3;
+  if (this->tx_freq2_hz() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(3, this->tx_freq2_hz(), target);
+  }
+
+  // float tx_phase2_rot = 4;
   if (this->tx_phase2_rot() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(5, this->tx_phase2_rot(), target);
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(4, this->tx_phase2_rot(), target);
+  }
+
+  // float gain1 = 5;
+  if (this->gain1() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(5, this->gain1(), target);
+  }
+
+  // float gain2 = 6;
+  if (this->gain2() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(6, this->gain2(), target);
+  }
+
+  // float gain3 = 7;
+  if (this->gain3() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(7, this->gain3(), target);
+  }
+
+  // bool awgn_enable = 8;
+  if (this->awgn_enable() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(8, this->awgn_enable(), target);
+  }
+
+  // bool notch_enable = 9;
+  if (this->notch_enable() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(9, this->notch_enable(), target);
+  }
+
+  // uint32 num_tx_samples_total = 10;
+  if (this->num_tx_samples_total() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(10, this->num_tx_samples_total(), target);
+  }
+
+  // uint32 num_tx_samples_per_batch = 11;
+  if (this->num_tx_samples_per_batch() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(11, this->num_tx_samples_per_batch(), target);
+  }
+
+  // string filebasename = 12;
+  if (this->filebasename().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->filebasename().data(), static_cast<int>(this->filebasename().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "sp.ste.PayloadSteSingleMeasurementTxParams.filebasename");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        12, this->filebasename(), target);
+  }
+
+  // string filename_tx_samples = 13;
+  if (this->filename_tx_samples().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->filename_tx_samples().data(), static_cast<int>(this->filename_tx_samples().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "sp.ste.PayloadSteSingleMeasurementTxParams.filename_tx_samples");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        13, this->filename_tx_samples(), target);
+  }
+
+  // uint64 nextTxStartTime = 14;
+  if (this->nexttxstarttime() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt64ToArray(14, this->nexttxstarttime(), target);
+  }
+
+  // .sp.ste.TxIdlePattern tx_idle_pattern = 15;
+  if (this->tx_idle_pattern() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
+      15, this->tx_idle_pattern(), target);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:sp.ste.tx_parameters)
+  // @@protoc_insertion_point(serialize_to_array_end:sp.ste.PayloadSteSingleMeasurementTxParams)
   return target;
 }
 
-size_t tx_parameters::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:sp.ste.tx_parameters)
+size_t PayloadSteSingleMeasurementTxParams::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:sp.ste.PayloadSteSingleMeasurementTxParams)
   size_t total_size = 0;
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -2398,29 +1934,90 @@ size_t tx_parameters::ByteSizeLong() const {
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
-  // double num_tx_samples_total = 1;
-  if (this->num_tx_samples_total() != 0) {
-    total_size += 1 + 8;
+  // string filebasename = 12;
+  if (this->filebasename().size() > 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->filebasename());
   }
 
-  // double tx_freq1_Hz = 2;
+  // string filename_tx_samples = 13;
+  if (this->filename_tx_samples().size() > 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->filename_tx_samples());
+  }
+
+  // float tx_freq1_Hz = 1;
   if (this->tx_freq1_hz() != 0) {
-    total_size += 1 + 8;
+    total_size += 1 + 4;
   }
 
-  // double tx_freq2_Hz = 3;
-  if (this->tx_freq2_hz() != 0) {
-    total_size += 1 + 8;
-  }
-
-  // double tx_phase1_rot = 4;
+  // float tx_phase1_rot = 2;
   if (this->tx_phase1_rot() != 0) {
-    total_size += 1 + 8;
+    total_size += 1 + 4;
   }
 
-  // double tx_phase2_rot = 5;
+  // float tx_freq2_Hz = 3;
+  if (this->tx_freq2_hz() != 0) {
+    total_size += 1 + 4;
+  }
+
+  // float tx_phase2_rot = 4;
   if (this->tx_phase2_rot() != 0) {
-    total_size += 1 + 8;
+    total_size += 1 + 4;
+  }
+
+  // float gain1 = 5;
+  if (this->gain1() != 0) {
+    total_size += 1 + 4;
+  }
+
+  // float gain2 = 6;
+  if (this->gain2() != 0) {
+    total_size += 1 + 4;
+  }
+
+  // float gain3 = 7;
+  if (this->gain3() != 0) {
+    total_size += 1 + 4;
+  }
+
+  // bool awgn_enable = 8;
+  if (this->awgn_enable() != 0) {
+    total_size += 1 + 1;
+  }
+
+  // bool notch_enable = 9;
+  if (this->notch_enable() != 0) {
+    total_size += 1 + 1;
+  }
+
+  // uint32 num_tx_samples_total = 10;
+  if (this->num_tx_samples_total() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::UInt32Size(
+        this->num_tx_samples_total());
+  }
+
+  // uint32 num_tx_samples_per_batch = 11;
+  if (this->num_tx_samples_per_batch() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::UInt32Size(
+        this->num_tx_samples_per_batch());
+  }
+
+  // uint64 nextTxStartTime = 14;
+  if (this->nexttxstarttime() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::UInt64Size(
+        this->nexttxstarttime());
+  }
+
+  // .sp.ste.TxIdlePattern tx_idle_pattern = 15;
+  if (this->tx_idle_pattern() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::EnumSize(this->tx_idle_pattern());
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
@@ -2430,79 +2027,121 @@ size_t tx_parameters::ByteSizeLong() const {
   return total_size;
 }
 
-void tx_parameters::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:sp.ste.tx_parameters)
+void PayloadSteSingleMeasurementTxParams::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:sp.ste.PayloadSteSingleMeasurementTxParams)
   GOOGLE_DCHECK_NE(&from, this);
-  const tx_parameters* source =
-      ::google::protobuf::internal::DynamicCastToGenerated<const tx_parameters>(
+  const PayloadSteSingleMeasurementTxParams* source =
+      ::google::protobuf::internal::DynamicCastToGenerated<const PayloadSteSingleMeasurementTxParams>(
           &from);
   if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:sp.ste.tx_parameters)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:sp.ste.PayloadSteSingleMeasurementTxParams)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:sp.ste.tx_parameters)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:sp.ste.PayloadSteSingleMeasurementTxParams)
     MergeFrom(*source);
   }
 }
 
-void tx_parameters::MergeFrom(const tx_parameters& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:sp.ste.tx_parameters)
+void PayloadSteSingleMeasurementTxParams::MergeFrom(const PayloadSteSingleMeasurementTxParams& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:sp.ste.PayloadSteSingleMeasurementTxParams)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.num_tx_samples_total() != 0) {
-    set_num_tx_samples_total(from.num_tx_samples_total());
+  if (from.filebasename().size() > 0) {
+
+    filebasename_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.filebasename_);
+  }
+  if (from.filename_tx_samples().size() > 0) {
+
+    filename_tx_samples_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.filename_tx_samples_);
   }
   if (from.tx_freq1_hz() != 0) {
     set_tx_freq1_hz(from.tx_freq1_hz());
   }
-  if (from.tx_freq2_hz() != 0) {
-    set_tx_freq2_hz(from.tx_freq2_hz());
-  }
   if (from.tx_phase1_rot() != 0) {
     set_tx_phase1_rot(from.tx_phase1_rot());
+  }
+  if (from.tx_freq2_hz() != 0) {
+    set_tx_freq2_hz(from.tx_freq2_hz());
   }
   if (from.tx_phase2_rot() != 0) {
     set_tx_phase2_rot(from.tx_phase2_rot());
   }
+  if (from.gain1() != 0) {
+    set_gain1(from.gain1());
+  }
+  if (from.gain2() != 0) {
+    set_gain2(from.gain2());
+  }
+  if (from.gain3() != 0) {
+    set_gain3(from.gain3());
+  }
+  if (from.awgn_enable() != 0) {
+    set_awgn_enable(from.awgn_enable());
+  }
+  if (from.notch_enable() != 0) {
+    set_notch_enable(from.notch_enable());
+  }
+  if (from.num_tx_samples_total() != 0) {
+    set_num_tx_samples_total(from.num_tx_samples_total());
+  }
+  if (from.num_tx_samples_per_batch() != 0) {
+    set_num_tx_samples_per_batch(from.num_tx_samples_per_batch());
+  }
+  if (from.nexttxstarttime() != 0) {
+    set_nexttxstarttime(from.nexttxstarttime());
+  }
+  if (from.tx_idle_pattern() != 0) {
+    set_tx_idle_pattern(from.tx_idle_pattern());
+  }
 }
 
-void tx_parameters::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:sp.ste.tx_parameters)
+void PayloadSteSingleMeasurementTxParams::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:sp.ste.PayloadSteSingleMeasurementTxParams)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-void tx_parameters::CopyFrom(const tx_parameters& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:sp.ste.tx_parameters)
+void PayloadSteSingleMeasurementTxParams::CopyFrom(const PayloadSteSingleMeasurementTxParams& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:sp.ste.PayloadSteSingleMeasurementTxParams)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool tx_parameters::IsInitialized() const {
+bool PayloadSteSingleMeasurementTxParams::IsInitialized() const {
   return true;
 }
 
-void tx_parameters::Swap(tx_parameters* other) {
+void PayloadSteSingleMeasurementTxParams::Swap(PayloadSteSingleMeasurementTxParams* other) {
   if (other == this) return;
   InternalSwap(other);
 }
-void tx_parameters::InternalSwap(tx_parameters* other) {
+void PayloadSteSingleMeasurementTxParams::InternalSwap(PayloadSteSingleMeasurementTxParams* other) {
   using std::swap;
-  swap(num_tx_samples_total_, other->num_tx_samples_total_);
+  filebasename_.Swap(&other->filebasename_);
+  filename_tx_samples_.Swap(&other->filename_tx_samples_);
   swap(tx_freq1_hz_, other->tx_freq1_hz_);
-  swap(tx_freq2_hz_, other->tx_freq2_hz_);
   swap(tx_phase1_rot_, other->tx_phase1_rot_);
+  swap(tx_freq2_hz_, other->tx_freq2_hz_);
   swap(tx_phase2_rot_, other->tx_phase2_rot_);
+  swap(gain1_, other->gain1_);
+  swap(gain2_, other->gain2_);
+  swap(gain3_, other->gain3_);
+  swap(awgn_enable_, other->awgn_enable_);
+  swap(notch_enable_, other->notch_enable_);
+  swap(num_tx_samples_total_, other->num_tx_samples_total_);
+  swap(num_tx_samples_per_batch_, other->num_tx_samples_per_batch_);
+  swap(nexttxstarttime_, other->nexttxstarttime_);
+  swap(tx_idle_pattern_, other->tx_idle_pattern_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
   swap(_cached_size_, other->_cached_size_);
 }
 
-::google::protobuf::Metadata tx_parameters::GetMetadata() const {
+::google::protobuf::Metadata PayloadSteSingleMeasurementTxParams::GetMetadata() const {
   protobuf_sp_5fste_2eproto::protobuf_AssignDescriptorsOnce();
   return ::protobuf_sp_5fste_2eproto::file_level_metadata[kIndexInFileMessages];
 }
@@ -2510,91 +2149,131 @@ void tx_parameters::InternalSwap(tx_parameters* other) {
 
 // ===================================================================
 
-void fft_parameters::InitAsDefaultInstance() {
+void PayloadSteSingleMeasurementRxParams::InitAsDefaultInstance() {
 }
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int fft_parameters::kFftLengthAFieldNumber;
-const int fft_parameters::kFftBatchesAFieldNumber;
-const int fft_parameters::kFftLengthBFieldNumber;
-const int fft_parameters::kFftBatchesBFieldNumber;
+const int PayloadSteSingleMeasurementRxParams::kFftLengthAFieldNumber;
+const int PayloadSteSingleMeasurementRxParams::kFftLengthBFieldNumber;
+const int PayloadSteSingleMeasurementRxParams::kFftBatchesAFieldNumber;
+const int PayloadSteSingleMeasurementRxParams::kFftBatchesBFieldNumber;
+const int PayloadSteSingleMeasurementRxParams::kRxRotFreqHzFieldNumber;
+const int PayloadSteSingleMeasurementRxParams::kDecimationFieldNumber;
+const int PayloadSteSingleMeasurementRxParams::kNumRxSamplesFieldNumber;
+const int PayloadSteSingleMeasurementRxParams::kSaveIqFieldNumber;
+const int PayloadSteSingleMeasurementRxParams::kFftAEnableFieldNumber;
+const int PayloadSteSingleMeasurementRxParams::kFftBEnableFieldNumber;
+const int PayloadSteSingleMeasurementRxParams::kParameterEstimateEnableFieldNumber;
+const int PayloadSteSingleMeasurementRxParams::kFilebasenameFieldNumber;
+const int PayloadSteSingleMeasurementRxParams::kFilenameFftAFieldNumber;
+const int PayloadSteSingleMeasurementRxParams::kFilenameFftBFieldNumber;
+const int PayloadSteSingleMeasurementRxParams::kFilenameRxSamplesFieldNumber;
+const int PayloadSteSingleMeasurementRxParams::kNextRxStartTimeFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
-fft_parameters::fft_parameters()
+PayloadSteSingleMeasurementRxParams::PayloadSteSingleMeasurementRxParams()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
   if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_sp_5fste_2eproto::InitDefaultsfft_parameters();
+    ::protobuf_sp_5fste_2eproto::InitDefaultsPayloadSteSingleMeasurementRxParams();
   }
   SharedCtor();
-  // @@protoc_insertion_point(constructor:sp.ste.fft_parameters)
+  // @@protoc_insertion_point(constructor:sp.ste.PayloadSteSingleMeasurementRxParams)
 }
-fft_parameters::fft_parameters(const fft_parameters& from)
+PayloadSteSingleMeasurementRxParams::PayloadSteSingleMeasurementRxParams(const PayloadSteSingleMeasurementRxParams& from)
   : ::google::protobuf::Message(),
       _internal_metadata_(NULL),
       _cached_size_(0) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
+  filebasename_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.filebasename().size() > 0) {
+    filebasename_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.filebasename_);
+  }
+  filename_fft_a_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.filename_fft_a().size() > 0) {
+    filename_fft_a_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.filename_fft_a_);
+  }
+  filename_fft_b_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.filename_fft_b().size() > 0) {
+    filename_fft_b_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.filename_fft_b_);
+  }
+  filename_rx_samples_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.filename_rx_samples().size() > 0) {
+    filename_rx_samples_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.filename_rx_samples_);
+  }
   ::memcpy(&fft_length_a_, &from.fft_length_a_,
-    static_cast<size_t>(reinterpret_cast<char*>(&fft_batches_b_) -
-    reinterpret_cast<char*>(&fft_length_a_)) + sizeof(fft_batches_b_));
-  // @@protoc_insertion_point(copy_constructor:sp.ste.fft_parameters)
+    static_cast<size_t>(reinterpret_cast<char*>(&nextrxstarttime_) -
+    reinterpret_cast<char*>(&fft_length_a_)) + sizeof(nextrxstarttime_));
+  // @@protoc_insertion_point(copy_constructor:sp.ste.PayloadSteSingleMeasurementRxParams)
 }
 
-void fft_parameters::SharedCtor() {
+void PayloadSteSingleMeasurementRxParams::SharedCtor() {
+  filebasename_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  filename_fft_a_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  filename_fft_b_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  filename_rx_samples_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   ::memset(&fft_length_a_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&fft_batches_b_) -
-      reinterpret_cast<char*>(&fft_length_a_)) + sizeof(fft_batches_b_));
+      reinterpret_cast<char*>(&nextrxstarttime_) -
+      reinterpret_cast<char*>(&fft_length_a_)) + sizeof(nextrxstarttime_));
   _cached_size_ = 0;
 }
 
-fft_parameters::~fft_parameters() {
-  // @@protoc_insertion_point(destructor:sp.ste.fft_parameters)
+PayloadSteSingleMeasurementRxParams::~PayloadSteSingleMeasurementRxParams() {
+  // @@protoc_insertion_point(destructor:sp.ste.PayloadSteSingleMeasurementRxParams)
   SharedDtor();
 }
 
-void fft_parameters::SharedDtor() {
+void PayloadSteSingleMeasurementRxParams::SharedDtor() {
+  filebasename_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  filename_fft_a_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  filename_fft_b_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  filename_rx_samples_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 
-void fft_parameters::SetCachedSize(int size) const {
+void PayloadSteSingleMeasurementRxParams::SetCachedSize(int size) const {
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
   _cached_size_ = size;
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
 }
-const ::google::protobuf::Descriptor* fft_parameters::descriptor() {
+const ::google::protobuf::Descriptor* PayloadSteSingleMeasurementRxParams::descriptor() {
   ::protobuf_sp_5fste_2eproto::protobuf_AssignDescriptorsOnce();
   return ::protobuf_sp_5fste_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
 }
 
-const fft_parameters& fft_parameters::default_instance() {
-  ::protobuf_sp_5fste_2eproto::InitDefaultsfft_parameters();
+const PayloadSteSingleMeasurementRxParams& PayloadSteSingleMeasurementRxParams::default_instance() {
+  ::protobuf_sp_5fste_2eproto::InitDefaultsPayloadSteSingleMeasurementRxParams();
   return *internal_default_instance();
 }
 
-fft_parameters* fft_parameters::New(::google::protobuf::Arena* arena) const {
-  fft_parameters* n = new fft_parameters;
+PayloadSteSingleMeasurementRxParams* PayloadSteSingleMeasurementRxParams::New(::google::protobuf::Arena* arena) const {
+  PayloadSteSingleMeasurementRxParams* n = new PayloadSteSingleMeasurementRxParams;
   if (arena != NULL) {
     arena->Own(n);
   }
   return n;
 }
 
-void fft_parameters::Clear() {
-// @@protoc_insertion_point(message_clear_start:sp.ste.fft_parameters)
+void PayloadSteSingleMeasurementRxParams::Clear() {
+// @@protoc_insertion_point(message_clear_start:sp.ste.PayloadSteSingleMeasurementRxParams)
   ::google::protobuf::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
+  filebasename_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  filename_fft_a_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  filename_fft_b_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  filename_rx_samples_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   ::memset(&fft_length_a_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&fft_batches_b_) -
-      reinterpret_cast<char*>(&fft_length_a_)) + sizeof(fft_batches_b_));
+      reinterpret_cast<char*>(&nextrxstarttime_) -
+      reinterpret_cast<char*>(&fft_length_a_)) + sizeof(nextrxstarttime_));
   _internal_metadata_.Clear();
 }
 
-bool fft_parameters::MergePartialFromCodedStream(
+bool PayloadSteSingleMeasurementRxParams::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:sp.ste.fft_parameters)
+  // @@protoc_insertion_point(parse_start:sp.ste.PayloadSteSingleMeasurementRxParams)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(16383u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
@@ -2612,28 +2291,28 @@ bool fft_parameters::MergePartialFromCodedStream(
         break;
       }
 
-      // uint32 fft_batches_a = 2;
+      // uint32 fft_length_b = 2;
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(16u /* 16 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
-                 input, &fft_batches_a_)));
+                 input, &fft_length_b_)));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // uint32 fft_length_b = 3;
+      // uint32 fft_batches_a = 3;
       case 3: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(24u /* 24 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
-                 input, &fft_length_b_)));
+                 input, &fft_batches_a_)));
         } else {
           goto handle_unusual;
         }
@@ -2654,326 +2333,13 @@ bool fft_parameters::MergePartialFromCodedStream(
         break;
       }
 
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:sp.ste.fft_parameters)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:sp.ste.fft_parameters)
-  return false;
-#undef DO_
-}
-
-void fft_parameters::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:sp.ste.fft_parameters)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // uint32 fft_length_a = 1;
-  if (this->fft_length_a() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteUInt32(1, this->fft_length_a(), output);
-  }
-
-  // uint32 fft_batches_a = 2;
-  if (this->fft_batches_a() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteUInt32(2, this->fft_batches_a(), output);
-  }
-
-  // uint32 fft_length_b = 3;
-  if (this->fft_length_b() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteUInt32(3, this->fft_length_b(), output);
-  }
-
-  // uint32 fft_batches_b = 4;
-  if (this->fft_batches_b() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteUInt32(4, this->fft_batches_b(), output);
-  }
-
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
-  }
-  // @@protoc_insertion_point(serialize_end:sp.ste.fft_parameters)
-}
-
-::google::protobuf::uint8* fft_parameters::InternalSerializeWithCachedSizesToArray(
-    bool deterministic, ::google::protobuf::uint8* target) const {
-  (void)deterministic; // Unused
-  // @@protoc_insertion_point(serialize_to_array_start:sp.ste.fft_parameters)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // uint32 fft_length_a = 1;
-  if (this->fft_length_a() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(1, this->fft_length_a(), target);
-  }
-
-  // uint32 fft_batches_a = 2;
-  if (this->fft_batches_a() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(2, this->fft_batches_a(), target);
-  }
-
-  // uint32 fft_length_b = 3;
-  if (this->fft_length_b() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(3, this->fft_length_b(), target);
-  }
-
-  // uint32 fft_batches_b = 4;
-  if (this->fft_batches_b() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(4, this->fft_batches_b(), target);
-  }
-
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:sp.ste.fft_parameters)
-  return target;
-}
-
-size_t fft_parameters::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:sp.ste.fft_parameters)
-  size_t total_size = 0;
-
-  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
-  }
-  // uint32 fft_length_a = 1;
-  if (this->fft_length_a() != 0) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::UInt32Size(
-        this->fft_length_a());
-  }
-
-  // uint32 fft_batches_a = 2;
-  if (this->fft_batches_a() != 0) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::UInt32Size(
-        this->fft_batches_a());
-  }
-
-  // uint32 fft_length_b = 3;
-  if (this->fft_length_b() != 0) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::UInt32Size(
-        this->fft_length_b());
-  }
-
-  // uint32 fft_batches_b = 4;
-  if (this->fft_batches_b() != 0) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::UInt32Size(
-        this->fft_batches_b());
-  }
-
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = cached_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
-  return total_size;
-}
-
-void fft_parameters::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:sp.ste.fft_parameters)
-  GOOGLE_DCHECK_NE(&from, this);
-  const fft_parameters* source =
-      ::google::protobuf::internal::DynamicCastToGenerated<const fft_parameters>(
-          &from);
-  if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:sp.ste.fft_parameters)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:sp.ste.fft_parameters)
-    MergeFrom(*source);
-  }
-}
-
-void fft_parameters::MergeFrom(const fft_parameters& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:sp.ste.fft_parameters)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  if (from.fft_length_a() != 0) {
-    set_fft_length_a(from.fft_length_a());
-  }
-  if (from.fft_batches_a() != 0) {
-    set_fft_batches_a(from.fft_batches_a());
-  }
-  if (from.fft_length_b() != 0) {
-    set_fft_length_b(from.fft_length_b());
-  }
-  if (from.fft_batches_b() != 0) {
-    set_fft_batches_b(from.fft_batches_b());
-  }
-}
-
-void fft_parameters::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:sp.ste.fft_parameters)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-void fft_parameters::CopyFrom(const fft_parameters& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:sp.ste.fft_parameters)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool fft_parameters::IsInitialized() const {
-  return true;
-}
-
-void fft_parameters::Swap(fft_parameters* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
-void fft_parameters::InternalSwap(fft_parameters* other) {
-  using std::swap;
-  swap(fft_length_a_, other->fft_length_a_);
-  swap(fft_batches_a_, other->fft_batches_a_);
-  swap(fft_length_b_, other->fft_length_b_);
-  swap(fft_batches_b_, other->fft_batches_b_);
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_cached_size_, other->_cached_size_);
-}
-
-::google::protobuf::Metadata fft_parameters::GetMetadata() const {
-  protobuf_sp_5fste_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_sp_5fste_2eproto::file_level_metadata[kIndexInFileMessages];
-}
-
-
-// ===================================================================
-
-void other_parameters::InitAsDefaultInstance() {
-}
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int other_parameters::kNumRxSamplesFieldNumber;
-const int other_parameters::kRxRotFreqHzFieldNumber;
-const int other_parameters::kDecimationFieldNumber;
-const int other_parameters::kGain1FieldNumber;
-const int other_parameters::kGain2FieldNumber;
-const int other_parameters::kNextTxStartTimeFieldNumber;
-const int other_parameters::kNextRxStartTimeFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-other_parameters::other_parameters()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
-    ::protobuf_sp_5fste_2eproto::InitDefaultsother_parameters();
-  }
-  SharedCtor();
-  // @@protoc_insertion_point(constructor:sp.ste.other_parameters)
-}
-other_parameters::other_parameters(const other_parameters& from)
-  : ::google::protobuf::Message(),
-      _internal_metadata_(NULL),
-      _cached_size_(0) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::memcpy(&num_rx_samples_, &from.num_rx_samples_,
-    static_cast<size_t>(reinterpret_cast<char*>(&gain2_) -
-    reinterpret_cast<char*>(&num_rx_samples_)) + sizeof(gain2_));
-  // @@protoc_insertion_point(copy_constructor:sp.ste.other_parameters)
-}
-
-void other_parameters::SharedCtor() {
-  ::memset(&num_rx_samples_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&gain2_) -
-      reinterpret_cast<char*>(&num_rx_samples_)) + sizeof(gain2_));
-  _cached_size_ = 0;
-}
-
-other_parameters::~other_parameters() {
-  // @@protoc_insertion_point(destructor:sp.ste.other_parameters)
-  SharedDtor();
-}
-
-void other_parameters::SharedDtor() {
-}
-
-void other_parameters::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
-}
-const ::google::protobuf::Descriptor* other_parameters::descriptor() {
-  ::protobuf_sp_5fste_2eproto::protobuf_AssignDescriptorsOnce();
-  return ::protobuf_sp_5fste_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
-}
-
-const other_parameters& other_parameters::default_instance() {
-  ::protobuf_sp_5fste_2eproto::InitDefaultsother_parameters();
-  return *internal_default_instance();
-}
-
-other_parameters* other_parameters::New(::google::protobuf::Arena* arena) const {
-  other_parameters* n = new other_parameters;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
-}
-
-void other_parameters::Clear() {
-// @@protoc_insertion_point(message_clear_start:sp.ste.other_parameters)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  ::memset(&num_rx_samples_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&gain2_) -
-      reinterpret_cast<char*>(&num_rx_samples_)) + sizeof(gain2_));
-  _internal_metadata_.Clear();
-}
-
-bool other_parameters::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:sp.ste.other_parameters)
-  for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // double num_rx_samples = 1;
-      case 1: {
+      // float rx_rot_freq_Hz = 5;
+      case 5: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(9u /* 9 & 0xFF */)) {
+            static_cast< ::google::protobuf::uint8>(45u /* 45 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 input, &num_rx_samples_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // double rx_rot_freq_Hz = 2;
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(17u /* 17 & 0xFF */)) {
-
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
+                   float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
                  input, &rx_rot_freq_hz_)));
         } else {
           goto handle_unusual;
@@ -2981,10 +2347,10 @@ bool other_parameters::MergePartialFromCodedStream(
         break;
       }
 
-      // uint32 decimation = 3;
-      case 3: {
+      // uint32 decimation = 6;
+      case 6: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(24u /* 24 & 0xFF */)) {
+            static_cast< ::google::protobuf::uint8>(48u /* 48 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
@@ -2995,55 +2361,147 @@ bool other_parameters::MergePartialFromCodedStream(
         break;
       }
 
-      // uint32 gain1 = 4;
-      case 4: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(32u /* 32 & 0xFF */)) {
-
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
-                 input, &gain1_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // uint32 gain2 = 5;
-      case 5: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(40u /* 40 & 0xFF */)) {
-
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
-                 input, &gain2_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // double nextTxStartTime = 6;
-      case 6: {
-        if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(49u /* 49 & 0xFF */)) {
-
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
-                 input, &nexttxstarttime_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // double nextRxStartTime = 7;
+      // uint32 num_rx_samples = 7;
       case 7: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(57u /* 57 & 0xFF */)) {
+            static_cast< ::google::protobuf::uint8>(56u /* 56 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &num_rx_samples_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // bool save_iq = 8;
+      case 8: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(64u /* 64 & 0xFF */)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &save_iq_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // bool fft_a_enable = 9;
+      case 9: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(72u /* 72 & 0xFF */)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &fft_a_enable_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // bool fft_b_enable = 10;
+      case 10: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(80u /* 80 & 0xFF */)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &fft_b_enable_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // bool parameter_estimate_enable = 11;
+      case 11: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(88u /* 88 & 0xFF */)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &parameter_estimate_enable_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string filebasename = 12;
+      case 12: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(98u /* 98 & 0xFF */)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_filebasename()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->filebasename().data(), static_cast<int>(this->filebasename().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "sp.ste.PayloadSteSingleMeasurementRxParams.filebasename"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string filename_fft_a = 13;
+      case 13: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(106u /* 106 & 0xFF */)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_filename_fft_a()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->filename_fft_a().data(), static_cast<int>(this->filename_fft_a().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "sp.ste.PayloadSteSingleMeasurementRxParams.filename_fft_a"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string filename_fft_b = 14;
+      case 14: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(114u /* 114 & 0xFF */)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_filename_fft_b()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->filename_fft_b().data(), static_cast<int>(this->filename_fft_b().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "sp.ste.PayloadSteSingleMeasurementRxParams.filename_fft_b"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string filename_rx_samples = 15;
+      case 15: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(122u /* 122 & 0xFF */)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_filename_rx_samples()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->filename_rx_samples().data(), static_cast<int>(this->filename_rx_samples().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "sp.ste.PayloadSteSingleMeasurementRxParams.filename_rx_samples"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // uint64 nextRxStartTime = 16;
+      case 16: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(128u /* 128 & 0xFF */)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint64, ::google::protobuf::internal::WireFormatLite::TYPE_UINT64>(
                  input, &nextrxstarttime_)));
         } else {
           goto handle_unusual;
@@ -3063,114 +2521,248 @@ bool other_parameters::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:sp.ste.other_parameters)
+  // @@protoc_insertion_point(parse_success:sp.ste.PayloadSteSingleMeasurementRxParams)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:sp.ste.other_parameters)
+  // @@protoc_insertion_point(parse_failure:sp.ste.PayloadSteSingleMeasurementRxParams)
   return false;
 #undef DO_
 }
 
-void other_parameters::SerializeWithCachedSizes(
+void PayloadSteSingleMeasurementRxParams::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:sp.ste.other_parameters)
+  // @@protoc_insertion_point(serialize_start:sp.ste.PayloadSteSingleMeasurementRxParams)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // double num_rx_samples = 1;
-  if (this->num_rx_samples() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(1, this->num_rx_samples(), output);
+  // uint32 fft_length_a = 1;
+  if (this->fft_length_a() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(1, this->fft_length_a(), output);
   }
 
-  // double rx_rot_freq_Hz = 2;
+  // uint32 fft_length_b = 2;
+  if (this->fft_length_b() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(2, this->fft_length_b(), output);
+  }
+
+  // uint32 fft_batches_a = 3;
+  if (this->fft_batches_a() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(3, this->fft_batches_a(), output);
+  }
+
+  // uint32 fft_batches_b = 4;
+  if (this->fft_batches_b() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(4, this->fft_batches_b(), output);
+  }
+
+  // float rx_rot_freq_Hz = 5;
   if (this->rx_rot_freq_hz() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(2, this->rx_rot_freq_hz(), output);
+    ::google::protobuf::internal::WireFormatLite::WriteFloat(5, this->rx_rot_freq_hz(), output);
   }
 
-  // uint32 decimation = 3;
+  // uint32 decimation = 6;
   if (this->decimation() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteUInt32(3, this->decimation(), output);
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(6, this->decimation(), output);
   }
 
-  // uint32 gain1 = 4;
-  if (this->gain1() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteUInt32(4, this->gain1(), output);
+  // uint32 num_rx_samples = 7;
+  if (this->num_rx_samples() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(7, this->num_rx_samples(), output);
   }
 
-  // uint32 gain2 = 5;
-  if (this->gain2() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteUInt32(5, this->gain2(), output);
+  // bool save_iq = 8;
+  if (this->save_iq() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(8, this->save_iq(), output);
   }
 
-  // double nextTxStartTime = 6;
-  if (this->nexttxstarttime() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(6, this->nexttxstarttime(), output);
+  // bool fft_a_enable = 9;
+  if (this->fft_a_enable() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(9, this->fft_a_enable(), output);
   }
 
-  // double nextRxStartTime = 7;
+  // bool fft_b_enable = 10;
+  if (this->fft_b_enable() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(10, this->fft_b_enable(), output);
+  }
+
+  // bool parameter_estimate_enable = 11;
+  if (this->parameter_estimate_enable() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(11, this->parameter_estimate_enable(), output);
+  }
+
+  // string filebasename = 12;
+  if (this->filebasename().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->filebasename().data(), static_cast<int>(this->filebasename().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "sp.ste.PayloadSteSingleMeasurementRxParams.filebasename");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      12, this->filebasename(), output);
+  }
+
+  // string filename_fft_a = 13;
+  if (this->filename_fft_a().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->filename_fft_a().data(), static_cast<int>(this->filename_fft_a().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "sp.ste.PayloadSteSingleMeasurementRxParams.filename_fft_a");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      13, this->filename_fft_a(), output);
+  }
+
+  // string filename_fft_b = 14;
+  if (this->filename_fft_b().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->filename_fft_b().data(), static_cast<int>(this->filename_fft_b().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "sp.ste.PayloadSteSingleMeasurementRxParams.filename_fft_b");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      14, this->filename_fft_b(), output);
+  }
+
+  // string filename_rx_samples = 15;
+  if (this->filename_rx_samples().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->filename_rx_samples().data(), static_cast<int>(this->filename_rx_samples().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "sp.ste.PayloadSteSingleMeasurementRxParams.filename_rx_samples");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      15, this->filename_rx_samples(), output);
+  }
+
+  // uint64 nextRxStartTime = 16;
   if (this->nextrxstarttime() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteDouble(7, this->nextrxstarttime(), output);
+    ::google::protobuf::internal::WireFormatLite::WriteUInt64(16, this->nextrxstarttime(), output);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
   }
-  // @@protoc_insertion_point(serialize_end:sp.ste.other_parameters)
+  // @@protoc_insertion_point(serialize_end:sp.ste.PayloadSteSingleMeasurementRxParams)
 }
 
-::google::protobuf::uint8* other_parameters::InternalSerializeWithCachedSizesToArray(
+::google::protobuf::uint8* PayloadSteSingleMeasurementRxParams::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
   (void)deterministic; // Unused
-  // @@protoc_insertion_point(serialize_to_array_start:sp.ste.other_parameters)
+  // @@protoc_insertion_point(serialize_to_array_start:sp.ste.PayloadSteSingleMeasurementRxParams)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // double num_rx_samples = 1;
-  if (this->num_rx_samples() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(1, this->num_rx_samples(), target);
+  // uint32 fft_length_a = 1;
+  if (this->fft_length_a() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(1, this->fft_length_a(), target);
   }
 
-  // double rx_rot_freq_Hz = 2;
+  // uint32 fft_length_b = 2;
+  if (this->fft_length_b() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(2, this->fft_length_b(), target);
+  }
+
+  // uint32 fft_batches_a = 3;
+  if (this->fft_batches_a() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(3, this->fft_batches_a(), target);
+  }
+
+  // uint32 fft_batches_b = 4;
+  if (this->fft_batches_b() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(4, this->fft_batches_b(), target);
+  }
+
+  // float rx_rot_freq_Hz = 5;
   if (this->rx_rot_freq_hz() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(2, this->rx_rot_freq_hz(), target);
+    target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(5, this->rx_rot_freq_hz(), target);
   }
 
-  // uint32 decimation = 3;
+  // uint32 decimation = 6;
   if (this->decimation() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(3, this->decimation(), target);
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(6, this->decimation(), target);
   }
 
-  // uint32 gain1 = 4;
-  if (this->gain1() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(4, this->gain1(), target);
+  // uint32 num_rx_samples = 7;
+  if (this->num_rx_samples() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(7, this->num_rx_samples(), target);
   }
 
-  // uint32 gain2 = 5;
-  if (this->gain2() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(5, this->gain2(), target);
+  // bool save_iq = 8;
+  if (this->save_iq() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(8, this->save_iq(), target);
   }
 
-  // double nextTxStartTime = 6;
-  if (this->nexttxstarttime() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(6, this->nexttxstarttime(), target);
+  // bool fft_a_enable = 9;
+  if (this->fft_a_enable() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(9, this->fft_a_enable(), target);
   }
 
-  // double nextRxStartTime = 7;
+  // bool fft_b_enable = 10;
+  if (this->fft_b_enable() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(10, this->fft_b_enable(), target);
+  }
+
+  // bool parameter_estimate_enable = 11;
+  if (this->parameter_estimate_enable() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(11, this->parameter_estimate_enable(), target);
+  }
+
+  // string filebasename = 12;
+  if (this->filebasename().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->filebasename().data(), static_cast<int>(this->filebasename().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "sp.ste.PayloadSteSingleMeasurementRxParams.filebasename");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        12, this->filebasename(), target);
+  }
+
+  // string filename_fft_a = 13;
+  if (this->filename_fft_a().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->filename_fft_a().data(), static_cast<int>(this->filename_fft_a().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "sp.ste.PayloadSteSingleMeasurementRxParams.filename_fft_a");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        13, this->filename_fft_a(), target);
+  }
+
+  // string filename_fft_b = 14;
+  if (this->filename_fft_b().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->filename_fft_b().data(), static_cast<int>(this->filename_fft_b().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "sp.ste.PayloadSteSingleMeasurementRxParams.filename_fft_b");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        14, this->filename_fft_b(), target);
+  }
+
+  // string filename_rx_samples = 15;
+  if (this->filename_rx_samples().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->filename_rx_samples().data(), static_cast<int>(this->filename_rx_samples().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "sp.ste.PayloadSteSingleMeasurementRxParams.filename_rx_samples");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        15, this->filename_rx_samples(), target);
+  }
+
+  // uint64 nextRxStartTime = 16;
   if (this->nextrxstarttime() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteDoubleToArray(7, this->nextrxstarttime(), target);
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt64ToArray(16, this->nextrxstarttime(), target);
   }
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
     target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:sp.ste.other_parameters)
+  // @@protoc_insertion_point(serialize_to_array_end:sp.ste.PayloadSteSingleMeasurementRxParams)
   return target;
 }
 
-size_t other_parameters::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:sp.ste.other_parameters)
+size_t PayloadSteSingleMeasurementRxParams::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:sp.ste.PayloadSteSingleMeasurementRxParams)
   size_t total_size = 0;
 
   if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
@@ -3178,45 +2770,106 @@ size_t other_parameters::ByteSizeLong() const {
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
         (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
-  // double num_rx_samples = 1;
-  if (this->num_rx_samples() != 0) {
-    total_size += 1 + 8;
+  // string filebasename = 12;
+  if (this->filebasename().size() > 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->filebasename());
   }
 
-  // double rx_rot_freq_Hz = 2;
+  // string filename_fft_a = 13;
+  if (this->filename_fft_a().size() > 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->filename_fft_a());
+  }
+
+  // string filename_fft_b = 14;
+  if (this->filename_fft_b().size() > 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->filename_fft_b());
+  }
+
+  // string filename_rx_samples = 15;
+  if (this->filename_rx_samples().size() > 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->filename_rx_samples());
+  }
+
+  // uint32 fft_length_a = 1;
+  if (this->fft_length_a() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::UInt32Size(
+        this->fft_length_a());
+  }
+
+  // uint32 fft_length_b = 2;
+  if (this->fft_length_b() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::UInt32Size(
+        this->fft_length_b());
+  }
+
+  // uint32 fft_batches_a = 3;
+  if (this->fft_batches_a() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::UInt32Size(
+        this->fft_batches_a());
+  }
+
+  // uint32 fft_batches_b = 4;
+  if (this->fft_batches_b() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::UInt32Size(
+        this->fft_batches_b());
+  }
+
+  // float rx_rot_freq_Hz = 5;
   if (this->rx_rot_freq_hz() != 0) {
-    total_size += 1 + 8;
+    total_size += 1 + 4;
   }
 
-  // uint32 decimation = 3;
+  // uint32 decimation = 6;
   if (this->decimation() != 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::UInt32Size(
         this->decimation());
   }
 
-  // uint32 gain1 = 4;
-  if (this->gain1() != 0) {
+  // uint32 num_rx_samples = 7;
+  if (this->num_rx_samples() != 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::UInt32Size(
-        this->gain1());
+        this->num_rx_samples());
   }
 
-  // double nextTxStartTime = 6;
-  if (this->nexttxstarttime() != 0) {
-    total_size += 1 + 8;
+  // bool save_iq = 8;
+  if (this->save_iq() != 0) {
+    total_size += 1 + 1;
   }
 
-  // double nextRxStartTime = 7;
+  // bool fft_a_enable = 9;
+  if (this->fft_a_enable() != 0) {
+    total_size += 1 + 1;
+  }
+
+  // bool fft_b_enable = 10;
+  if (this->fft_b_enable() != 0) {
+    total_size += 1 + 1;
+  }
+
+  // bool parameter_estimate_enable = 11;
+  if (this->parameter_estimate_enable() != 0) {
+    total_size += 1 + 1;
+  }
+
+  // uint64 nextRxStartTime = 16;
   if (this->nextrxstarttime() != 0) {
-    total_size += 1 + 8;
-  }
-
-  // uint32 gain2 = 5;
-  if (this->gain2() != 0) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::UInt32Size(
-        this->gain2());
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::UInt64Size(
+        this->nextrxstarttime());
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
@@ -3226,30 +2879,55 @@ size_t other_parameters::ByteSizeLong() const {
   return total_size;
 }
 
-void other_parameters::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:sp.ste.other_parameters)
+void PayloadSteSingleMeasurementRxParams::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:sp.ste.PayloadSteSingleMeasurementRxParams)
   GOOGLE_DCHECK_NE(&from, this);
-  const other_parameters* source =
-      ::google::protobuf::internal::DynamicCastToGenerated<const other_parameters>(
+  const PayloadSteSingleMeasurementRxParams* source =
+      ::google::protobuf::internal::DynamicCastToGenerated<const PayloadSteSingleMeasurementRxParams>(
           &from);
   if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:sp.ste.other_parameters)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:sp.ste.PayloadSteSingleMeasurementRxParams)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:sp.ste.other_parameters)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:sp.ste.PayloadSteSingleMeasurementRxParams)
     MergeFrom(*source);
   }
 }
 
-void other_parameters::MergeFrom(const other_parameters& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:sp.ste.other_parameters)
+void PayloadSteSingleMeasurementRxParams::MergeFrom(const PayloadSteSingleMeasurementRxParams& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:sp.ste.PayloadSteSingleMeasurementRxParams)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.num_rx_samples() != 0) {
-    set_num_rx_samples(from.num_rx_samples());
+  if (from.filebasename().size() > 0) {
+
+    filebasename_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.filebasename_);
+  }
+  if (from.filename_fft_a().size() > 0) {
+
+    filename_fft_a_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.filename_fft_a_);
+  }
+  if (from.filename_fft_b().size() > 0) {
+
+    filename_fft_b_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.filename_fft_b_);
+  }
+  if (from.filename_rx_samples().size() > 0) {
+
+    filename_rx_samples_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.filename_rx_samples_);
+  }
+  if (from.fft_length_a() != 0) {
+    set_fft_length_a(from.fft_length_a());
+  }
+  if (from.fft_length_b() != 0) {
+    set_fft_length_b(from.fft_length_b());
+  }
+  if (from.fft_batches_a() != 0) {
+    set_fft_batches_a(from.fft_batches_a());
+  }
+  if (from.fft_batches_b() != 0) {
+    set_fft_batches_b(from.fft_batches_b());
   }
   if (from.rx_rot_freq_hz() != 0) {
     set_rx_rot_freq_hz(from.rx_rot_freq_hz());
@@ -3257,56 +2935,71 @@ void other_parameters::MergeFrom(const other_parameters& from) {
   if (from.decimation() != 0) {
     set_decimation(from.decimation());
   }
-  if (from.gain1() != 0) {
-    set_gain1(from.gain1());
+  if (from.num_rx_samples() != 0) {
+    set_num_rx_samples(from.num_rx_samples());
   }
-  if (from.nexttxstarttime() != 0) {
-    set_nexttxstarttime(from.nexttxstarttime());
+  if (from.save_iq() != 0) {
+    set_save_iq(from.save_iq());
+  }
+  if (from.fft_a_enable() != 0) {
+    set_fft_a_enable(from.fft_a_enable());
+  }
+  if (from.fft_b_enable() != 0) {
+    set_fft_b_enable(from.fft_b_enable());
+  }
+  if (from.parameter_estimate_enable() != 0) {
+    set_parameter_estimate_enable(from.parameter_estimate_enable());
   }
   if (from.nextrxstarttime() != 0) {
     set_nextrxstarttime(from.nextrxstarttime());
   }
-  if (from.gain2() != 0) {
-    set_gain2(from.gain2());
-  }
 }
 
-void other_parameters::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:sp.ste.other_parameters)
+void PayloadSteSingleMeasurementRxParams::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:sp.ste.PayloadSteSingleMeasurementRxParams)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-void other_parameters::CopyFrom(const other_parameters& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:sp.ste.other_parameters)
+void PayloadSteSingleMeasurementRxParams::CopyFrom(const PayloadSteSingleMeasurementRxParams& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:sp.ste.PayloadSteSingleMeasurementRxParams)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool other_parameters::IsInitialized() const {
+bool PayloadSteSingleMeasurementRxParams::IsInitialized() const {
   return true;
 }
 
-void other_parameters::Swap(other_parameters* other) {
+void PayloadSteSingleMeasurementRxParams::Swap(PayloadSteSingleMeasurementRxParams* other) {
   if (other == this) return;
   InternalSwap(other);
 }
-void other_parameters::InternalSwap(other_parameters* other) {
+void PayloadSteSingleMeasurementRxParams::InternalSwap(PayloadSteSingleMeasurementRxParams* other) {
   using std::swap;
-  swap(num_rx_samples_, other->num_rx_samples_);
+  filebasename_.Swap(&other->filebasename_);
+  filename_fft_a_.Swap(&other->filename_fft_a_);
+  filename_fft_b_.Swap(&other->filename_fft_b_);
+  filename_rx_samples_.Swap(&other->filename_rx_samples_);
+  swap(fft_length_a_, other->fft_length_a_);
+  swap(fft_length_b_, other->fft_length_b_);
+  swap(fft_batches_a_, other->fft_batches_a_);
+  swap(fft_batches_b_, other->fft_batches_b_);
   swap(rx_rot_freq_hz_, other->rx_rot_freq_hz_);
   swap(decimation_, other->decimation_);
-  swap(gain1_, other->gain1_);
-  swap(nexttxstarttime_, other->nexttxstarttime_);
+  swap(num_rx_samples_, other->num_rx_samples_);
+  swap(save_iq_, other->save_iq_);
+  swap(fft_a_enable_, other->fft_a_enable_);
+  swap(fft_b_enable_, other->fft_b_enable_);
+  swap(parameter_estimate_enable_, other->parameter_estimate_enable_);
   swap(nextrxstarttime_, other->nextrxstarttime_);
-  swap(gain2_, other->gain2_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
   swap(_cached_size_, other->_cached_size_);
 }
 
-::google::protobuf::Metadata other_parameters::GetMetadata() const {
+::google::protobuf::Metadata PayloadSteSingleMeasurementRxParams::GetMetadata() const {
   protobuf_sp_5fste_2eproto::protobuf_AssignDescriptorsOnce();
   return ::protobuf_sp_5fste_2eproto::file_level_metadata[kIndexInFileMessages];
 }

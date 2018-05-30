@@ -1,9 +1,8 @@
 //Server is in the STE and receives requests from the Client
 //Basically the reverse of the traditional use of client and server
 
-#include "sp_ste_server.h"
-#include "rpc_structures.h"
 #include "communication_information.h"
+#include "sp_ste_server.h"
 
 int main(int argc, char** argv)
 {

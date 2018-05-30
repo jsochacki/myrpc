@@ -37,7 +37,7 @@ namespace protobuf_sp_5fste_2eproto {
 struct TableStruct {
   static const ::google::protobuf::internal::ParseTableField entries[];
   static const ::google::protobuf::internal::AuxillaryParseTableField aux[];
-  static const ::google::protobuf::internal::ParseTable schema[8];
+  static const ::google::protobuf::internal::ParseTable schema[6];
   static const ::google::protobuf::internal::FieldMetadata field_metadata[];
   static const ::google::protobuf::internal::SerializationTable serialization_table[];
   static const ::google::protobuf::uint32 offsets[];
@@ -47,86 +47,69 @@ void InitDefaultsset_parametersImpl();
 void InitDefaultsset_parameters();
 void InitDefaultsparameter_valuesImpl();
 void InitDefaultsparameter_values();
-void InitDefaultsnum_paramsImpl();
-void InitDefaultsnum_params();
-void InitDefaultsstate_parametersImpl();
-void InitDefaultsstate_parameters();
-void InitDefaultstx_parametersImpl();
-void InitDefaultstx_parameters();
-void InitDefaultsfft_parametersImpl();
-void InitDefaultsfft_parameters();
-void InitDefaultsother_parametersImpl();
-void InitDefaultsother_parameters();
+void InitDefaultsTestBedRpcHeaderImpl();
+void InitDefaultsTestBedRpcHeader();
+void InitDefaultsPayloadSteSingleMeasurementTxParamsImpl();
+void InitDefaultsPayloadSteSingleMeasurementTxParams();
+void InitDefaultsPayloadSteSingleMeasurementRxParamsImpl();
+void InitDefaultsPayloadSteSingleMeasurementRxParams();
 void InitDefaultsnull_messageImpl();
 void InitDefaultsnull_message();
 inline void InitDefaults() {
   InitDefaultsset_parameters();
   InitDefaultsparameter_values();
-  InitDefaultsnum_params();
-  InitDefaultsstate_parameters();
-  InitDefaultstx_parameters();
-  InitDefaultsfft_parameters();
-  InitDefaultsother_parameters();
+  InitDefaultsTestBedRpcHeader();
+  InitDefaultsPayloadSteSingleMeasurementTxParams();
+  InitDefaultsPayloadSteSingleMeasurementRxParams();
   InitDefaultsnull_message();
 }
 }  // namespace protobuf_sp_5fste_2eproto
 namespace sp {
 namespace ste {
-class fft_parameters;
-class fft_parametersDefaultTypeInternal;
-extern fft_parametersDefaultTypeInternal _fft_parameters_default_instance_;
+class PayloadSteSingleMeasurementRxParams;
+class PayloadSteSingleMeasurementRxParamsDefaultTypeInternal;
+extern PayloadSteSingleMeasurementRxParamsDefaultTypeInternal _PayloadSteSingleMeasurementRxParams_default_instance_;
+class PayloadSteSingleMeasurementTxParams;
+class PayloadSteSingleMeasurementTxParamsDefaultTypeInternal;
+extern PayloadSteSingleMeasurementTxParamsDefaultTypeInternal _PayloadSteSingleMeasurementTxParams_default_instance_;
+class TestBedRpcHeader;
+class TestBedRpcHeaderDefaultTypeInternal;
+extern TestBedRpcHeaderDefaultTypeInternal _TestBedRpcHeader_default_instance_;
 class null_message;
 class null_messageDefaultTypeInternal;
 extern null_messageDefaultTypeInternal _null_message_default_instance_;
-class num_params;
-class num_paramsDefaultTypeInternal;
-extern num_paramsDefaultTypeInternal _num_params_default_instance_;
-class other_parameters;
-class other_parametersDefaultTypeInternal;
-extern other_parametersDefaultTypeInternal _other_parameters_default_instance_;
 class parameter_values;
 class parameter_valuesDefaultTypeInternal;
 extern parameter_valuesDefaultTypeInternal _parameter_values_default_instance_;
 class set_parameters;
 class set_parametersDefaultTypeInternal;
 extern set_parametersDefaultTypeInternal _set_parameters_default_instance_;
-class state_parameters;
-class state_parametersDefaultTypeInternal;
-extern state_parametersDefaultTypeInternal _state_parameters_default_instance_;
-class tx_parameters;
-class tx_parametersDefaultTypeInternal;
-extern tx_parametersDefaultTypeInternal _tx_parameters_default_instance_;
 }  // namespace ste
 }  // namespace sp
 namespace sp {
 namespace ste {
 
-enum state {
-  DISABLED = 0,
-  OFF = 0,
-  NOTRUNNING = 0,
-  COMPLETE = 0,
-  ENABLED = 1,
-  ON = 1,
-  RUNNING = 1,
-  INCOMPLETE = 1,
-  state_INT_MIN_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32min,
-  state_INT_MAX_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32max
+enum TxIdlePattern {
+  TX_IDLE_PATTERN_ZERO = 0,
+  TX_IDLE_PATTERN_RAMP = 1,
+  TX_IDLE_PATTERN_CW = 2,
+  TxIdlePattern_INT_MIN_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32min,
+  TxIdlePattern_INT_MAX_SENTINEL_DO_NOT_USE_ = ::google::protobuf::kint32max
 };
-bool state_IsValid(int value);
-const state state_MIN = DISABLED;
-const state state_MAX = ENABLED;
-const int state_ARRAYSIZE = state_MAX + 1;
+bool TxIdlePattern_IsValid(int value);
+const TxIdlePattern TxIdlePattern_MIN = TX_IDLE_PATTERN_ZERO;
+const TxIdlePattern TxIdlePattern_MAX = TX_IDLE_PATTERN_CW;
+const int TxIdlePattern_ARRAYSIZE = TxIdlePattern_MAX + 1;
 
-const ::google::protobuf::EnumDescriptor* state_descriptor();
-inline const ::std::string& state_Name(state value) {
+const ::google::protobuf::EnumDescriptor* TxIdlePattern_descriptor();
+inline const ::std::string& TxIdlePattern_Name(TxIdlePattern value) {
   return ::google::protobuf::internal::NameOfEnum(
-    state_descriptor(), value);
+    TxIdlePattern_descriptor(), value);
 }
-inline bool state_Parse(
-    const ::std::string& name, state* value) {
-  return ::google::protobuf::internal::ParseNamedEnum<state>(
-    state_descriptor(), name, value);
+inline bool TxIdlePattern_Parse(
+    const ::std::string& name, TxIdlePattern* value) {
+  return ::google::protobuf::internal::ParseNamedEnum<TxIdlePattern>(
+    TxIdlePattern_descriptor(), name, value);
 }
 // ===================================================================
 
@@ -212,60 +195,40 @@ class set_parameters : public ::google::protobuf::Message /* @@protoc_insertion_
 
   // accessors -------------------------------------------------------
 
-  // .sp.ste.num_params num_params = 1;
-  bool has_num_params() const;
-  void clear_num_params();
-  static const int kNumParamsFieldNumber = 1;
-  const ::sp::ste::num_params& num_params() const;
-  ::sp::ste::num_params* release_num_params();
-  ::sp::ste::num_params* mutable_num_params();
-  void set_allocated_num_params(::sp::ste::num_params* num_params);
+  // .sp.ste.TestBedRpcHeader hdr = 1;
+  bool has_hdr() const;
+  void clear_hdr();
+  static const int kHdrFieldNumber = 1;
+  const ::sp::ste::TestBedRpcHeader& hdr() const;
+  ::sp::ste::TestBedRpcHeader* release_hdr();
+  ::sp::ste::TestBedRpcHeader* mutable_hdr();
+  void set_allocated_hdr(::sp::ste::TestBedRpcHeader* hdr);
 
-  // .sp.ste.state_parameters state_parameters = 2;
-  bool has_state_parameters() const;
-  void clear_state_parameters();
-  static const int kStateParametersFieldNumber = 2;
-  const ::sp::ste::state_parameters& state_parameters() const;
-  ::sp::ste::state_parameters* release_state_parameters();
-  ::sp::ste::state_parameters* mutable_state_parameters();
-  void set_allocated_state_parameters(::sp::ste::state_parameters* state_parameters);
+  // .sp.ste.PayloadSteSingleMeasurementRxParams rx = 2;
+  bool has_rx() const;
+  void clear_rx();
+  static const int kRxFieldNumber = 2;
+  const ::sp::ste::PayloadSteSingleMeasurementRxParams& rx() const;
+  ::sp::ste::PayloadSteSingleMeasurementRxParams* release_rx();
+  ::sp::ste::PayloadSteSingleMeasurementRxParams* mutable_rx();
+  void set_allocated_rx(::sp::ste::PayloadSteSingleMeasurementRxParams* rx);
 
-  // .sp.ste.tx_parameters tx_parameters = 3;
-  bool has_tx_parameters() const;
-  void clear_tx_parameters();
-  static const int kTxParametersFieldNumber = 3;
-  const ::sp::ste::tx_parameters& tx_parameters() const;
-  ::sp::ste::tx_parameters* release_tx_parameters();
-  ::sp::ste::tx_parameters* mutable_tx_parameters();
-  void set_allocated_tx_parameters(::sp::ste::tx_parameters* tx_parameters);
-
-  // .sp.ste.fft_parameters fft_parameters = 4;
-  bool has_fft_parameters() const;
-  void clear_fft_parameters();
-  static const int kFftParametersFieldNumber = 4;
-  const ::sp::ste::fft_parameters& fft_parameters() const;
-  ::sp::ste::fft_parameters* release_fft_parameters();
-  ::sp::ste::fft_parameters* mutable_fft_parameters();
-  void set_allocated_fft_parameters(::sp::ste::fft_parameters* fft_parameters);
-
-  // .sp.ste.other_parameters other_parameters = 5;
-  bool has_other_parameters() const;
-  void clear_other_parameters();
-  static const int kOtherParametersFieldNumber = 5;
-  const ::sp::ste::other_parameters& other_parameters() const;
-  ::sp::ste::other_parameters* release_other_parameters();
-  ::sp::ste::other_parameters* mutable_other_parameters();
-  void set_allocated_other_parameters(::sp::ste::other_parameters* other_parameters);
+  // .sp.ste.PayloadSteSingleMeasurementTxParams tx = 3;
+  bool has_tx() const;
+  void clear_tx();
+  static const int kTxFieldNumber = 3;
+  const ::sp::ste::PayloadSteSingleMeasurementTxParams& tx() const;
+  ::sp::ste::PayloadSteSingleMeasurementTxParams* release_tx();
+  ::sp::ste::PayloadSteSingleMeasurementTxParams* mutable_tx();
+  void set_allocated_tx(::sp::ste::PayloadSteSingleMeasurementTxParams* tx);
 
   // @@protoc_insertion_point(class_scope:sp.ste.set_parameters)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::sp::ste::num_params* num_params_;
-  ::sp::ste::state_parameters* state_parameters_;
-  ::sp::ste::tx_parameters* tx_parameters_;
-  ::sp::ste::fft_parameters* fft_parameters_;
-  ::sp::ste::other_parameters* other_parameters_;
+  ::sp::ste::TestBedRpcHeader* hdr_;
+  ::sp::ste::PayloadSteSingleMeasurementRxParams* rx_;
+  ::sp::ste::PayloadSteSingleMeasurementTxParams* tx_;
   mutable int _cached_size_;
   friend struct ::protobuf_sp_5fste_2eproto::TableStruct;
   friend void ::protobuf_sp_5fste_2eproto::InitDefaultsset_parametersImpl();
@@ -354,84 +317,64 @@ class parameter_values : public ::google::protobuf::Message /* @@protoc_insertio
 
   // accessors -------------------------------------------------------
 
-  // .sp.ste.num_params num_params = 1;
-  bool has_num_params() const;
-  void clear_num_params();
-  static const int kNumParamsFieldNumber = 1;
-  const ::sp::ste::num_params& num_params() const;
-  ::sp::ste::num_params* release_num_params();
-  ::sp::ste::num_params* mutable_num_params();
-  void set_allocated_num_params(::sp::ste::num_params* num_params);
+  // .sp.ste.TestBedRpcHeader hdr = 1;
+  bool has_hdr() const;
+  void clear_hdr();
+  static const int kHdrFieldNumber = 1;
+  const ::sp::ste::TestBedRpcHeader& hdr() const;
+  ::sp::ste::TestBedRpcHeader* release_hdr();
+  ::sp::ste::TestBedRpcHeader* mutable_hdr();
+  void set_allocated_hdr(::sp::ste::TestBedRpcHeader* hdr);
 
-  // .sp.ste.state_parameters state_parameters = 2;
-  bool has_state_parameters() const;
-  void clear_state_parameters();
-  static const int kStateParametersFieldNumber = 2;
-  const ::sp::ste::state_parameters& state_parameters() const;
-  ::sp::ste::state_parameters* release_state_parameters();
-  ::sp::ste::state_parameters* mutable_state_parameters();
-  void set_allocated_state_parameters(::sp::ste::state_parameters* state_parameters);
+  // .sp.ste.PayloadSteSingleMeasurementRxParams rx = 2;
+  bool has_rx() const;
+  void clear_rx();
+  static const int kRxFieldNumber = 2;
+  const ::sp::ste::PayloadSteSingleMeasurementRxParams& rx() const;
+  ::sp::ste::PayloadSteSingleMeasurementRxParams* release_rx();
+  ::sp::ste::PayloadSteSingleMeasurementRxParams* mutable_rx();
+  void set_allocated_rx(::sp::ste::PayloadSteSingleMeasurementRxParams* rx);
 
-  // .sp.ste.tx_parameters tx_parameters = 3;
-  bool has_tx_parameters() const;
-  void clear_tx_parameters();
-  static const int kTxParametersFieldNumber = 3;
-  const ::sp::ste::tx_parameters& tx_parameters() const;
-  ::sp::ste::tx_parameters* release_tx_parameters();
-  ::sp::ste::tx_parameters* mutable_tx_parameters();
-  void set_allocated_tx_parameters(::sp::ste::tx_parameters* tx_parameters);
-
-  // .sp.ste.fft_parameters fft_parameters = 4;
-  bool has_fft_parameters() const;
-  void clear_fft_parameters();
-  static const int kFftParametersFieldNumber = 4;
-  const ::sp::ste::fft_parameters& fft_parameters() const;
-  ::sp::ste::fft_parameters* release_fft_parameters();
-  ::sp::ste::fft_parameters* mutable_fft_parameters();
-  void set_allocated_fft_parameters(::sp::ste::fft_parameters* fft_parameters);
-
-  // .sp.ste.other_parameters other_parameters = 5;
-  bool has_other_parameters() const;
-  void clear_other_parameters();
-  static const int kOtherParametersFieldNumber = 5;
-  const ::sp::ste::other_parameters& other_parameters() const;
-  ::sp::ste::other_parameters* release_other_parameters();
-  ::sp::ste::other_parameters* mutable_other_parameters();
-  void set_allocated_other_parameters(::sp::ste::other_parameters* other_parameters);
+  // .sp.ste.PayloadSteSingleMeasurementTxParams tx = 3;
+  bool has_tx() const;
+  void clear_tx();
+  static const int kTxFieldNumber = 3;
+  const ::sp::ste::PayloadSteSingleMeasurementTxParams& tx() const;
+  ::sp::ste::PayloadSteSingleMeasurementTxParams* release_tx();
+  ::sp::ste::PayloadSteSingleMeasurementTxParams* mutable_tx();
+  void set_allocated_tx(::sp::ste::PayloadSteSingleMeasurementTxParams* tx);
 
   // @@protoc_insertion_point(class_scope:sp.ste.parameter_values)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::sp::ste::num_params* num_params_;
-  ::sp::ste::state_parameters* state_parameters_;
-  ::sp::ste::tx_parameters* tx_parameters_;
-  ::sp::ste::fft_parameters* fft_parameters_;
-  ::sp::ste::other_parameters* other_parameters_;
+  ::sp::ste::TestBedRpcHeader* hdr_;
+  ::sp::ste::PayloadSteSingleMeasurementRxParams* rx_;
+  ::sp::ste::PayloadSteSingleMeasurementTxParams* tx_;
   mutable int _cached_size_;
   friend struct ::protobuf_sp_5fste_2eproto::TableStruct;
   friend void ::protobuf_sp_5fste_2eproto::InitDefaultsparameter_valuesImpl();
 };
 // -------------------------------------------------------------------
 
-class num_params : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:sp.ste.num_params) */ {
+class TestBedRpcHeader : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:sp.ste.TestBedRpcHeader) */ {
  public:
-  num_params();
-  virtual ~num_params();
+  TestBedRpcHeader();
+  virtual ~TestBedRpcHeader();
 
-  num_params(const num_params& from);
+  TestBedRpcHeader(const TestBedRpcHeader& from);
 
-  inline num_params& operator=(const num_params& from) {
+  inline TestBedRpcHeader& operator=(const TestBedRpcHeader& from) {
     CopyFrom(from);
     return *this;
   }
   #if LANG_CXX11
-  num_params(num_params&& from) noexcept
-    : num_params() {
+  TestBedRpcHeader(TestBedRpcHeader&& from) noexcept
+    : TestBedRpcHeader() {
     *this = ::std::move(from);
   }
 
-  inline num_params& operator=(num_params&& from) noexcept {
+  inline TestBedRpcHeader& operator=(TestBedRpcHeader&& from) noexcept {
     if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
       if (this != &from) InternalSwap(&from);
     } else {
@@ -441,30 +384,30 @@ class num_params : public ::google::protobuf::Message /* @@protoc_insertion_poin
   }
   #endif
   static const ::google::protobuf::Descriptor* descriptor();
-  static const num_params& default_instance();
+  static const TestBedRpcHeader& default_instance();
 
   static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
-  static inline const num_params* internal_default_instance() {
-    return reinterpret_cast<const num_params*>(
-               &_num_params_default_instance_);
+  static inline const TestBedRpcHeader* internal_default_instance() {
+    return reinterpret_cast<const TestBedRpcHeader*>(
+               &_TestBedRpcHeader_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
     2;
 
-  void Swap(num_params* other);
-  friend void swap(num_params& a, num_params& b) {
+  void Swap(TestBedRpcHeader* other);
+  friend void swap(TestBedRpcHeader& a, TestBedRpcHeader& b) {
     a.Swap(&b);
   }
 
   // implements Message ----------------------------------------------
 
-  inline num_params* New() const PROTOBUF_FINAL { return New(NULL); }
+  inline TestBedRpcHeader* New() const PROTOBUF_FINAL { return New(NULL); }
 
-  num_params* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  TestBedRpcHeader* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
   void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
   void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
-  void CopyFrom(const num_params& from);
-  void MergeFrom(const num_params& from);
+  void CopyFrom(const TestBedRpcHeader& from);
+  void MergeFrom(const TestBedRpcHeader& from);
   void Clear() PROTOBUF_FINAL;
   bool IsInitialized() const PROTOBUF_FINAL;
 
@@ -480,7 +423,7 @@ class num_params : public ::google::protobuf::Message /* @@protoc_insertion_poin
   void SharedCtor();
   void SharedDtor();
   void SetCachedSize(int size) const PROTOBUF_FINAL;
-  void InternalSwap(num_params* other);
+  void InternalSwap(TestBedRpcHeader* other);
   private:
   inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
     return NULL;
@@ -496,62 +439,56 @@ class num_params : public ::google::protobuf::Message /* @@protoc_insertion_poin
 
   // accessors -------------------------------------------------------
 
-  // uint32 state_count = 1;
-  void clear_state_count();
-  static const int kStateCountFieldNumber = 1;
-  ::google::protobuf::uint32 state_count() const;
-  void set_state_count(::google::protobuf::uint32 value);
+  // string module = 1;
+  void clear_module();
+  static const int kModuleFieldNumber = 1;
+  const ::std::string& module() const;
+  void set_module(const ::std::string& value);
+  #if LANG_CXX11
+  void set_module(::std::string&& value);
+  #endif
+  void set_module(const char* value);
+  void set_module(const char* value, size_t size);
+  ::std::string* mutable_module();
+  ::std::string* release_module();
+  void set_allocated_module(::std::string* module);
 
-  // uint32 tx_count = 2;
-  void clear_tx_count();
-  static const int kTxCountFieldNumber = 2;
-  ::google::protobuf::uint32 tx_count() const;
-  void set_tx_count(::google::protobuf::uint32 value);
+  // int32 core = 2;
+  void clear_core();
+  static const int kCoreFieldNumber = 2;
+  ::google::protobuf::int32 core() const;
+  void set_core(::google::protobuf::int32 value);
 
-  // uint32 fft_count = 3;
-  void clear_fft_count();
-  static const int kFftCountFieldNumber = 3;
-  ::google::protobuf::uint32 fft_count() const;
-  void set_fft_count(::google::protobuf::uint32 value);
-
-  // uint32 other_count = 4;
-  void clear_other_count();
-  static const int kOtherCountFieldNumber = 4;
-  ::google::protobuf::uint32 other_count() const;
-  void set_other_count(::google::protobuf::uint32 value);
-
-  // @@protoc_insertion_point(class_scope:sp.ste.num_params)
+  // @@protoc_insertion_point(class_scope:sp.ste.TestBedRpcHeader)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::google::protobuf::uint32 state_count_;
-  ::google::protobuf::uint32 tx_count_;
-  ::google::protobuf::uint32 fft_count_;
-  ::google::protobuf::uint32 other_count_;
+  ::google::protobuf::internal::ArenaStringPtr module_;
+  ::google::protobuf::int32 core_;
   mutable int _cached_size_;
   friend struct ::protobuf_sp_5fste_2eproto::TableStruct;
-  friend void ::protobuf_sp_5fste_2eproto::InitDefaultsnum_paramsImpl();
+  friend void ::protobuf_sp_5fste_2eproto::InitDefaultsTestBedRpcHeaderImpl();
 };
 // -------------------------------------------------------------------
 
-class state_parameters : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:sp.ste.state_parameters) */ {
+class PayloadSteSingleMeasurementTxParams : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:sp.ste.PayloadSteSingleMeasurementTxParams) */ {
  public:
-  state_parameters();
-  virtual ~state_parameters();
+  PayloadSteSingleMeasurementTxParams();
+  virtual ~PayloadSteSingleMeasurementTxParams();
 
-  state_parameters(const state_parameters& from);
+  PayloadSteSingleMeasurementTxParams(const PayloadSteSingleMeasurementTxParams& from);
 
-  inline state_parameters& operator=(const state_parameters& from) {
+  inline PayloadSteSingleMeasurementTxParams& operator=(const PayloadSteSingleMeasurementTxParams& from) {
     CopyFrom(from);
     return *this;
   }
   #if LANG_CXX11
-  state_parameters(state_parameters&& from) noexcept
-    : state_parameters() {
+  PayloadSteSingleMeasurementTxParams(PayloadSteSingleMeasurementTxParams&& from) noexcept
+    : PayloadSteSingleMeasurementTxParams() {
     *this = ::std::move(from);
   }
 
-  inline state_parameters& operator=(state_parameters&& from) noexcept {
+  inline PayloadSteSingleMeasurementTxParams& operator=(PayloadSteSingleMeasurementTxParams&& from) noexcept {
     if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
       if (this != &from) InternalSwap(&from);
     } else {
@@ -561,30 +498,30 @@ class state_parameters : public ::google::protobuf::Message /* @@protoc_insertio
   }
   #endif
   static const ::google::protobuf::Descriptor* descriptor();
-  static const state_parameters& default_instance();
+  static const PayloadSteSingleMeasurementTxParams& default_instance();
 
   static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
-  static inline const state_parameters* internal_default_instance() {
-    return reinterpret_cast<const state_parameters*>(
-               &_state_parameters_default_instance_);
+  static inline const PayloadSteSingleMeasurementTxParams* internal_default_instance() {
+    return reinterpret_cast<const PayloadSteSingleMeasurementTxParams*>(
+               &_PayloadSteSingleMeasurementTxParams_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
     3;
 
-  void Swap(state_parameters* other);
-  friend void swap(state_parameters& a, state_parameters& b) {
+  void Swap(PayloadSteSingleMeasurementTxParams* other);
+  friend void swap(PayloadSteSingleMeasurementTxParams& a, PayloadSteSingleMeasurementTxParams& b) {
     a.Swap(&b);
   }
 
   // implements Message ----------------------------------------------
 
-  inline state_parameters* New() const PROTOBUF_FINAL { return New(NULL); }
+  inline PayloadSteSingleMeasurementTxParams* New() const PROTOBUF_FINAL { return New(NULL); }
 
-  state_parameters* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  PayloadSteSingleMeasurementTxParams* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
   void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
   void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
-  void CopyFrom(const state_parameters& from);
-  void MergeFrom(const state_parameters& from);
+  void CopyFrom(const PayloadSteSingleMeasurementTxParams& from);
+  void MergeFrom(const PayloadSteSingleMeasurementTxParams& from);
   void Clear() PROTOBUF_FINAL;
   bool IsInitialized() const PROTOBUF_FINAL;
 
@@ -600,7 +537,7 @@ class state_parameters : public ::google::protobuf::Message /* @@protoc_insertio
   void SharedCtor();
   void SharedDtor();
   void SetCachedSize(int size) const PROTOBUF_FINAL;
-  void InternalSwap(state_parameters* other);
+  void InternalSwap(PayloadSteSingleMeasurementTxParams* other);
   private:
   inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
     return NULL;
@@ -616,76 +553,155 @@ class state_parameters : public ::google::protobuf::Message /* @@protoc_insertio
 
   // accessors -------------------------------------------------------
 
-  // .sp.ste.state save_iq = 1;
-  void clear_save_iq();
-  static const int kSaveIqFieldNumber = 1;
-  ::sp::ste::state save_iq() const;
-  void set_save_iq(::sp::ste::state value);
+  // string filebasename = 12;
+  void clear_filebasename();
+  static const int kFilebasenameFieldNumber = 12;
+  const ::std::string& filebasename() const;
+  void set_filebasename(const ::std::string& value);
+  #if LANG_CXX11
+  void set_filebasename(::std::string&& value);
+  #endif
+  void set_filebasename(const char* value);
+  void set_filebasename(const char* value, size_t size);
+  ::std::string* mutable_filebasename();
+  ::std::string* release_filebasename();
+  void set_allocated_filebasename(::std::string* filebasename);
 
-  // .sp.ste.state parameter_estimate_enable = 2;
-  void clear_parameter_estimate_enable();
-  static const int kParameterEstimateEnableFieldNumber = 2;
-  ::sp::ste::state parameter_estimate_enable() const;
-  void set_parameter_estimate_enable(::sp::ste::state value);
+  // string filename_tx_samples = 13;
+  void clear_filename_tx_samples();
+  static const int kFilenameTxSamplesFieldNumber = 13;
+  const ::std::string& filename_tx_samples() const;
+  void set_filename_tx_samples(const ::std::string& value);
+  #if LANG_CXX11
+  void set_filename_tx_samples(::std::string&& value);
+  #endif
+  void set_filename_tx_samples(const char* value);
+  void set_filename_tx_samples(const char* value, size_t size);
+  ::std::string* mutable_filename_tx_samples();
+  ::std::string* release_filename_tx_samples();
+  void set_allocated_filename_tx_samples(::std::string* filename_tx_samples);
 
-  // .sp.ste.state awgn_enable = 3;
+  // float tx_freq1_Hz = 1;
+  void clear_tx_freq1_hz();
+  static const int kTxFreq1HzFieldNumber = 1;
+  float tx_freq1_hz() const;
+  void set_tx_freq1_hz(float value);
+
+  // float tx_phase1_rot = 2;
+  void clear_tx_phase1_rot();
+  static const int kTxPhase1RotFieldNumber = 2;
+  float tx_phase1_rot() const;
+  void set_tx_phase1_rot(float value);
+
+  // float tx_freq2_Hz = 3;
+  void clear_tx_freq2_hz();
+  static const int kTxFreq2HzFieldNumber = 3;
+  float tx_freq2_hz() const;
+  void set_tx_freq2_hz(float value);
+
+  // float tx_phase2_rot = 4;
+  void clear_tx_phase2_rot();
+  static const int kTxPhase2RotFieldNumber = 4;
+  float tx_phase2_rot() const;
+  void set_tx_phase2_rot(float value);
+
+  // float gain1 = 5;
+  void clear_gain1();
+  static const int kGain1FieldNumber = 5;
+  float gain1() const;
+  void set_gain1(float value);
+
+  // float gain2 = 6;
+  void clear_gain2();
+  static const int kGain2FieldNumber = 6;
+  float gain2() const;
+  void set_gain2(float value);
+
+  // float gain3 = 7;
+  void clear_gain3();
+  static const int kGain3FieldNumber = 7;
+  float gain3() const;
+  void set_gain3(float value);
+
+  // bool awgn_enable = 8;
   void clear_awgn_enable();
-  static const int kAwgnEnableFieldNumber = 3;
-  ::sp::ste::state awgn_enable() const;
-  void set_awgn_enable(::sp::ste::state value);
+  static const int kAwgnEnableFieldNumber = 8;
+  bool awgn_enable() const;
+  void set_awgn_enable(bool value);
 
-  // .sp.ste.state notch_enable = 4;
+  // bool notch_enable = 9;
   void clear_notch_enable();
-  static const int kNotchEnableFieldNumber = 4;
-  ::sp::ste::state notch_enable() const;
-  void set_notch_enable(::sp::ste::state value);
+  static const int kNotchEnableFieldNumber = 9;
+  bool notch_enable() const;
+  void set_notch_enable(bool value);
 
-  // .sp.ste.state fft_a_enable = 5;
-  void clear_fft_a_enable();
-  static const int kFftAEnableFieldNumber = 5;
-  ::sp::ste::state fft_a_enable() const;
-  void set_fft_a_enable(::sp::ste::state value);
+  // uint32 num_tx_samples_total = 10;
+  void clear_num_tx_samples_total();
+  static const int kNumTxSamplesTotalFieldNumber = 10;
+  ::google::protobuf::uint32 num_tx_samples_total() const;
+  void set_num_tx_samples_total(::google::protobuf::uint32 value);
 
-  // .sp.ste.state fft_b_enable = 6;
-  void clear_fft_b_enable();
-  static const int kFftBEnableFieldNumber = 6;
-  ::sp::ste::state fft_b_enable() const;
-  void set_fft_b_enable(::sp::ste::state value);
+  // uint32 num_tx_samples_per_batch = 11;
+  void clear_num_tx_samples_per_batch();
+  static const int kNumTxSamplesPerBatchFieldNumber = 11;
+  ::google::protobuf::uint32 num_tx_samples_per_batch() const;
+  void set_num_tx_samples_per_batch(::google::protobuf::uint32 value);
 
-  // @@protoc_insertion_point(class_scope:sp.ste.state_parameters)
+  // uint64 nextTxStartTime = 14;
+  void clear_nexttxstarttime();
+  static const int kNextTxStartTimeFieldNumber = 14;
+  ::google::protobuf::uint64 nexttxstarttime() const;
+  void set_nexttxstarttime(::google::protobuf::uint64 value);
+
+  // .sp.ste.TxIdlePattern tx_idle_pattern = 15;
+  void clear_tx_idle_pattern();
+  static const int kTxIdlePatternFieldNumber = 15;
+  ::sp::ste::TxIdlePattern tx_idle_pattern() const;
+  void set_tx_idle_pattern(::sp::ste::TxIdlePattern value);
+
+  // @@protoc_insertion_point(class_scope:sp.ste.PayloadSteSingleMeasurementTxParams)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  int save_iq_;
-  int parameter_estimate_enable_;
-  int awgn_enable_;
-  int notch_enable_;
-  int fft_a_enable_;
-  int fft_b_enable_;
+  ::google::protobuf::internal::ArenaStringPtr filebasename_;
+  ::google::protobuf::internal::ArenaStringPtr filename_tx_samples_;
+  float tx_freq1_hz_;
+  float tx_phase1_rot_;
+  float tx_freq2_hz_;
+  float tx_phase2_rot_;
+  float gain1_;
+  float gain2_;
+  float gain3_;
+  bool awgn_enable_;
+  bool notch_enable_;
+  ::google::protobuf::uint32 num_tx_samples_total_;
+  ::google::protobuf::uint32 num_tx_samples_per_batch_;
+  ::google::protobuf::uint64 nexttxstarttime_;
+  int tx_idle_pattern_;
   mutable int _cached_size_;
   friend struct ::protobuf_sp_5fste_2eproto::TableStruct;
-  friend void ::protobuf_sp_5fste_2eproto::InitDefaultsstate_parametersImpl();
+  friend void ::protobuf_sp_5fste_2eproto::InitDefaultsPayloadSteSingleMeasurementTxParamsImpl();
 };
 // -------------------------------------------------------------------
 
-class tx_parameters : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:sp.ste.tx_parameters) */ {
+class PayloadSteSingleMeasurementRxParams : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:sp.ste.PayloadSteSingleMeasurementRxParams) */ {
  public:
-  tx_parameters();
-  virtual ~tx_parameters();
+  PayloadSteSingleMeasurementRxParams();
+  virtual ~PayloadSteSingleMeasurementRxParams();
 
-  tx_parameters(const tx_parameters& from);
+  PayloadSteSingleMeasurementRxParams(const PayloadSteSingleMeasurementRxParams& from);
 
-  inline tx_parameters& operator=(const tx_parameters& from) {
+  inline PayloadSteSingleMeasurementRxParams& operator=(const PayloadSteSingleMeasurementRxParams& from) {
     CopyFrom(from);
     return *this;
   }
   #if LANG_CXX11
-  tx_parameters(tx_parameters&& from) noexcept
-    : tx_parameters() {
+  PayloadSteSingleMeasurementRxParams(PayloadSteSingleMeasurementRxParams&& from) noexcept
+    : PayloadSteSingleMeasurementRxParams() {
     *this = ::std::move(from);
   }
 
-  inline tx_parameters& operator=(tx_parameters&& from) noexcept {
+  inline PayloadSteSingleMeasurementRxParams& operator=(PayloadSteSingleMeasurementRxParams&& from) noexcept {
     if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
       if (this != &from) InternalSwap(&from);
     } else {
@@ -695,30 +711,30 @@ class tx_parameters : public ::google::protobuf::Message /* @@protoc_insertion_p
   }
   #endif
   static const ::google::protobuf::Descriptor* descriptor();
-  static const tx_parameters& default_instance();
+  static const PayloadSteSingleMeasurementRxParams& default_instance();
 
   static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
-  static inline const tx_parameters* internal_default_instance() {
-    return reinterpret_cast<const tx_parameters*>(
-               &_tx_parameters_default_instance_);
+  static inline const PayloadSteSingleMeasurementRxParams* internal_default_instance() {
+    return reinterpret_cast<const PayloadSteSingleMeasurementRxParams*>(
+               &_PayloadSteSingleMeasurementRxParams_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
     4;
 
-  void Swap(tx_parameters* other);
-  friend void swap(tx_parameters& a, tx_parameters& b) {
+  void Swap(PayloadSteSingleMeasurementRxParams* other);
+  friend void swap(PayloadSteSingleMeasurementRxParams& a, PayloadSteSingleMeasurementRxParams& b) {
     a.Swap(&b);
   }
 
   // implements Message ----------------------------------------------
 
-  inline tx_parameters* New() const PROTOBUF_FINAL { return New(NULL); }
+  inline PayloadSteSingleMeasurementRxParams* New() const PROTOBUF_FINAL { return New(NULL); }
 
-  tx_parameters* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  PayloadSteSingleMeasurementRxParams* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
   void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
   void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
-  void CopyFrom(const tx_parameters& from);
-  void MergeFrom(const tx_parameters& from);
+  void CopyFrom(const PayloadSteSingleMeasurementRxParams& from);
+  void MergeFrom(const PayloadSteSingleMeasurementRxParams& from);
   void Clear() PROTOBUF_FINAL;
   bool IsInitialized() const PROTOBUF_FINAL;
 
@@ -734,7 +750,7 @@ class tx_parameters : public ::google::protobuf::Message /* @@protoc_insertion_p
   void SharedCtor();
   void SharedDtor();
   void SetCachedSize(int size) const PROTOBUF_FINAL;
-  void InternalSwap(tx_parameters* other);
+  void InternalSwap(PayloadSteSingleMeasurementRxParams* other);
   private:
   inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
     return NULL;
@@ -750,132 +766,61 @@ class tx_parameters : public ::google::protobuf::Message /* @@protoc_insertion_p
 
   // accessors -------------------------------------------------------
 
-  // double num_tx_samples_total = 1;
-  void clear_num_tx_samples_total();
-  static const int kNumTxSamplesTotalFieldNumber = 1;
-  double num_tx_samples_total() const;
-  void set_num_tx_samples_total(double value);
-
-  // double tx_freq1_Hz = 2;
-  void clear_tx_freq1_hz();
-  static const int kTxFreq1HzFieldNumber = 2;
-  double tx_freq1_hz() const;
-  void set_tx_freq1_hz(double value);
-
-  // double tx_freq2_Hz = 3;
-  void clear_tx_freq2_hz();
-  static const int kTxFreq2HzFieldNumber = 3;
-  double tx_freq2_hz() const;
-  void set_tx_freq2_hz(double value);
-
-  // double tx_phase1_rot = 4;
-  void clear_tx_phase1_rot();
-  static const int kTxPhase1RotFieldNumber = 4;
-  double tx_phase1_rot() const;
-  void set_tx_phase1_rot(double value);
-
-  // double tx_phase2_rot = 5;
-  void clear_tx_phase2_rot();
-  static const int kTxPhase2RotFieldNumber = 5;
-  double tx_phase2_rot() const;
-  void set_tx_phase2_rot(double value);
-
-  // @@protoc_insertion_point(class_scope:sp.ste.tx_parameters)
- private:
-
-  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  double num_tx_samples_total_;
-  double tx_freq1_hz_;
-  double tx_freq2_hz_;
-  double tx_phase1_rot_;
-  double tx_phase2_rot_;
-  mutable int _cached_size_;
-  friend struct ::protobuf_sp_5fste_2eproto::TableStruct;
-  friend void ::protobuf_sp_5fste_2eproto::InitDefaultstx_parametersImpl();
-};
-// -------------------------------------------------------------------
-
-class fft_parameters : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:sp.ste.fft_parameters) */ {
- public:
-  fft_parameters();
-  virtual ~fft_parameters();
-
-  fft_parameters(const fft_parameters& from);
-
-  inline fft_parameters& operator=(const fft_parameters& from) {
-    CopyFrom(from);
-    return *this;
-  }
+  // string filebasename = 12;
+  void clear_filebasename();
+  static const int kFilebasenameFieldNumber = 12;
+  const ::std::string& filebasename() const;
+  void set_filebasename(const ::std::string& value);
   #if LANG_CXX11
-  fft_parameters(fft_parameters&& from) noexcept
-    : fft_parameters() {
-    *this = ::std::move(from);
-  }
-
-  inline fft_parameters& operator=(fft_parameters&& from) noexcept {
-    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
-      if (this != &from) InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
+  void set_filebasename(::std::string&& value);
   #endif
-  static const ::google::protobuf::Descriptor* descriptor();
-  static const fft_parameters& default_instance();
+  void set_filebasename(const char* value);
+  void set_filebasename(const char* value, size_t size);
+  ::std::string* mutable_filebasename();
+  ::std::string* release_filebasename();
+  void set_allocated_filebasename(::std::string* filebasename);
 
-  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
-  static inline const fft_parameters* internal_default_instance() {
-    return reinterpret_cast<const fft_parameters*>(
-               &_fft_parameters_default_instance_);
-  }
-  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    5;
+  // string filename_fft_a = 13;
+  void clear_filename_fft_a();
+  static const int kFilenameFftAFieldNumber = 13;
+  const ::std::string& filename_fft_a() const;
+  void set_filename_fft_a(const ::std::string& value);
+  #if LANG_CXX11
+  void set_filename_fft_a(::std::string&& value);
+  #endif
+  void set_filename_fft_a(const char* value);
+  void set_filename_fft_a(const char* value, size_t size);
+  ::std::string* mutable_filename_fft_a();
+  ::std::string* release_filename_fft_a();
+  void set_allocated_filename_fft_a(::std::string* filename_fft_a);
 
-  void Swap(fft_parameters* other);
-  friend void swap(fft_parameters& a, fft_parameters& b) {
-    a.Swap(&b);
-  }
+  // string filename_fft_b = 14;
+  void clear_filename_fft_b();
+  static const int kFilenameFftBFieldNumber = 14;
+  const ::std::string& filename_fft_b() const;
+  void set_filename_fft_b(const ::std::string& value);
+  #if LANG_CXX11
+  void set_filename_fft_b(::std::string&& value);
+  #endif
+  void set_filename_fft_b(const char* value);
+  void set_filename_fft_b(const char* value, size_t size);
+  ::std::string* mutable_filename_fft_b();
+  ::std::string* release_filename_fft_b();
+  void set_allocated_filename_fft_b(::std::string* filename_fft_b);
 
-  // implements Message ----------------------------------------------
-
-  inline fft_parameters* New() const PROTOBUF_FINAL { return New(NULL); }
-
-  fft_parameters* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
-  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
-  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
-  void CopyFrom(const fft_parameters& from);
-  void MergeFrom(const fft_parameters& from);
-  void Clear() PROTOBUF_FINAL;
-  bool IsInitialized() const PROTOBUF_FINAL;
-
-  size_t ByteSizeLong() const PROTOBUF_FINAL;
-  bool MergePartialFromCodedStream(
-      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
-  void SerializeWithCachedSizes(
-      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
-  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
-      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
-  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
-  private:
-  void SharedCtor();
-  void SharedDtor();
-  void SetCachedSize(int size) const PROTOBUF_FINAL;
-  void InternalSwap(fft_parameters* other);
-  private:
-  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
-    return NULL;
-  }
-  inline void* MaybeArenaPtr() const {
-    return NULL;
-  }
-  public:
-
-  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
+  // string filename_rx_samples = 15;
+  void clear_filename_rx_samples();
+  static const int kFilenameRxSamplesFieldNumber = 15;
+  const ::std::string& filename_rx_samples() const;
+  void set_filename_rx_samples(const ::std::string& value);
+  #if LANG_CXX11
+  void set_filename_rx_samples(::std::string&& value);
+  #endif
+  void set_filename_rx_samples(const char* value);
+  void set_filename_rx_samples(const char* value, size_t size);
+  ::std::string* mutable_filename_rx_samples();
+  ::std::string* release_filename_rx_samples();
+  void set_allocated_filename_rx_samples(::std::string* filename_rx_samples);
 
   // uint32 fft_length_a = 1;
   void clear_fft_length_a();
@@ -883,17 +828,17 @@ class fft_parameters : public ::google::protobuf::Message /* @@protoc_insertion_
   ::google::protobuf::uint32 fft_length_a() const;
   void set_fft_length_a(::google::protobuf::uint32 value);
 
-  // uint32 fft_batches_a = 2;
-  void clear_fft_batches_a();
-  static const int kFftBatchesAFieldNumber = 2;
-  ::google::protobuf::uint32 fft_batches_a() const;
-  void set_fft_batches_a(::google::protobuf::uint32 value);
-
-  // uint32 fft_length_b = 3;
+  // uint32 fft_length_b = 2;
   void clear_fft_length_b();
-  static const int kFftLengthBFieldNumber = 3;
+  static const int kFftLengthBFieldNumber = 2;
   ::google::protobuf::uint32 fft_length_b() const;
   void set_fft_length_b(::google::protobuf::uint32 value);
+
+  // uint32 fft_batches_a = 3;
+  void clear_fft_batches_a();
+  static const int kFftBatchesAFieldNumber = 3;
+  ::google::protobuf::uint32 fft_batches_a() const;
+  void set_fft_batches_a(::google::protobuf::uint32 value);
 
   // uint32 fft_batches_b = 4;
   void clear_fft_batches_b();
@@ -901,158 +846,77 @@ class fft_parameters : public ::google::protobuf::Message /* @@protoc_insertion_
   ::google::protobuf::uint32 fft_batches_b() const;
   void set_fft_batches_b(::google::protobuf::uint32 value);
 
-  // @@protoc_insertion_point(class_scope:sp.ste.fft_parameters)
- private:
-
-  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::google::protobuf::uint32 fft_length_a_;
-  ::google::protobuf::uint32 fft_batches_a_;
-  ::google::protobuf::uint32 fft_length_b_;
-  ::google::protobuf::uint32 fft_batches_b_;
-  mutable int _cached_size_;
-  friend struct ::protobuf_sp_5fste_2eproto::TableStruct;
-  friend void ::protobuf_sp_5fste_2eproto::InitDefaultsfft_parametersImpl();
-};
-// -------------------------------------------------------------------
-
-class other_parameters : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:sp.ste.other_parameters) */ {
- public:
-  other_parameters();
-  virtual ~other_parameters();
-
-  other_parameters(const other_parameters& from);
-
-  inline other_parameters& operator=(const other_parameters& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  #if LANG_CXX11
-  other_parameters(other_parameters&& from) noexcept
-    : other_parameters() {
-    *this = ::std::move(from);
-  }
-
-  inline other_parameters& operator=(other_parameters&& from) noexcept {
-    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
-      if (this != &from) InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-  #endif
-  static const ::google::protobuf::Descriptor* descriptor();
-  static const other_parameters& default_instance();
-
-  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
-  static inline const other_parameters* internal_default_instance() {
-    return reinterpret_cast<const other_parameters*>(
-               &_other_parameters_default_instance_);
-  }
-  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    6;
-
-  void Swap(other_parameters* other);
-  friend void swap(other_parameters& a, other_parameters& b) {
-    a.Swap(&b);
-  }
-
-  // implements Message ----------------------------------------------
-
-  inline other_parameters* New() const PROTOBUF_FINAL { return New(NULL); }
-
-  other_parameters* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
-  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
-  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
-  void CopyFrom(const other_parameters& from);
-  void MergeFrom(const other_parameters& from);
-  void Clear() PROTOBUF_FINAL;
-  bool IsInitialized() const PROTOBUF_FINAL;
-
-  size_t ByteSizeLong() const PROTOBUF_FINAL;
-  bool MergePartialFromCodedStream(
-      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
-  void SerializeWithCachedSizes(
-      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
-  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
-      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
-  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
-  private:
-  void SharedCtor();
-  void SharedDtor();
-  void SetCachedSize(int size) const PROTOBUF_FINAL;
-  void InternalSwap(other_parameters* other);
-  private:
-  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
-    return NULL;
-  }
-  inline void* MaybeArenaPtr() const {
-    return NULL;
-  }
-  public:
-
-  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  // double num_rx_samples = 1;
-  void clear_num_rx_samples();
-  static const int kNumRxSamplesFieldNumber = 1;
-  double num_rx_samples() const;
-  void set_num_rx_samples(double value);
-
-  // double rx_rot_freq_Hz = 2;
+  // float rx_rot_freq_Hz = 5;
   void clear_rx_rot_freq_hz();
-  static const int kRxRotFreqHzFieldNumber = 2;
-  double rx_rot_freq_hz() const;
-  void set_rx_rot_freq_hz(double value);
+  static const int kRxRotFreqHzFieldNumber = 5;
+  float rx_rot_freq_hz() const;
+  void set_rx_rot_freq_hz(float value);
 
-  // uint32 decimation = 3;
+  // uint32 decimation = 6;
   void clear_decimation();
-  static const int kDecimationFieldNumber = 3;
+  static const int kDecimationFieldNumber = 6;
   ::google::protobuf::uint32 decimation() const;
   void set_decimation(::google::protobuf::uint32 value);
 
-  // uint32 gain1 = 4;
-  void clear_gain1();
-  static const int kGain1FieldNumber = 4;
-  ::google::protobuf::uint32 gain1() const;
-  void set_gain1(::google::protobuf::uint32 value);
+  // uint32 num_rx_samples = 7;
+  void clear_num_rx_samples();
+  static const int kNumRxSamplesFieldNumber = 7;
+  ::google::protobuf::uint32 num_rx_samples() const;
+  void set_num_rx_samples(::google::protobuf::uint32 value);
 
-  // double nextTxStartTime = 6;
-  void clear_nexttxstarttime();
-  static const int kNextTxStartTimeFieldNumber = 6;
-  double nexttxstarttime() const;
-  void set_nexttxstarttime(double value);
+  // bool save_iq = 8;
+  void clear_save_iq();
+  static const int kSaveIqFieldNumber = 8;
+  bool save_iq() const;
+  void set_save_iq(bool value);
 
-  // double nextRxStartTime = 7;
+  // bool fft_a_enable = 9;
+  void clear_fft_a_enable();
+  static const int kFftAEnableFieldNumber = 9;
+  bool fft_a_enable() const;
+  void set_fft_a_enable(bool value);
+
+  // bool fft_b_enable = 10;
+  void clear_fft_b_enable();
+  static const int kFftBEnableFieldNumber = 10;
+  bool fft_b_enable() const;
+  void set_fft_b_enable(bool value);
+
+  // bool parameter_estimate_enable = 11;
+  void clear_parameter_estimate_enable();
+  static const int kParameterEstimateEnableFieldNumber = 11;
+  bool parameter_estimate_enable() const;
+  void set_parameter_estimate_enable(bool value);
+
+  // uint64 nextRxStartTime = 16;
   void clear_nextrxstarttime();
-  static const int kNextRxStartTimeFieldNumber = 7;
-  double nextrxstarttime() const;
-  void set_nextrxstarttime(double value);
+  static const int kNextRxStartTimeFieldNumber = 16;
+  ::google::protobuf::uint64 nextrxstarttime() const;
+  void set_nextrxstarttime(::google::protobuf::uint64 value);
 
-  // uint32 gain2 = 5;
-  void clear_gain2();
-  static const int kGain2FieldNumber = 5;
-  ::google::protobuf::uint32 gain2() const;
-  void set_gain2(::google::protobuf::uint32 value);
-
-  // @@protoc_insertion_point(class_scope:sp.ste.other_parameters)
+  // @@protoc_insertion_point(class_scope:sp.ste.PayloadSteSingleMeasurementRxParams)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  double num_rx_samples_;
-  double rx_rot_freq_hz_;
+  ::google::protobuf::internal::ArenaStringPtr filebasename_;
+  ::google::protobuf::internal::ArenaStringPtr filename_fft_a_;
+  ::google::protobuf::internal::ArenaStringPtr filename_fft_b_;
+  ::google::protobuf::internal::ArenaStringPtr filename_rx_samples_;
+  ::google::protobuf::uint32 fft_length_a_;
+  ::google::protobuf::uint32 fft_length_b_;
+  ::google::protobuf::uint32 fft_batches_a_;
+  ::google::protobuf::uint32 fft_batches_b_;
+  float rx_rot_freq_hz_;
   ::google::protobuf::uint32 decimation_;
-  ::google::protobuf::uint32 gain1_;
-  double nexttxstarttime_;
-  double nextrxstarttime_;
-  ::google::protobuf::uint32 gain2_;
+  ::google::protobuf::uint32 num_rx_samples_;
+  bool save_iq_;
+  bool fft_a_enable_;
+  bool fft_b_enable_;
+  bool parameter_estimate_enable_;
+  ::google::protobuf::uint64 nextrxstarttime_;
   mutable int _cached_size_;
   friend struct ::protobuf_sp_5fste_2eproto::TableStruct;
-  friend void ::protobuf_sp_5fste_2eproto::InitDefaultsother_parametersImpl();
+  friend void ::protobuf_sp_5fste_2eproto::InitDefaultsPayloadSteSingleMeasurementRxParamsImpl();
 };
 // -------------------------------------------------------------------
 
@@ -1091,7 +955,7 @@ class null_message : public ::google::protobuf::Message /* @@protoc_insertion_po
                &_null_message_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    7;
+    5;
 
   void Swap(null_message* other);
   friend void swap(null_message& a, null_message& b) {
@@ -1157,892 +1021,1055 @@ class null_message : public ::google::protobuf::Message /* @@protoc_insertion_po
 #endif  // __GNUC__
 // set_parameters
 
-// .sp.ste.num_params num_params = 1;
-inline bool set_parameters::has_num_params() const {
-  return this != internal_default_instance() && num_params_ != NULL;
+// .sp.ste.TestBedRpcHeader hdr = 1;
+inline bool set_parameters::has_hdr() const {
+  return this != internal_default_instance() && hdr_ != NULL;
 }
-inline void set_parameters::clear_num_params() {
-  if (GetArenaNoVirtual() == NULL && num_params_ != NULL) {
-    delete num_params_;
+inline void set_parameters::clear_hdr() {
+  if (GetArenaNoVirtual() == NULL && hdr_ != NULL) {
+    delete hdr_;
   }
-  num_params_ = NULL;
+  hdr_ = NULL;
 }
-inline const ::sp::ste::num_params& set_parameters::num_params() const {
-  const ::sp::ste::num_params* p = num_params_;
-  // @@protoc_insertion_point(field_get:sp.ste.set_parameters.num_params)
-  return p != NULL ? *p : *reinterpret_cast<const ::sp::ste::num_params*>(
-      &::sp::ste::_num_params_default_instance_);
+inline const ::sp::ste::TestBedRpcHeader& set_parameters::hdr() const {
+  const ::sp::ste::TestBedRpcHeader* p = hdr_;
+  // @@protoc_insertion_point(field_get:sp.ste.set_parameters.hdr)
+  return p != NULL ? *p : *reinterpret_cast<const ::sp::ste::TestBedRpcHeader*>(
+      &::sp::ste::_TestBedRpcHeader_default_instance_);
 }
-inline ::sp::ste::num_params* set_parameters::release_num_params() {
-  // @@protoc_insertion_point(field_release:sp.ste.set_parameters.num_params)
+inline ::sp::ste::TestBedRpcHeader* set_parameters::release_hdr() {
+  // @@protoc_insertion_point(field_release:sp.ste.set_parameters.hdr)
   
-  ::sp::ste::num_params* temp = num_params_;
-  num_params_ = NULL;
+  ::sp::ste::TestBedRpcHeader* temp = hdr_;
+  hdr_ = NULL;
   return temp;
 }
-inline ::sp::ste::num_params* set_parameters::mutable_num_params() {
+inline ::sp::ste::TestBedRpcHeader* set_parameters::mutable_hdr() {
   
-  if (num_params_ == NULL) {
-    num_params_ = new ::sp::ste::num_params;
+  if (hdr_ == NULL) {
+    hdr_ = new ::sp::ste::TestBedRpcHeader;
   }
-  // @@protoc_insertion_point(field_mutable:sp.ste.set_parameters.num_params)
-  return num_params_;
+  // @@protoc_insertion_point(field_mutable:sp.ste.set_parameters.hdr)
+  return hdr_;
 }
-inline void set_parameters::set_allocated_num_params(::sp::ste::num_params* num_params) {
+inline void set_parameters::set_allocated_hdr(::sp::ste::TestBedRpcHeader* hdr) {
   ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
   if (message_arena == NULL) {
-    delete num_params_;
+    delete hdr_;
   }
-  if (num_params) {
+  if (hdr) {
     ::google::protobuf::Arena* submessage_arena = NULL;
     if (message_arena != submessage_arena) {
-      num_params = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, num_params, submessage_arena);
+      hdr = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, hdr, submessage_arena);
     }
     
   } else {
     
   }
-  num_params_ = num_params;
-  // @@protoc_insertion_point(field_set_allocated:sp.ste.set_parameters.num_params)
+  hdr_ = hdr;
+  // @@protoc_insertion_point(field_set_allocated:sp.ste.set_parameters.hdr)
 }
 
-// .sp.ste.state_parameters state_parameters = 2;
-inline bool set_parameters::has_state_parameters() const {
-  return this != internal_default_instance() && state_parameters_ != NULL;
+// .sp.ste.PayloadSteSingleMeasurementRxParams rx = 2;
+inline bool set_parameters::has_rx() const {
+  return this != internal_default_instance() && rx_ != NULL;
 }
-inline void set_parameters::clear_state_parameters() {
-  if (GetArenaNoVirtual() == NULL && state_parameters_ != NULL) {
-    delete state_parameters_;
+inline void set_parameters::clear_rx() {
+  if (GetArenaNoVirtual() == NULL && rx_ != NULL) {
+    delete rx_;
   }
-  state_parameters_ = NULL;
+  rx_ = NULL;
 }
-inline const ::sp::ste::state_parameters& set_parameters::state_parameters() const {
-  const ::sp::ste::state_parameters* p = state_parameters_;
-  // @@protoc_insertion_point(field_get:sp.ste.set_parameters.state_parameters)
-  return p != NULL ? *p : *reinterpret_cast<const ::sp::ste::state_parameters*>(
-      &::sp::ste::_state_parameters_default_instance_);
+inline const ::sp::ste::PayloadSteSingleMeasurementRxParams& set_parameters::rx() const {
+  const ::sp::ste::PayloadSteSingleMeasurementRxParams* p = rx_;
+  // @@protoc_insertion_point(field_get:sp.ste.set_parameters.rx)
+  return p != NULL ? *p : *reinterpret_cast<const ::sp::ste::PayloadSteSingleMeasurementRxParams*>(
+      &::sp::ste::_PayloadSteSingleMeasurementRxParams_default_instance_);
 }
-inline ::sp::ste::state_parameters* set_parameters::release_state_parameters() {
-  // @@protoc_insertion_point(field_release:sp.ste.set_parameters.state_parameters)
+inline ::sp::ste::PayloadSteSingleMeasurementRxParams* set_parameters::release_rx() {
+  // @@protoc_insertion_point(field_release:sp.ste.set_parameters.rx)
   
-  ::sp::ste::state_parameters* temp = state_parameters_;
-  state_parameters_ = NULL;
+  ::sp::ste::PayloadSteSingleMeasurementRxParams* temp = rx_;
+  rx_ = NULL;
   return temp;
 }
-inline ::sp::ste::state_parameters* set_parameters::mutable_state_parameters() {
+inline ::sp::ste::PayloadSteSingleMeasurementRxParams* set_parameters::mutable_rx() {
   
-  if (state_parameters_ == NULL) {
-    state_parameters_ = new ::sp::ste::state_parameters;
+  if (rx_ == NULL) {
+    rx_ = new ::sp::ste::PayloadSteSingleMeasurementRxParams;
   }
-  // @@protoc_insertion_point(field_mutable:sp.ste.set_parameters.state_parameters)
-  return state_parameters_;
+  // @@protoc_insertion_point(field_mutable:sp.ste.set_parameters.rx)
+  return rx_;
 }
-inline void set_parameters::set_allocated_state_parameters(::sp::ste::state_parameters* state_parameters) {
+inline void set_parameters::set_allocated_rx(::sp::ste::PayloadSteSingleMeasurementRxParams* rx) {
   ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
   if (message_arena == NULL) {
-    delete state_parameters_;
+    delete rx_;
   }
-  if (state_parameters) {
+  if (rx) {
     ::google::protobuf::Arena* submessage_arena = NULL;
     if (message_arena != submessage_arena) {
-      state_parameters = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, state_parameters, submessage_arena);
+      rx = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, rx, submessage_arena);
     }
     
   } else {
     
   }
-  state_parameters_ = state_parameters;
-  // @@protoc_insertion_point(field_set_allocated:sp.ste.set_parameters.state_parameters)
+  rx_ = rx;
+  // @@protoc_insertion_point(field_set_allocated:sp.ste.set_parameters.rx)
 }
 
-// .sp.ste.tx_parameters tx_parameters = 3;
-inline bool set_parameters::has_tx_parameters() const {
-  return this != internal_default_instance() && tx_parameters_ != NULL;
+// .sp.ste.PayloadSteSingleMeasurementTxParams tx = 3;
+inline bool set_parameters::has_tx() const {
+  return this != internal_default_instance() && tx_ != NULL;
 }
-inline void set_parameters::clear_tx_parameters() {
-  if (GetArenaNoVirtual() == NULL && tx_parameters_ != NULL) {
-    delete tx_parameters_;
+inline void set_parameters::clear_tx() {
+  if (GetArenaNoVirtual() == NULL && tx_ != NULL) {
+    delete tx_;
   }
-  tx_parameters_ = NULL;
+  tx_ = NULL;
 }
-inline const ::sp::ste::tx_parameters& set_parameters::tx_parameters() const {
-  const ::sp::ste::tx_parameters* p = tx_parameters_;
-  // @@protoc_insertion_point(field_get:sp.ste.set_parameters.tx_parameters)
-  return p != NULL ? *p : *reinterpret_cast<const ::sp::ste::tx_parameters*>(
-      &::sp::ste::_tx_parameters_default_instance_);
+inline const ::sp::ste::PayloadSteSingleMeasurementTxParams& set_parameters::tx() const {
+  const ::sp::ste::PayloadSteSingleMeasurementTxParams* p = tx_;
+  // @@protoc_insertion_point(field_get:sp.ste.set_parameters.tx)
+  return p != NULL ? *p : *reinterpret_cast<const ::sp::ste::PayloadSteSingleMeasurementTxParams*>(
+      &::sp::ste::_PayloadSteSingleMeasurementTxParams_default_instance_);
 }
-inline ::sp::ste::tx_parameters* set_parameters::release_tx_parameters() {
-  // @@protoc_insertion_point(field_release:sp.ste.set_parameters.tx_parameters)
+inline ::sp::ste::PayloadSteSingleMeasurementTxParams* set_parameters::release_tx() {
+  // @@protoc_insertion_point(field_release:sp.ste.set_parameters.tx)
   
-  ::sp::ste::tx_parameters* temp = tx_parameters_;
-  tx_parameters_ = NULL;
+  ::sp::ste::PayloadSteSingleMeasurementTxParams* temp = tx_;
+  tx_ = NULL;
   return temp;
 }
-inline ::sp::ste::tx_parameters* set_parameters::mutable_tx_parameters() {
+inline ::sp::ste::PayloadSteSingleMeasurementTxParams* set_parameters::mutable_tx() {
   
-  if (tx_parameters_ == NULL) {
-    tx_parameters_ = new ::sp::ste::tx_parameters;
+  if (tx_ == NULL) {
+    tx_ = new ::sp::ste::PayloadSteSingleMeasurementTxParams;
   }
-  // @@protoc_insertion_point(field_mutable:sp.ste.set_parameters.tx_parameters)
-  return tx_parameters_;
+  // @@protoc_insertion_point(field_mutable:sp.ste.set_parameters.tx)
+  return tx_;
 }
-inline void set_parameters::set_allocated_tx_parameters(::sp::ste::tx_parameters* tx_parameters) {
+inline void set_parameters::set_allocated_tx(::sp::ste::PayloadSteSingleMeasurementTxParams* tx) {
   ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
   if (message_arena == NULL) {
-    delete tx_parameters_;
+    delete tx_;
   }
-  if (tx_parameters) {
+  if (tx) {
     ::google::protobuf::Arena* submessage_arena = NULL;
     if (message_arena != submessage_arena) {
-      tx_parameters = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, tx_parameters, submessage_arena);
+      tx = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, tx, submessage_arena);
     }
     
   } else {
     
   }
-  tx_parameters_ = tx_parameters;
-  // @@protoc_insertion_point(field_set_allocated:sp.ste.set_parameters.tx_parameters)
-}
-
-// .sp.ste.fft_parameters fft_parameters = 4;
-inline bool set_parameters::has_fft_parameters() const {
-  return this != internal_default_instance() && fft_parameters_ != NULL;
-}
-inline void set_parameters::clear_fft_parameters() {
-  if (GetArenaNoVirtual() == NULL && fft_parameters_ != NULL) {
-    delete fft_parameters_;
-  }
-  fft_parameters_ = NULL;
-}
-inline const ::sp::ste::fft_parameters& set_parameters::fft_parameters() const {
-  const ::sp::ste::fft_parameters* p = fft_parameters_;
-  // @@protoc_insertion_point(field_get:sp.ste.set_parameters.fft_parameters)
-  return p != NULL ? *p : *reinterpret_cast<const ::sp::ste::fft_parameters*>(
-      &::sp::ste::_fft_parameters_default_instance_);
-}
-inline ::sp::ste::fft_parameters* set_parameters::release_fft_parameters() {
-  // @@protoc_insertion_point(field_release:sp.ste.set_parameters.fft_parameters)
-  
-  ::sp::ste::fft_parameters* temp = fft_parameters_;
-  fft_parameters_ = NULL;
-  return temp;
-}
-inline ::sp::ste::fft_parameters* set_parameters::mutable_fft_parameters() {
-  
-  if (fft_parameters_ == NULL) {
-    fft_parameters_ = new ::sp::ste::fft_parameters;
-  }
-  // @@protoc_insertion_point(field_mutable:sp.ste.set_parameters.fft_parameters)
-  return fft_parameters_;
-}
-inline void set_parameters::set_allocated_fft_parameters(::sp::ste::fft_parameters* fft_parameters) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete fft_parameters_;
-  }
-  if (fft_parameters) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      fft_parameters = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, fft_parameters, submessage_arena);
-    }
-    
-  } else {
-    
-  }
-  fft_parameters_ = fft_parameters;
-  // @@protoc_insertion_point(field_set_allocated:sp.ste.set_parameters.fft_parameters)
-}
-
-// .sp.ste.other_parameters other_parameters = 5;
-inline bool set_parameters::has_other_parameters() const {
-  return this != internal_default_instance() && other_parameters_ != NULL;
-}
-inline void set_parameters::clear_other_parameters() {
-  if (GetArenaNoVirtual() == NULL && other_parameters_ != NULL) {
-    delete other_parameters_;
-  }
-  other_parameters_ = NULL;
-}
-inline const ::sp::ste::other_parameters& set_parameters::other_parameters() const {
-  const ::sp::ste::other_parameters* p = other_parameters_;
-  // @@protoc_insertion_point(field_get:sp.ste.set_parameters.other_parameters)
-  return p != NULL ? *p : *reinterpret_cast<const ::sp::ste::other_parameters*>(
-      &::sp::ste::_other_parameters_default_instance_);
-}
-inline ::sp::ste::other_parameters* set_parameters::release_other_parameters() {
-  // @@protoc_insertion_point(field_release:sp.ste.set_parameters.other_parameters)
-  
-  ::sp::ste::other_parameters* temp = other_parameters_;
-  other_parameters_ = NULL;
-  return temp;
-}
-inline ::sp::ste::other_parameters* set_parameters::mutable_other_parameters() {
-  
-  if (other_parameters_ == NULL) {
-    other_parameters_ = new ::sp::ste::other_parameters;
-  }
-  // @@protoc_insertion_point(field_mutable:sp.ste.set_parameters.other_parameters)
-  return other_parameters_;
-}
-inline void set_parameters::set_allocated_other_parameters(::sp::ste::other_parameters* other_parameters) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete other_parameters_;
-  }
-  if (other_parameters) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      other_parameters = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, other_parameters, submessage_arena);
-    }
-    
-  } else {
-    
-  }
-  other_parameters_ = other_parameters;
-  // @@protoc_insertion_point(field_set_allocated:sp.ste.set_parameters.other_parameters)
+  tx_ = tx;
+  // @@protoc_insertion_point(field_set_allocated:sp.ste.set_parameters.tx)
 }
 
 // -------------------------------------------------------------------
 
 // parameter_values
 
-// .sp.ste.num_params num_params = 1;
-inline bool parameter_values::has_num_params() const {
-  return this != internal_default_instance() && num_params_ != NULL;
+// .sp.ste.TestBedRpcHeader hdr = 1;
+inline bool parameter_values::has_hdr() const {
+  return this != internal_default_instance() && hdr_ != NULL;
 }
-inline void parameter_values::clear_num_params() {
-  if (GetArenaNoVirtual() == NULL && num_params_ != NULL) {
-    delete num_params_;
+inline void parameter_values::clear_hdr() {
+  if (GetArenaNoVirtual() == NULL && hdr_ != NULL) {
+    delete hdr_;
   }
-  num_params_ = NULL;
+  hdr_ = NULL;
 }
-inline const ::sp::ste::num_params& parameter_values::num_params() const {
-  const ::sp::ste::num_params* p = num_params_;
-  // @@protoc_insertion_point(field_get:sp.ste.parameter_values.num_params)
-  return p != NULL ? *p : *reinterpret_cast<const ::sp::ste::num_params*>(
-      &::sp::ste::_num_params_default_instance_);
+inline const ::sp::ste::TestBedRpcHeader& parameter_values::hdr() const {
+  const ::sp::ste::TestBedRpcHeader* p = hdr_;
+  // @@protoc_insertion_point(field_get:sp.ste.parameter_values.hdr)
+  return p != NULL ? *p : *reinterpret_cast<const ::sp::ste::TestBedRpcHeader*>(
+      &::sp::ste::_TestBedRpcHeader_default_instance_);
 }
-inline ::sp::ste::num_params* parameter_values::release_num_params() {
-  // @@protoc_insertion_point(field_release:sp.ste.parameter_values.num_params)
+inline ::sp::ste::TestBedRpcHeader* parameter_values::release_hdr() {
+  // @@protoc_insertion_point(field_release:sp.ste.parameter_values.hdr)
   
-  ::sp::ste::num_params* temp = num_params_;
-  num_params_ = NULL;
+  ::sp::ste::TestBedRpcHeader* temp = hdr_;
+  hdr_ = NULL;
   return temp;
 }
-inline ::sp::ste::num_params* parameter_values::mutable_num_params() {
+inline ::sp::ste::TestBedRpcHeader* parameter_values::mutable_hdr() {
   
-  if (num_params_ == NULL) {
-    num_params_ = new ::sp::ste::num_params;
+  if (hdr_ == NULL) {
+    hdr_ = new ::sp::ste::TestBedRpcHeader;
   }
-  // @@protoc_insertion_point(field_mutable:sp.ste.parameter_values.num_params)
-  return num_params_;
+  // @@protoc_insertion_point(field_mutable:sp.ste.parameter_values.hdr)
+  return hdr_;
 }
-inline void parameter_values::set_allocated_num_params(::sp::ste::num_params* num_params) {
+inline void parameter_values::set_allocated_hdr(::sp::ste::TestBedRpcHeader* hdr) {
   ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
   if (message_arena == NULL) {
-    delete num_params_;
+    delete hdr_;
   }
-  if (num_params) {
+  if (hdr) {
     ::google::protobuf::Arena* submessage_arena = NULL;
     if (message_arena != submessage_arena) {
-      num_params = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, num_params, submessage_arena);
+      hdr = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, hdr, submessage_arena);
     }
     
   } else {
     
   }
-  num_params_ = num_params;
-  // @@protoc_insertion_point(field_set_allocated:sp.ste.parameter_values.num_params)
+  hdr_ = hdr;
+  // @@protoc_insertion_point(field_set_allocated:sp.ste.parameter_values.hdr)
 }
 
-// .sp.ste.state_parameters state_parameters = 2;
-inline bool parameter_values::has_state_parameters() const {
-  return this != internal_default_instance() && state_parameters_ != NULL;
+// .sp.ste.PayloadSteSingleMeasurementRxParams rx = 2;
+inline bool parameter_values::has_rx() const {
+  return this != internal_default_instance() && rx_ != NULL;
 }
-inline void parameter_values::clear_state_parameters() {
-  if (GetArenaNoVirtual() == NULL && state_parameters_ != NULL) {
-    delete state_parameters_;
+inline void parameter_values::clear_rx() {
+  if (GetArenaNoVirtual() == NULL && rx_ != NULL) {
+    delete rx_;
   }
-  state_parameters_ = NULL;
+  rx_ = NULL;
 }
-inline const ::sp::ste::state_parameters& parameter_values::state_parameters() const {
-  const ::sp::ste::state_parameters* p = state_parameters_;
-  // @@protoc_insertion_point(field_get:sp.ste.parameter_values.state_parameters)
-  return p != NULL ? *p : *reinterpret_cast<const ::sp::ste::state_parameters*>(
-      &::sp::ste::_state_parameters_default_instance_);
+inline const ::sp::ste::PayloadSteSingleMeasurementRxParams& parameter_values::rx() const {
+  const ::sp::ste::PayloadSteSingleMeasurementRxParams* p = rx_;
+  // @@protoc_insertion_point(field_get:sp.ste.parameter_values.rx)
+  return p != NULL ? *p : *reinterpret_cast<const ::sp::ste::PayloadSteSingleMeasurementRxParams*>(
+      &::sp::ste::_PayloadSteSingleMeasurementRxParams_default_instance_);
 }
-inline ::sp::ste::state_parameters* parameter_values::release_state_parameters() {
-  // @@protoc_insertion_point(field_release:sp.ste.parameter_values.state_parameters)
+inline ::sp::ste::PayloadSteSingleMeasurementRxParams* parameter_values::release_rx() {
+  // @@protoc_insertion_point(field_release:sp.ste.parameter_values.rx)
   
-  ::sp::ste::state_parameters* temp = state_parameters_;
-  state_parameters_ = NULL;
+  ::sp::ste::PayloadSteSingleMeasurementRxParams* temp = rx_;
+  rx_ = NULL;
   return temp;
 }
-inline ::sp::ste::state_parameters* parameter_values::mutable_state_parameters() {
+inline ::sp::ste::PayloadSteSingleMeasurementRxParams* parameter_values::mutable_rx() {
   
-  if (state_parameters_ == NULL) {
-    state_parameters_ = new ::sp::ste::state_parameters;
+  if (rx_ == NULL) {
+    rx_ = new ::sp::ste::PayloadSteSingleMeasurementRxParams;
   }
-  // @@protoc_insertion_point(field_mutable:sp.ste.parameter_values.state_parameters)
-  return state_parameters_;
+  // @@protoc_insertion_point(field_mutable:sp.ste.parameter_values.rx)
+  return rx_;
 }
-inline void parameter_values::set_allocated_state_parameters(::sp::ste::state_parameters* state_parameters) {
+inline void parameter_values::set_allocated_rx(::sp::ste::PayloadSteSingleMeasurementRxParams* rx) {
   ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
   if (message_arena == NULL) {
-    delete state_parameters_;
+    delete rx_;
   }
-  if (state_parameters) {
+  if (rx) {
     ::google::protobuf::Arena* submessage_arena = NULL;
     if (message_arena != submessage_arena) {
-      state_parameters = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, state_parameters, submessage_arena);
+      rx = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, rx, submessage_arena);
     }
     
   } else {
     
   }
-  state_parameters_ = state_parameters;
-  // @@protoc_insertion_point(field_set_allocated:sp.ste.parameter_values.state_parameters)
+  rx_ = rx;
+  // @@protoc_insertion_point(field_set_allocated:sp.ste.parameter_values.rx)
 }
 
-// .sp.ste.tx_parameters tx_parameters = 3;
-inline bool parameter_values::has_tx_parameters() const {
-  return this != internal_default_instance() && tx_parameters_ != NULL;
+// .sp.ste.PayloadSteSingleMeasurementTxParams tx = 3;
+inline bool parameter_values::has_tx() const {
+  return this != internal_default_instance() && tx_ != NULL;
 }
-inline void parameter_values::clear_tx_parameters() {
-  if (GetArenaNoVirtual() == NULL && tx_parameters_ != NULL) {
-    delete tx_parameters_;
+inline void parameter_values::clear_tx() {
+  if (GetArenaNoVirtual() == NULL && tx_ != NULL) {
+    delete tx_;
   }
-  tx_parameters_ = NULL;
+  tx_ = NULL;
 }
-inline const ::sp::ste::tx_parameters& parameter_values::tx_parameters() const {
-  const ::sp::ste::tx_parameters* p = tx_parameters_;
-  // @@protoc_insertion_point(field_get:sp.ste.parameter_values.tx_parameters)
-  return p != NULL ? *p : *reinterpret_cast<const ::sp::ste::tx_parameters*>(
-      &::sp::ste::_tx_parameters_default_instance_);
+inline const ::sp::ste::PayloadSteSingleMeasurementTxParams& parameter_values::tx() const {
+  const ::sp::ste::PayloadSteSingleMeasurementTxParams* p = tx_;
+  // @@protoc_insertion_point(field_get:sp.ste.parameter_values.tx)
+  return p != NULL ? *p : *reinterpret_cast<const ::sp::ste::PayloadSteSingleMeasurementTxParams*>(
+      &::sp::ste::_PayloadSteSingleMeasurementTxParams_default_instance_);
 }
-inline ::sp::ste::tx_parameters* parameter_values::release_tx_parameters() {
-  // @@protoc_insertion_point(field_release:sp.ste.parameter_values.tx_parameters)
+inline ::sp::ste::PayloadSteSingleMeasurementTxParams* parameter_values::release_tx() {
+  // @@protoc_insertion_point(field_release:sp.ste.parameter_values.tx)
   
-  ::sp::ste::tx_parameters* temp = tx_parameters_;
-  tx_parameters_ = NULL;
+  ::sp::ste::PayloadSteSingleMeasurementTxParams* temp = tx_;
+  tx_ = NULL;
   return temp;
 }
-inline ::sp::ste::tx_parameters* parameter_values::mutable_tx_parameters() {
+inline ::sp::ste::PayloadSteSingleMeasurementTxParams* parameter_values::mutable_tx() {
   
-  if (tx_parameters_ == NULL) {
-    tx_parameters_ = new ::sp::ste::tx_parameters;
+  if (tx_ == NULL) {
+    tx_ = new ::sp::ste::PayloadSteSingleMeasurementTxParams;
   }
-  // @@protoc_insertion_point(field_mutable:sp.ste.parameter_values.tx_parameters)
-  return tx_parameters_;
+  // @@protoc_insertion_point(field_mutable:sp.ste.parameter_values.tx)
+  return tx_;
 }
-inline void parameter_values::set_allocated_tx_parameters(::sp::ste::tx_parameters* tx_parameters) {
+inline void parameter_values::set_allocated_tx(::sp::ste::PayloadSteSingleMeasurementTxParams* tx) {
   ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
   if (message_arena == NULL) {
-    delete tx_parameters_;
+    delete tx_;
   }
-  if (tx_parameters) {
+  if (tx) {
     ::google::protobuf::Arena* submessage_arena = NULL;
     if (message_arena != submessage_arena) {
-      tx_parameters = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, tx_parameters, submessage_arena);
+      tx = ::google::protobuf::internal::GetOwnedMessage(
+          message_arena, tx, submessage_arena);
     }
     
   } else {
     
   }
-  tx_parameters_ = tx_parameters;
-  // @@protoc_insertion_point(field_set_allocated:sp.ste.parameter_values.tx_parameters)
-}
-
-// .sp.ste.fft_parameters fft_parameters = 4;
-inline bool parameter_values::has_fft_parameters() const {
-  return this != internal_default_instance() && fft_parameters_ != NULL;
-}
-inline void parameter_values::clear_fft_parameters() {
-  if (GetArenaNoVirtual() == NULL && fft_parameters_ != NULL) {
-    delete fft_parameters_;
-  }
-  fft_parameters_ = NULL;
-}
-inline const ::sp::ste::fft_parameters& parameter_values::fft_parameters() const {
-  const ::sp::ste::fft_parameters* p = fft_parameters_;
-  // @@protoc_insertion_point(field_get:sp.ste.parameter_values.fft_parameters)
-  return p != NULL ? *p : *reinterpret_cast<const ::sp::ste::fft_parameters*>(
-      &::sp::ste::_fft_parameters_default_instance_);
-}
-inline ::sp::ste::fft_parameters* parameter_values::release_fft_parameters() {
-  // @@protoc_insertion_point(field_release:sp.ste.parameter_values.fft_parameters)
-  
-  ::sp::ste::fft_parameters* temp = fft_parameters_;
-  fft_parameters_ = NULL;
-  return temp;
-}
-inline ::sp::ste::fft_parameters* parameter_values::mutable_fft_parameters() {
-  
-  if (fft_parameters_ == NULL) {
-    fft_parameters_ = new ::sp::ste::fft_parameters;
-  }
-  // @@protoc_insertion_point(field_mutable:sp.ste.parameter_values.fft_parameters)
-  return fft_parameters_;
-}
-inline void parameter_values::set_allocated_fft_parameters(::sp::ste::fft_parameters* fft_parameters) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete fft_parameters_;
-  }
-  if (fft_parameters) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      fft_parameters = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, fft_parameters, submessage_arena);
-    }
-    
-  } else {
-    
-  }
-  fft_parameters_ = fft_parameters;
-  // @@protoc_insertion_point(field_set_allocated:sp.ste.parameter_values.fft_parameters)
-}
-
-// .sp.ste.other_parameters other_parameters = 5;
-inline bool parameter_values::has_other_parameters() const {
-  return this != internal_default_instance() && other_parameters_ != NULL;
-}
-inline void parameter_values::clear_other_parameters() {
-  if (GetArenaNoVirtual() == NULL && other_parameters_ != NULL) {
-    delete other_parameters_;
-  }
-  other_parameters_ = NULL;
-}
-inline const ::sp::ste::other_parameters& parameter_values::other_parameters() const {
-  const ::sp::ste::other_parameters* p = other_parameters_;
-  // @@protoc_insertion_point(field_get:sp.ste.parameter_values.other_parameters)
-  return p != NULL ? *p : *reinterpret_cast<const ::sp::ste::other_parameters*>(
-      &::sp::ste::_other_parameters_default_instance_);
-}
-inline ::sp::ste::other_parameters* parameter_values::release_other_parameters() {
-  // @@protoc_insertion_point(field_release:sp.ste.parameter_values.other_parameters)
-  
-  ::sp::ste::other_parameters* temp = other_parameters_;
-  other_parameters_ = NULL;
-  return temp;
-}
-inline ::sp::ste::other_parameters* parameter_values::mutable_other_parameters() {
-  
-  if (other_parameters_ == NULL) {
-    other_parameters_ = new ::sp::ste::other_parameters;
-  }
-  // @@protoc_insertion_point(field_mutable:sp.ste.parameter_values.other_parameters)
-  return other_parameters_;
-}
-inline void parameter_values::set_allocated_other_parameters(::sp::ste::other_parameters* other_parameters) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == NULL) {
-    delete other_parameters_;
-  }
-  if (other_parameters) {
-    ::google::protobuf::Arena* submessage_arena = NULL;
-    if (message_arena != submessage_arena) {
-      other_parameters = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, other_parameters, submessage_arena);
-    }
-    
-  } else {
-    
-  }
-  other_parameters_ = other_parameters;
-  // @@protoc_insertion_point(field_set_allocated:sp.ste.parameter_values.other_parameters)
+  tx_ = tx;
+  // @@protoc_insertion_point(field_set_allocated:sp.ste.parameter_values.tx)
 }
 
 // -------------------------------------------------------------------
 
-// num_params
+// TestBedRpcHeader
 
-// uint32 state_count = 1;
-inline void num_params::clear_state_count() {
-  state_count_ = 0u;
+// string module = 1;
+inline void TestBedRpcHeader::clear_module() {
+  module_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline ::google::protobuf::uint32 num_params::state_count() const {
-  // @@protoc_insertion_point(field_get:sp.ste.num_params.state_count)
-  return state_count_;
+inline const ::std::string& TestBedRpcHeader::module() const {
+  // @@protoc_insertion_point(field_get:sp.ste.TestBedRpcHeader.module)
+  return module_.GetNoArena();
 }
-inline void num_params::set_state_count(::google::protobuf::uint32 value) {
+inline void TestBedRpcHeader::set_module(const ::std::string& value) {
   
-  state_count_ = value;
-  // @@protoc_insertion_point(field_set:sp.ste.num_params.state_count)
+  module_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:sp.ste.TestBedRpcHeader.module)
+}
+#if LANG_CXX11
+inline void TestBedRpcHeader::set_module(::std::string&& value) {
+  
+  module_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:sp.ste.TestBedRpcHeader.module)
+}
+#endif
+inline void TestBedRpcHeader::set_module(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  module_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:sp.ste.TestBedRpcHeader.module)
+}
+inline void TestBedRpcHeader::set_module(const char* value, size_t size) {
+  
+  module_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:sp.ste.TestBedRpcHeader.module)
+}
+inline ::std::string* TestBedRpcHeader::mutable_module() {
+  
+  // @@protoc_insertion_point(field_mutable:sp.ste.TestBedRpcHeader.module)
+  return module_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* TestBedRpcHeader::release_module() {
+  // @@protoc_insertion_point(field_release:sp.ste.TestBedRpcHeader.module)
+  
+  return module_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void TestBedRpcHeader::set_allocated_module(::std::string* module) {
+  if (module != NULL) {
+    
+  } else {
+    
+  }
+  module_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), module);
+  // @@protoc_insertion_point(field_set_allocated:sp.ste.TestBedRpcHeader.module)
 }
 
-// uint32 tx_count = 2;
-inline void num_params::clear_tx_count() {
-  tx_count_ = 0u;
+// int32 core = 2;
+inline void TestBedRpcHeader::clear_core() {
+  core_ = 0;
 }
-inline ::google::protobuf::uint32 num_params::tx_count() const {
-  // @@protoc_insertion_point(field_get:sp.ste.num_params.tx_count)
-  return tx_count_;
+inline ::google::protobuf::int32 TestBedRpcHeader::core() const {
+  // @@protoc_insertion_point(field_get:sp.ste.TestBedRpcHeader.core)
+  return core_;
 }
-inline void num_params::set_tx_count(::google::protobuf::uint32 value) {
+inline void TestBedRpcHeader::set_core(::google::protobuf::int32 value) {
   
-  tx_count_ = value;
-  // @@protoc_insertion_point(field_set:sp.ste.num_params.tx_count)
-}
-
-// uint32 fft_count = 3;
-inline void num_params::clear_fft_count() {
-  fft_count_ = 0u;
-}
-inline ::google::protobuf::uint32 num_params::fft_count() const {
-  // @@protoc_insertion_point(field_get:sp.ste.num_params.fft_count)
-  return fft_count_;
-}
-inline void num_params::set_fft_count(::google::protobuf::uint32 value) {
-  
-  fft_count_ = value;
-  // @@protoc_insertion_point(field_set:sp.ste.num_params.fft_count)
-}
-
-// uint32 other_count = 4;
-inline void num_params::clear_other_count() {
-  other_count_ = 0u;
-}
-inline ::google::protobuf::uint32 num_params::other_count() const {
-  // @@protoc_insertion_point(field_get:sp.ste.num_params.other_count)
-  return other_count_;
-}
-inline void num_params::set_other_count(::google::protobuf::uint32 value) {
-  
-  other_count_ = value;
-  // @@protoc_insertion_point(field_set:sp.ste.num_params.other_count)
+  core_ = value;
+  // @@protoc_insertion_point(field_set:sp.ste.TestBedRpcHeader.core)
 }
 
 // -------------------------------------------------------------------
 
-// state_parameters
+// PayloadSteSingleMeasurementTxParams
 
-// .sp.ste.state save_iq = 1;
-inline void state_parameters::clear_save_iq() {
-  save_iq_ = 0;
-}
-inline ::sp::ste::state state_parameters::save_iq() const {
-  // @@protoc_insertion_point(field_get:sp.ste.state_parameters.save_iq)
-  return static_cast< ::sp::ste::state >(save_iq_);
-}
-inline void state_parameters::set_save_iq(::sp::ste::state value) {
-  
-  save_iq_ = value;
-  // @@protoc_insertion_point(field_set:sp.ste.state_parameters.save_iq)
-}
-
-// .sp.ste.state parameter_estimate_enable = 2;
-inline void state_parameters::clear_parameter_estimate_enable() {
-  parameter_estimate_enable_ = 0;
-}
-inline ::sp::ste::state state_parameters::parameter_estimate_enable() const {
-  // @@protoc_insertion_point(field_get:sp.ste.state_parameters.parameter_estimate_enable)
-  return static_cast< ::sp::ste::state >(parameter_estimate_enable_);
-}
-inline void state_parameters::set_parameter_estimate_enable(::sp::ste::state value) {
-  
-  parameter_estimate_enable_ = value;
-  // @@protoc_insertion_point(field_set:sp.ste.state_parameters.parameter_estimate_enable)
-}
-
-// .sp.ste.state awgn_enable = 3;
-inline void state_parameters::clear_awgn_enable() {
-  awgn_enable_ = 0;
-}
-inline ::sp::ste::state state_parameters::awgn_enable() const {
-  // @@protoc_insertion_point(field_get:sp.ste.state_parameters.awgn_enable)
-  return static_cast< ::sp::ste::state >(awgn_enable_);
-}
-inline void state_parameters::set_awgn_enable(::sp::ste::state value) {
-  
-  awgn_enable_ = value;
-  // @@protoc_insertion_point(field_set:sp.ste.state_parameters.awgn_enable)
-}
-
-// .sp.ste.state notch_enable = 4;
-inline void state_parameters::clear_notch_enable() {
-  notch_enable_ = 0;
-}
-inline ::sp::ste::state state_parameters::notch_enable() const {
-  // @@protoc_insertion_point(field_get:sp.ste.state_parameters.notch_enable)
-  return static_cast< ::sp::ste::state >(notch_enable_);
-}
-inline void state_parameters::set_notch_enable(::sp::ste::state value) {
-  
-  notch_enable_ = value;
-  // @@protoc_insertion_point(field_set:sp.ste.state_parameters.notch_enable)
-}
-
-// .sp.ste.state fft_a_enable = 5;
-inline void state_parameters::clear_fft_a_enable() {
-  fft_a_enable_ = 0;
-}
-inline ::sp::ste::state state_parameters::fft_a_enable() const {
-  // @@protoc_insertion_point(field_get:sp.ste.state_parameters.fft_a_enable)
-  return static_cast< ::sp::ste::state >(fft_a_enable_);
-}
-inline void state_parameters::set_fft_a_enable(::sp::ste::state value) {
-  
-  fft_a_enable_ = value;
-  // @@protoc_insertion_point(field_set:sp.ste.state_parameters.fft_a_enable)
-}
-
-// .sp.ste.state fft_b_enable = 6;
-inline void state_parameters::clear_fft_b_enable() {
-  fft_b_enable_ = 0;
-}
-inline ::sp::ste::state state_parameters::fft_b_enable() const {
-  // @@protoc_insertion_point(field_get:sp.ste.state_parameters.fft_b_enable)
-  return static_cast< ::sp::ste::state >(fft_b_enable_);
-}
-inline void state_parameters::set_fft_b_enable(::sp::ste::state value) {
-  
-  fft_b_enable_ = value;
-  // @@protoc_insertion_point(field_set:sp.ste.state_parameters.fft_b_enable)
-}
-
-// -------------------------------------------------------------------
-
-// tx_parameters
-
-// double num_tx_samples_total = 1;
-inline void tx_parameters::clear_num_tx_samples_total() {
-  num_tx_samples_total_ = 0;
-}
-inline double tx_parameters::num_tx_samples_total() const {
-  // @@protoc_insertion_point(field_get:sp.ste.tx_parameters.num_tx_samples_total)
-  return num_tx_samples_total_;
-}
-inline void tx_parameters::set_num_tx_samples_total(double value) {
-  
-  num_tx_samples_total_ = value;
-  // @@protoc_insertion_point(field_set:sp.ste.tx_parameters.num_tx_samples_total)
-}
-
-// double tx_freq1_Hz = 2;
-inline void tx_parameters::clear_tx_freq1_hz() {
+// float tx_freq1_Hz = 1;
+inline void PayloadSteSingleMeasurementTxParams::clear_tx_freq1_hz() {
   tx_freq1_hz_ = 0;
 }
-inline double tx_parameters::tx_freq1_hz() const {
-  // @@protoc_insertion_point(field_get:sp.ste.tx_parameters.tx_freq1_Hz)
+inline float PayloadSteSingleMeasurementTxParams::tx_freq1_hz() const {
+  // @@protoc_insertion_point(field_get:sp.ste.PayloadSteSingleMeasurementTxParams.tx_freq1_Hz)
   return tx_freq1_hz_;
 }
-inline void tx_parameters::set_tx_freq1_hz(double value) {
+inline void PayloadSteSingleMeasurementTxParams::set_tx_freq1_hz(float value) {
   
   tx_freq1_hz_ = value;
-  // @@protoc_insertion_point(field_set:sp.ste.tx_parameters.tx_freq1_Hz)
+  // @@protoc_insertion_point(field_set:sp.ste.PayloadSteSingleMeasurementTxParams.tx_freq1_Hz)
 }
 
-// double tx_freq2_Hz = 3;
-inline void tx_parameters::clear_tx_freq2_hz() {
-  tx_freq2_hz_ = 0;
-}
-inline double tx_parameters::tx_freq2_hz() const {
-  // @@protoc_insertion_point(field_get:sp.ste.tx_parameters.tx_freq2_Hz)
-  return tx_freq2_hz_;
-}
-inline void tx_parameters::set_tx_freq2_hz(double value) {
-  
-  tx_freq2_hz_ = value;
-  // @@protoc_insertion_point(field_set:sp.ste.tx_parameters.tx_freq2_Hz)
-}
-
-// double tx_phase1_rot = 4;
-inline void tx_parameters::clear_tx_phase1_rot() {
+// float tx_phase1_rot = 2;
+inline void PayloadSteSingleMeasurementTxParams::clear_tx_phase1_rot() {
   tx_phase1_rot_ = 0;
 }
-inline double tx_parameters::tx_phase1_rot() const {
-  // @@protoc_insertion_point(field_get:sp.ste.tx_parameters.tx_phase1_rot)
+inline float PayloadSteSingleMeasurementTxParams::tx_phase1_rot() const {
+  // @@protoc_insertion_point(field_get:sp.ste.PayloadSteSingleMeasurementTxParams.tx_phase1_rot)
   return tx_phase1_rot_;
 }
-inline void tx_parameters::set_tx_phase1_rot(double value) {
+inline void PayloadSteSingleMeasurementTxParams::set_tx_phase1_rot(float value) {
   
   tx_phase1_rot_ = value;
-  // @@protoc_insertion_point(field_set:sp.ste.tx_parameters.tx_phase1_rot)
+  // @@protoc_insertion_point(field_set:sp.ste.PayloadSteSingleMeasurementTxParams.tx_phase1_rot)
 }
 
-// double tx_phase2_rot = 5;
-inline void tx_parameters::clear_tx_phase2_rot() {
+// float tx_freq2_Hz = 3;
+inline void PayloadSteSingleMeasurementTxParams::clear_tx_freq2_hz() {
+  tx_freq2_hz_ = 0;
+}
+inline float PayloadSteSingleMeasurementTxParams::tx_freq2_hz() const {
+  // @@protoc_insertion_point(field_get:sp.ste.PayloadSteSingleMeasurementTxParams.tx_freq2_Hz)
+  return tx_freq2_hz_;
+}
+inline void PayloadSteSingleMeasurementTxParams::set_tx_freq2_hz(float value) {
+  
+  tx_freq2_hz_ = value;
+  // @@protoc_insertion_point(field_set:sp.ste.PayloadSteSingleMeasurementTxParams.tx_freq2_Hz)
+}
+
+// float tx_phase2_rot = 4;
+inline void PayloadSteSingleMeasurementTxParams::clear_tx_phase2_rot() {
   tx_phase2_rot_ = 0;
 }
-inline double tx_parameters::tx_phase2_rot() const {
-  // @@protoc_insertion_point(field_get:sp.ste.tx_parameters.tx_phase2_rot)
+inline float PayloadSteSingleMeasurementTxParams::tx_phase2_rot() const {
+  // @@protoc_insertion_point(field_get:sp.ste.PayloadSteSingleMeasurementTxParams.tx_phase2_rot)
   return tx_phase2_rot_;
 }
-inline void tx_parameters::set_tx_phase2_rot(double value) {
+inline void PayloadSteSingleMeasurementTxParams::set_tx_phase2_rot(float value) {
   
   tx_phase2_rot_ = value;
-  // @@protoc_insertion_point(field_set:sp.ste.tx_parameters.tx_phase2_rot)
+  // @@protoc_insertion_point(field_set:sp.ste.PayloadSteSingleMeasurementTxParams.tx_phase2_rot)
+}
+
+// float gain1 = 5;
+inline void PayloadSteSingleMeasurementTxParams::clear_gain1() {
+  gain1_ = 0;
+}
+inline float PayloadSteSingleMeasurementTxParams::gain1() const {
+  // @@protoc_insertion_point(field_get:sp.ste.PayloadSteSingleMeasurementTxParams.gain1)
+  return gain1_;
+}
+inline void PayloadSteSingleMeasurementTxParams::set_gain1(float value) {
+  
+  gain1_ = value;
+  // @@protoc_insertion_point(field_set:sp.ste.PayloadSteSingleMeasurementTxParams.gain1)
+}
+
+// float gain2 = 6;
+inline void PayloadSteSingleMeasurementTxParams::clear_gain2() {
+  gain2_ = 0;
+}
+inline float PayloadSteSingleMeasurementTxParams::gain2() const {
+  // @@protoc_insertion_point(field_get:sp.ste.PayloadSteSingleMeasurementTxParams.gain2)
+  return gain2_;
+}
+inline void PayloadSteSingleMeasurementTxParams::set_gain2(float value) {
+  
+  gain2_ = value;
+  // @@protoc_insertion_point(field_set:sp.ste.PayloadSteSingleMeasurementTxParams.gain2)
+}
+
+// float gain3 = 7;
+inline void PayloadSteSingleMeasurementTxParams::clear_gain3() {
+  gain3_ = 0;
+}
+inline float PayloadSteSingleMeasurementTxParams::gain3() const {
+  // @@protoc_insertion_point(field_get:sp.ste.PayloadSteSingleMeasurementTxParams.gain3)
+  return gain3_;
+}
+inline void PayloadSteSingleMeasurementTxParams::set_gain3(float value) {
+  
+  gain3_ = value;
+  // @@protoc_insertion_point(field_set:sp.ste.PayloadSteSingleMeasurementTxParams.gain3)
+}
+
+// bool awgn_enable = 8;
+inline void PayloadSteSingleMeasurementTxParams::clear_awgn_enable() {
+  awgn_enable_ = false;
+}
+inline bool PayloadSteSingleMeasurementTxParams::awgn_enable() const {
+  // @@protoc_insertion_point(field_get:sp.ste.PayloadSteSingleMeasurementTxParams.awgn_enable)
+  return awgn_enable_;
+}
+inline void PayloadSteSingleMeasurementTxParams::set_awgn_enable(bool value) {
+  
+  awgn_enable_ = value;
+  // @@protoc_insertion_point(field_set:sp.ste.PayloadSteSingleMeasurementTxParams.awgn_enable)
+}
+
+// bool notch_enable = 9;
+inline void PayloadSteSingleMeasurementTxParams::clear_notch_enable() {
+  notch_enable_ = false;
+}
+inline bool PayloadSteSingleMeasurementTxParams::notch_enable() const {
+  // @@protoc_insertion_point(field_get:sp.ste.PayloadSteSingleMeasurementTxParams.notch_enable)
+  return notch_enable_;
+}
+inline void PayloadSteSingleMeasurementTxParams::set_notch_enable(bool value) {
+  
+  notch_enable_ = value;
+  // @@protoc_insertion_point(field_set:sp.ste.PayloadSteSingleMeasurementTxParams.notch_enable)
+}
+
+// uint32 num_tx_samples_total = 10;
+inline void PayloadSteSingleMeasurementTxParams::clear_num_tx_samples_total() {
+  num_tx_samples_total_ = 0u;
+}
+inline ::google::protobuf::uint32 PayloadSteSingleMeasurementTxParams::num_tx_samples_total() const {
+  // @@protoc_insertion_point(field_get:sp.ste.PayloadSteSingleMeasurementTxParams.num_tx_samples_total)
+  return num_tx_samples_total_;
+}
+inline void PayloadSteSingleMeasurementTxParams::set_num_tx_samples_total(::google::protobuf::uint32 value) {
+  
+  num_tx_samples_total_ = value;
+  // @@protoc_insertion_point(field_set:sp.ste.PayloadSteSingleMeasurementTxParams.num_tx_samples_total)
+}
+
+// uint32 num_tx_samples_per_batch = 11;
+inline void PayloadSteSingleMeasurementTxParams::clear_num_tx_samples_per_batch() {
+  num_tx_samples_per_batch_ = 0u;
+}
+inline ::google::protobuf::uint32 PayloadSteSingleMeasurementTxParams::num_tx_samples_per_batch() const {
+  // @@protoc_insertion_point(field_get:sp.ste.PayloadSteSingleMeasurementTxParams.num_tx_samples_per_batch)
+  return num_tx_samples_per_batch_;
+}
+inline void PayloadSteSingleMeasurementTxParams::set_num_tx_samples_per_batch(::google::protobuf::uint32 value) {
+  
+  num_tx_samples_per_batch_ = value;
+  // @@protoc_insertion_point(field_set:sp.ste.PayloadSteSingleMeasurementTxParams.num_tx_samples_per_batch)
+}
+
+// string filebasename = 12;
+inline void PayloadSteSingleMeasurementTxParams::clear_filebasename() {
+  filebasename_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& PayloadSteSingleMeasurementTxParams::filebasename() const {
+  // @@protoc_insertion_point(field_get:sp.ste.PayloadSteSingleMeasurementTxParams.filebasename)
+  return filebasename_.GetNoArena();
+}
+inline void PayloadSteSingleMeasurementTxParams::set_filebasename(const ::std::string& value) {
+  
+  filebasename_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:sp.ste.PayloadSteSingleMeasurementTxParams.filebasename)
+}
+#if LANG_CXX11
+inline void PayloadSteSingleMeasurementTxParams::set_filebasename(::std::string&& value) {
+  
+  filebasename_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:sp.ste.PayloadSteSingleMeasurementTxParams.filebasename)
+}
+#endif
+inline void PayloadSteSingleMeasurementTxParams::set_filebasename(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  filebasename_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:sp.ste.PayloadSteSingleMeasurementTxParams.filebasename)
+}
+inline void PayloadSteSingleMeasurementTxParams::set_filebasename(const char* value, size_t size) {
+  
+  filebasename_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:sp.ste.PayloadSteSingleMeasurementTxParams.filebasename)
+}
+inline ::std::string* PayloadSteSingleMeasurementTxParams::mutable_filebasename() {
+  
+  // @@protoc_insertion_point(field_mutable:sp.ste.PayloadSteSingleMeasurementTxParams.filebasename)
+  return filebasename_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* PayloadSteSingleMeasurementTxParams::release_filebasename() {
+  // @@protoc_insertion_point(field_release:sp.ste.PayloadSteSingleMeasurementTxParams.filebasename)
+  
+  return filebasename_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void PayloadSteSingleMeasurementTxParams::set_allocated_filebasename(::std::string* filebasename) {
+  if (filebasename != NULL) {
+    
+  } else {
+    
+  }
+  filebasename_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), filebasename);
+  // @@protoc_insertion_point(field_set_allocated:sp.ste.PayloadSteSingleMeasurementTxParams.filebasename)
+}
+
+// string filename_tx_samples = 13;
+inline void PayloadSteSingleMeasurementTxParams::clear_filename_tx_samples() {
+  filename_tx_samples_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& PayloadSteSingleMeasurementTxParams::filename_tx_samples() const {
+  // @@protoc_insertion_point(field_get:sp.ste.PayloadSteSingleMeasurementTxParams.filename_tx_samples)
+  return filename_tx_samples_.GetNoArena();
+}
+inline void PayloadSteSingleMeasurementTxParams::set_filename_tx_samples(const ::std::string& value) {
+  
+  filename_tx_samples_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:sp.ste.PayloadSteSingleMeasurementTxParams.filename_tx_samples)
+}
+#if LANG_CXX11
+inline void PayloadSteSingleMeasurementTxParams::set_filename_tx_samples(::std::string&& value) {
+  
+  filename_tx_samples_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:sp.ste.PayloadSteSingleMeasurementTxParams.filename_tx_samples)
+}
+#endif
+inline void PayloadSteSingleMeasurementTxParams::set_filename_tx_samples(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  filename_tx_samples_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:sp.ste.PayloadSteSingleMeasurementTxParams.filename_tx_samples)
+}
+inline void PayloadSteSingleMeasurementTxParams::set_filename_tx_samples(const char* value, size_t size) {
+  
+  filename_tx_samples_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:sp.ste.PayloadSteSingleMeasurementTxParams.filename_tx_samples)
+}
+inline ::std::string* PayloadSteSingleMeasurementTxParams::mutable_filename_tx_samples() {
+  
+  // @@protoc_insertion_point(field_mutable:sp.ste.PayloadSteSingleMeasurementTxParams.filename_tx_samples)
+  return filename_tx_samples_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* PayloadSteSingleMeasurementTxParams::release_filename_tx_samples() {
+  // @@protoc_insertion_point(field_release:sp.ste.PayloadSteSingleMeasurementTxParams.filename_tx_samples)
+  
+  return filename_tx_samples_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void PayloadSteSingleMeasurementTxParams::set_allocated_filename_tx_samples(::std::string* filename_tx_samples) {
+  if (filename_tx_samples != NULL) {
+    
+  } else {
+    
+  }
+  filename_tx_samples_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), filename_tx_samples);
+  // @@protoc_insertion_point(field_set_allocated:sp.ste.PayloadSteSingleMeasurementTxParams.filename_tx_samples)
+}
+
+// uint64 nextTxStartTime = 14;
+inline void PayloadSteSingleMeasurementTxParams::clear_nexttxstarttime() {
+  nexttxstarttime_ = GOOGLE_ULONGLONG(0);
+}
+inline ::google::protobuf::uint64 PayloadSteSingleMeasurementTxParams::nexttxstarttime() const {
+  // @@protoc_insertion_point(field_get:sp.ste.PayloadSteSingleMeasurementTxParams.nextTxStartTime)
+  return nexttxstarttime_;
+}
+inline void PayloadSteSingleMeasurementTxParams::set_nexttxstarttime(::google::protobuf::uint64 value) {
+  
+  nexttxstarttime_ = value;
+  // @@protoc_insertion_point(field_set:sp.ste.PayloadSteSingleMeasurementTxParams.nextTxStartTime)
+}
+
+// .sp.ste.TxIdlePattern tx_idle_pattern = 15;
+inline void PayloadSteSingleMeasurementTxParams::clear_tx_idle_pattern() {
+  tx_idle_pattern_ = 0;
+}
+inline ::sp::ste::TxIdlePattern PayloadSteSingleMeasurementTxParams::tx_idle_pattern() const {
+  // @@protoc_insertion_point(field_get:sp.ste.PayloadSteSingleMeasurementTxParams.tx_idle_pattern)
+  return static_cast< ::sp::ste::TxIdlePattern >(tx_idle_pattern_);
+}
+inline void PayloadSteSingleMeasurementTxParams::set_tx_idle_pattern(::sp::ste::TxIdlePattern value) {
+  
+  tx_idle_pattern_ = value;
+  // @@protoc_insertion_point(field_set:sp.ste.PayloadSteSingleMeasurementTxParams.tx_idle_pattern)
 }
 
 // -------------------------------------------------------------------
 
-// fft_parameters
+// PayloadSteSingleMeasurementRxParams
 
 // uint32 fft_length_a = 1;
-inline void fft_parameters::clear_fft_length_a() {
+inline void PayloadSteSingleMeasurementRxParams::clear_fft_length_a() {
   fft_length_a_ = 0u;
 }
-inline ::google::protobuf::uint32 fft_parameters::fft_length_a() const {
-  // @@protoc_insertion_point(field_get:sp.ste.fft_parameters.fft_length_a)
+inline ::google::protobuf::uint32 PayloadSteSingleMeasurementRxParams::fft_length_a() const {
+  // @@protoc_insertion_point(field_get:sp.ste.PayloadSteSingleMeasurementRxParams.fft_length_a)
   return fft_length_a_;
 }
-inline void fft_parameters::set_fft_length_a(::google::protobuf::uint32 value) {
+inline void PayloadSteSingleMeasurementRxParams::set_fft_length_a(::google::protobuf::uint32 value) {
   
   fft_length_a_ = value;
-  // @@protoc_insertion_point(field_set:sp.ste.fft_parameters.fft_length_a)
+  // @@protoc_insertion_point(field_set:sp.ste.PayloadSteSingleMeasurementRxParams.fft_length_a)
 }
 
-// uint32 fft_batches_a = 2;
-inline void fft_parameters::clear_fft_batches_a() {
-  fft_batches_a_ = 0u;
-}
-inline ::google::protobuf::uint32 fft_parameters::fft_batches_a() const {
-  // @@protoc_insertion_point(field_get:sp.ste.fft_parameters.fft_batches_a)
-  return fft_batches_a_;
-}
-inline void fft_parameters::set_fft_batches_a(::google::protobuf::uint32 value) {
-  
-  fft_batches_a_ = value;
-  // @@protoc_insertion_point(field_set:sp.ste.fft_parameters.fft_batches_a)
-}
-
-// uint32 fft_length_b = 3;
-inline void fft_parameters::clear_fft_length_b() {
+// uint32 fft_length_b = 2;
+inline void PayloadSteSingleMeasurementRxParams::clear_fft_length_b() {
   fft_length_b_ = 0u;
 }
-inline ::google::protobuf::uint32 fft_parameters::fft_length_b() const {
-  // @@protoc_insertion_point(field_get:sp.ste.fft_parameters.fft_length_b)
+inline ::google::protobuf::uint32 PayloadSteSingleMeasurementRxParams::fft_length_b() const {
+  // @@protoc_insertion_point(field_get:sp.ste.PayloadSteSingleMeasurementRxParams.fft_length_b)
   return fft_length_b_;
 }
-inline void fft_parameters::set_fft_length_b(::google::protobuf::uint32 value) {
+inline void PayloadSteSingleMeasurementRxParams::set_fft_length_b(::google::protobuf::uint32 value) {
   
   fft_length_b_ = value;
-  // @@protoc_insertion_point(field_set:sp.ste.fft_parameters.fft_length_b)
+  // @@protoc_insertion_point(field_set:sp.ste.PayloadSteSingleMeasurementRxParams.fft_length_b)
+}
+
+// uint32 fft_batches_a = 3;
+inline void PayloadSteSingleMeasurementRxParams::clear_fft_batches_a() {
+  fft_batches_a_ = 0u;
+}
+inline ::google::protobuf::uint32 PayloadSteSingleMeasurementRxParams::fft_batches_a() const {
+  // @@protoc_insertion_point(field_get:sp.ste.PayloadSteSingleMeasurementRxParams.fft_batches_a)
+  return fft_batches_a_;
+}
+inline void PayloadSteSingleMeasurementRxParams::set_fft_batches_a(::google::protobuf::uint32 value) {
+  
+  fft_batches_a_ = value;
+  // @@protoc_insertion_point(field_set:sp.ste.PayloadSteSingleMeasurementRxParams.fft_batches_a)
 }
 
 // uint32 fft_batches_b = 4;
-inline void fft_parameters::clear_fft_batches_b() {
+inline void PayloadSteSingleMeasurementRxParams::clear_fft_batches_b() {
   fft_batches_b_ = 0u;
 }
-inline ::google::protobuf::uint32 fft_parameters::fft_batches_b() const {
-  // @@protoc_insertion_point(field_get:sp.ste.fft_parameters.fft_batches_b)
+inline ::google::protobuf::uint32 PayloadSteSingleMeasurementRxParams::fft_batches_b() const {
+  // @@protoc_insertion_point(field_get:sp.ste.PayloadSteSingleMeasurementRxParams.fft_batches_b)
   return fft_batches_b_;
 }
-inline void fft_parameters::set_fft_batches_b(::google::protobuf::uint32 value) {
+inline void PayloadSteSingleMeasurementRxParams::set_fft_batches_b(::google::protobuf::uint32 value) {
   
   fft_batches_b_ = value;
-  // @@protoc_insertion_point(field_set:sp.ste.fft_parameters.fft_batches_b)
+  // @@protoc_insertion_point(field_set:sp.ste.PayloadSteSingleMeasurementRxParams.fft_batches_b)
 }
 
-// -------------------------------------------------------------------
-
-// other_parameters
-
-// double num_rx_samples = 1;
-inline void other_parameters::clear_num_rx_samples() {
-  num_rx_samples_ = 0;
-}
-inline double other_parameters::num_rx_samples() const {
-  // @@protoc_insertion_point(field_get:sp.ste.other_parameters.num_rx_samples)
-  return num_rx_samples_;
-}
-inline void other_parameters::set_num_rx_samples(double value) {
-  
-  num_rx_samples_ = value;
-  // @@protoc_insertion_point(field_set:sp.ste.other_parameters.num_rx_samples)
-}
-
-// double rx_rot_freq_Hz = 2;
-inline void other_parameters::clear_rx_rot_freq_hz() {
+// float rx_rot_freq_Hz = 5;
+inline void PayloadSteSingleMeasurementRxParams::clear_rx_rot_freq_hz() {
   rx_rot_freq_hz_ = 0;
 }
-inline double other_parameters::rx_rot_freq_hz() const {
-  // @@protoc_insertion_point(field_get:sp.ste.other_parameters.rx_rot_freq_Hz)
+inline float PayloadSteSingleMeasurementRxParams::rx_rot_freq_hz() const {
+  // @@protoc_insertion_point(field_get:sp.ste.PayloadSteSingleMeasurementRxParams.rx_rot_freq_Hz)
   return rx_rot_freq_hz_;
 }
-inline void other_parameters::set_rx_rot_freq_hz(double value) {
+inline void PayloadSteSingleMeasurementRxParams::set_rx_rot_freq_hz(float value) {
   
   rx_rot_freq_hz_ = value;
-  // @@protoc_insertion_point(field_set:sp.ste.other_parameters.rx_rot_freq_Hz)
+  // @@protoc_insertion_point(field_set:sp.ste.PayloadSteSingleMeasurementRxParams.rx_rot_freq_Hz)
 }
 
-// uint32 decimation = 3;
-inline void other_parameters::clear_decimation() {
+// uint32 decimation = 6;
+inline void PayloadSteSingleMeasurementRxParams::clear_decimation() {
   decimation_ = 0u;
 }
-inline ::google::protobuf::uint32 other_parameters::decimation() const {
-  // @@protoc_insertion_point(field_get:sp.ste.other_parameters.decimation)
+inline ::google::protobuf::uint32 PayloadSteSingleMeasurementRxParams::decimation() const {
+  // @@protoc_insertion_point(field_get:sp.ste.PayloadSteSingleMeasurementRxParams.decimation)
   return decimation_;
 }
-inline void other_parameters::set_decimation(::google::protobuf::uint32 value) {
+inline void PayloadSteSingleMeasurementRxParams::set_decimation(::google::protobuf::uint32 value) {
   
   decimation_ = value;
-  // @@protoc_insertion_point(field_set:sp.ste.other_parameters.decimation)
+  // @@protoc_insertion_point(field_set:sp.ste.PayloadSteSingleMeasurementRxParams.decimation)
 }
 
-// uint32 gain1 = 4;
-inline void other_parameters::clear_gain1() {
-  gain1_ = 0u;
+// uint32 num_rx_samples = 7;
+inline void PayloadSteSingleMeasurementRxParams::clear_num_rx_samples() {
+  num_rx_samples_ = 0u;
 }
-inline ::google::protobuf::uint32 other_parameters::gain1() const {
-  // @@protoc_insertion_point(field_get:sp.ste.other_parameters.gain1)
-  return gain1_;
+inline ::google::protobuf::uint32 PayloadSteSingleMeasurementRxParams::num_rx_samples() const {
+  // @@protoc_insertion_point(field_get:sp.ste.PayloadSteSingleMeasurementRxParams.num_rx_samples)
+  return num_rx_samples_;
 }
-inline void other_parameters::set_gain1(::google::protobuf::uint32 value) {
+inline void PayloadSteSingleMeasurementRxParams::set_num_rx_samples(::google::protobuf::uint32 value) {
   
-  gain1_ = value;
-  // @@protoc_insertion_point(field_set:sp.ste.other_parameters.gain1)
+  num_rx_samples_ = value;
+  // @@protoc_insertion_point(field_set:sp.ste.PayloadSteSingleMeasurementRxParams.num_rx_samples)
 }
 
-// uint32 gain2 = 5;
-inline void other_parameters::clear_gain2() {
-  gain2_ = 0u;
+// bool save_iq = 8;
+inline void PayloadSteSingleMeasurementRxParams::clear_save_iq() {
+  save_iq_ = false;
 }
-inline ::google::protobuf::uint32 other_parameters::gain2() const {
-  // @@protoc_insertion_point(field_get:sp.ste.other_parameters.gain2)
-  return gain2_;
+inline bool PayloadSteSingleMeasurementRxParams::save_iq() const {
+  // @@protoc_insertion_point(field_get:sp.ste.PayloadSteSingleMeasurementRxParams.save_iq)
+  return save_iq_;
 }
-inline void other_parameters::set_gain2(::google::protobuf::uint32 value) {
+inline void PayloadSteSingleMeasurementRxParams::set_save_iq(bool value) {
   
-  gain2_ = value;
-  // @@protoc_insertion_point(field_set:sp.ste.other_parameters.gain2)
+  save_iq_ = value;
+  // @@protoc_insertion_point(field_set:sp.ste.PayloadSteSingleMeasurementRxParams.save_iq)
 }
 
-// double nextTxStartTime = 6;
-inline void other_parameters::clear_nexttxstarttime() {
-  nexttxstarttime_ = 0;
+// bool fft_a_enable = 9;
+inline void PayloadSteSingleMeasurementRxParams::clear_fft_a_enable() {
+  fft_a_enable_ = false;
 }
-inline double other_parameters::nexttxstarttime() const {
-  // @@protoc_insertion_point(field_get:sp.ste.other_parameters.nextTxStartTime)
-  return nexttxstarttime_;
+inline bool PayloadSteSingleMeasurementRxParams::fft_a_enable() const {
+  // @@protoc_insertion_point(field_get:sp.ste.PayloadSteSingleMeasurementRxParams.fft_a_enable)
+  return fft_a_enable_;
 }
-inline void other_parameters::set_nexttxstarttime(double value) {
+inline void PayloadSteSingleMeasurementRxParams::set_fft_a_enable(bool value) {
   
-  nexttxstarttime_ = value;
-  // @@protoc_insertion_point(field_set:sp.ste.other_parameters.nextTxStartTime)
+  fft_a_enable_ = value;
+  // @@protoc_insertion_point(field_set:sp.ste.PayloadSteSingleMeasurementRxParams.fft_a_enable)
 }
 
-// double nextRxStartTime = 7;
-inline void other_parameters::clear_nextrxstarttime() {
-  nextrxstarttime_ = 0;
+// bool fft_b_enable = 10;
+inline void PayloadSteSingleMeasurementRxParams::clear_fft_b_enable() {
+  fft_b_enable_ = false;
 }
-inline double other_parameters::nextrxstarttime() const {
-  // @@protoc_insertion_point(field_get:sp.ste.other_parameters.nextRxStartTime)
+inline bool PayloadSteSingleMeasurementRxParams::fft_b_enable() const {
+  // @@protoc_insertion_point(field_get:sp.ste.PayloadSteSingleMeasurementRxParams.fft_b_enable)
+  return fft_b_enable_;
+}
+inline void PayloadSteSingleMeasurementRxParams::set_fft_b_enable(bool value) {
+  
+  fft_b_enable_ = value;
+  // @@protoc_insertion_point(field_set:sp.ste.PayloadSteSingleMeasurementRxParams.fft_b_enable)
+}
+
+// bool parameter_estimate_enable = 11;
+inline void PayloadSteSingleMeasurementRxParams::clear_parameter_estimate_enable() {
+  parameter_estimate_enable_ = false;
+}
+inline bool PayloadSteSingleMeasurementRxParams::parameter_estimate_enable() const {
+  // @@protoc_insertion_point(field_get:sp.ste.PayloadSteSingleMeasurementRxParams.parameter_estimate_enable)
+  return parameter_estimate_enable_;
+}
+inline void PayloadSteSingleMeasurementRxParams::set_parameter_estimate_enable(bool value) {
+  
+  parameter_estimate_enable_ = value;
+  // @@protoc_insertion_point(field_set:sp.ste.PayloadSteSingleMeasurementRxParams.parameter_estimate_enable)
+}
+
+// string filebasename = 12;
+inline void PayloadSteSingleMeasurementRxParams::clear_filebasename() {
+  filebasename_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& PayloadSteSingleMeasurementRxParams::filebasename() const {
+  // @@protoc_insertion_point(field_get:sp.ste.PayloadSteSingleMeasurementRxParams.filebasename)
+  return filebasename_.GetNoArena();
+}
+inline void PayloadSteSingleMeasurementRxParams::set_filebasename(const ::std::string& value) {
+  
+  filebasename_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:sp.ste.PayloadSteSingleMeasurementRxParams.filebasename)
+}
+#if LANG_CXX11
+inline void PayloadSteSingleMeasurementRxParams::set_filebasename(::std::string&& value) {
+  
+  filebasename_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:sp.ste.PayloadSteSingleMeasurementRxParams.filebasename)
+}
+#endif
+inline void PayloadSteSingleMeasurementRxParams::set_filebasename(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  filebasename_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:sp.ste.PayloadSteSingleMeasurementRxParams.filebasename)
+}
+inline void PayloadSteSingleMeasurementRxParams::set_filebasename(const char* value, size_t size) {
+  
+  filebasename_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:sp.ste.PayloadSteSingleMeasurementRxParams.filebasename)
+}
+inline ::std::string* PayloadSteSingleMeasurementRxParams::mutable_filebasename() {
+  
+  // @@protoc_insertion_point(field_mutable:sp.ste.PayloadSteSingleMeasurementRxParams.filebasename)
+  return filebasename_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* PayloadSteSingleMeasurementRxParams::release_filebasename() {
+  // @@protoc_insertion_point(field_release:sp.ste.PayloadSteSingleMeasurementRxParams.filebasename)
+  
+  return filebasename_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void PayloadSteSingleMeasurementRxParams::set_allocated_filebasename(::std::string* filebasename) {
+  if (filebasename != NULL) {
+    
+  } else {
+    
+  }
+  filebasename_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), filebasename);
+  // @@protoc_insertion_point(field_set_allocated:sp.ste.PayloadSteSingleMeasurementRxParams.filebasename)
+}
+
+// string filename_fft_a = 13;
+inline void PayloadSteSingleMeasurementRxParams::clear_filename_fft_a() {
+  filename_fft_a_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& PayloadSteSingleMeasurementRxParams::filename_fft_a() const {
+  // @@protoc_insertion_point(field_get:sp.ste.PayloadSteSingleMeasurementRxParams.filename_fft_a)
+  return filename_fft_a_.GetNoArena();
+}
+inline void PayloadSteSingleMeasurementRxParams::set_filename_fft_a(const ::std::string& value) {
+  
+  filename_fft_a_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:sp.ste.PayloadSteSingleMeasurementRxParams.filename_fft_a)
+}
+#if LANG_CXX11
+inline void PayloadSteSingleMeasurementRxParams::set_filename_fft_a(::std::string&& value) {
+  
+  filename_fft_a_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:sp.ste.PayloadSteSingleMeasurementRxParams.filename_fft_a)
+}
+#endif
+inline void PayloadSteSingleMeasurementRxParams::set_filename_fft_a(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  filename_fft_a_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:sp.ste.PayloadSteSingleMeasurementRxParams.filename_fft_a)
+}
+inline void PayloadSteSingleMeasurementRxParams::set_filename_fft_a(const char* value, size_t size) {
+  
+  filename_fft_a_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:sp.ste.PayloadSteSingleMeasurementRxParams.filename_fft_a)
+}
+inline ::std::string* PayloadSteSingleMeasurementRxParams::mutable_filename_fft_a() {
+  
+  // @@protoc_insertion_point(field_mutable:sp.ste.PayloadSteSingleMeasurementRxParams.filename_fft_a)
+  return filename_fft_a_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* PayloadSteSingleMeasurementRxParams::release_filename_fft_a() {
+  // @@protoc_insertion_point(field_release:sp.ste.PayloadSteSingleMeasurementRxParams.filename_fft_a)
+  
+  return filename_fft_a_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void PayloadSteSingleMeasurementRxParams::set_allocated_filename_fft_a(::std::string* filename_fft_a) {
+  if (filename_fft_a != NULL) {
+    
+  } else {
+    
+  }
+  filename_fft_a_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), filename_fft_a);
+  // @@protoc_insertion_point(field_set_allocated:sp.ste.PayloadSteSingleMeasurementRxParams.filename_fft_a)
+}
+
+// string filename_fft_b = 14;
+inline void PayloadSteSingleMeasurementRxParams::clear_filename_fft_b() {
+  filename_fft_b_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& PayloadSteSingleMeasurementRxParams::filename_fft_b() const {
+  // @@protoc_insertion_point(field_get:sp.ste.PayloadSteSingleMeasurementRxParams.filename_fft_b)
+  return filename_fft_b_.GetNoArena();
+}
+inline void PayloadSteSingleMeasurementRxParams::set_filename_fft_b(const ::std::string& value) {
+  
+  filename_fft_b_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:sp.ste.PayloadSteSingleMeasurementRxParams.filename_fft_b)
+}
+#if LANG_CXX11
+inline void PayloadSteSingleMeasurementRxParams::set_filename_fft_b(::std::string&& value) {
+  
+  filename_fft_b_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:sp.ste.PayloadSteSingleMeasurementRxParams.filename_fft_b)
+}
+#endif
+inline void PayloadSteSingleMeasurementRxParams::set_filename_fft_b(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  filename_fft_b_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:sp.ste.PayloadSteSingleMeasurementRxParams.filename_fft_b)
+}
+inline void PayloadSteSingleMeasurementRxParams::set_filename_fft_b(const char* value, size_t size) {
+  
+  filename_fft_b_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:sp.ste.PayloadSteSingleMeasurementRxParams.filename_fft_b)
+}
+inline ::std::string* PayloadSteSingleMeasurementRxParams::mutable_filename_fft_b() {
+  
+  // @@protoc_insertion_point(field_mutable:sp.ste.PayloadSteSingleMeasurementRxParams.filename_fft_b)
+  return filename_fft_b_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* PayloadSteSingleMeasurementRxParams::release_filename_fft_b() {
+  // @@protoc_insertion_point(field_release:sp.ste.PayloadSteSingleMeasurementRxParams.filename_fft_b)
+  
+  return filename_fft_b_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void PayloadSteSingleMeasurementRxParams::set_allocated_filename_fft_b(::std::string* filename_fft_b) {
+  if (filename_fft_b != NULL) {
+    
+  } else {
+    
+  }
+  filename_fft_b_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), filename_fft_b);
+  // @@protoc_insertion_point(field_set_allocated:sp.ste.PayloadSteSingleMeasurementRxParams.filename_fft_b)
+}
+
+// string filename_rx_samples = 15;
+inline void PayloadSteSingleMeasurementRxParams::clear_filename_rx_samples() {
+  filename_rx_samples_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& PayloadSteSingleMeasurementRxParams::filename_rx_samples() const {
+  // @@protoc_insertion_point(field_get:sp.ste.PayloadSteSingleMeasurementRxParams.filename_rx_samples)
+  return filename_rx_samples_.GetNoArena();
+}
+inline void PayloadSteSingleMeasurementRxParams::set_filename_rx_samples(const ::std::string& value) {
+  
+  filename_rx_samples_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:sp.ste.PayloadSteSingleMeasurementRxParams.filename_rx_samples)
+}
+#if LANG_CXX11
+inline void PayloadSteSingleMeasurementRxParams::set_filename_rx_samples(::std::string&& value) {
+  
+  filename_rx_samples_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:sp.ste.PayloadSteSingleMeasurementRxParams.filename_rx_samples)
+}
+#endif
+inline void PayloadSteSingleMeasurementRxParams::set_filename_rx_samples(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  filename_rx_samples_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:sp.ste.PayloadSteSingleMeasurementRxParams.filename_rx_samples)
+}
+inline void PayloadSteSingleMeasurementRxParams::set_filename_rx_samples(const char* value, size_t size) {
+  
+  filename_rx_samples_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:sp.ste.PayloadSteSingleMeasurementRxParams.filename_rx_samples)
+}
+inline ::std::string* PayloadSteSingleMeasurementRxParams::mutable_filename_rx_samples() {
+  
+  // @@protoc_insertion_point(field_mutable:sp.ste.PayloadSteSingleMeasurementRxParams.filename_rx_samples)
+  return filename_rx_samples_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* PayloadSteSingleMeasurementRxParams::release_filename_rx_samples() {
+  // @@protoc_insertion_point(field_release:sp.ste.PayloadSteSingleMeasurementRxParams.filename_rx_samples)
+  
+  return filename_rx_samples_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void PayloadSteSingleMeasurementRxParams::set_allocated_filename_rx_samples(::std::string* filename_rx_samples) {
+  if (filename_rx_samples != NULL) {
+    
+  } else {
+    
+  }
+  filename_rx_samples_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), filename_rx_samples);
+  // @@protoc_insertion_point(field_set_allocated:sp.ste.PayloadSteSingleMeasurementRxParams.filename_rx_samples)
+}
+
+// uint64 nextRxStartTime = 16;
+inline void PayloadSteSingleMeasurementRxParams::clear_nextrxstarttime() {
+  nextrxstarttime_ = GOOGLE_ULONGLONG(0);
+}
+inline ::google::protobuf::uint64 PayloadSteSingleMeasurementRxParams::nextrxstarttime() const {
+  // @@protoc_insertion_point(field_get:sp.ste.PayloadSteSingleMeasurementRxParams.nextRxStartTime)
   return nextrxstarttime_;
 }
-inline void other_parameters::set_nextrxstarttime(double value) {
+inline void PayloadSteSingleMeasurementRxParams::set_nextrxstarttime(::google::protobuf::uint64 value) {
   
   nextrxstarttime_ = value;
-  // @@protoc_insertion_point(field_set:sp.ste.other_parameters.nextRxStartTime)
+  // @@protoc_insertion_point(field_set:sp.ste.PayloadSteSingleMeasurementRxParams.nextRxStartTime)
 }
 
 // -------------------------------------------------------------------
@@ -2062,10 +2089,6 @@ inline void other_parameters::set_nextrxstarttime(double value) {
 
 // -------------------------------------------------------------------
 
-// -------------------------------------------------------------------
-
-// -------------------------------------------------------------------
-
 
 // @@protoc_insertion_point(namespace_scope)
 
@@ -2075,10 +2098,10 @@ inline void other_parameters::set_nextrxstarttime(double value) {
 namespace google {
 namespace protobuf {
 
-template <> struct is_proto_enum< ::sp::ste::state> : ::google::protobuf::internal::true_type {};
+template <> struct is_proto_enum< ::sp::ste::TxIdlePattern> : ::google::protobuf::internal::true_type {};
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::sp::ste::state>() {
-  return ::sp::ste::state_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::sp::ste::TxIdlePattern>() {
+  return ::sp::ste::TxIdlePattern_descriptor();
 }
 
 }  // namespace protobuf

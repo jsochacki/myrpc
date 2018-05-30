@@ -5,9 +5,12 @@
 #include <memory>
 #include <string>
 
+#include <fstream>
+
 #include <grpcpp/grpcpp.h>
 
 #include "sp_ste.grpc.pb.h"
+#include "sp_ste_typedefs.h"
 
 class sp_ste_control_class_client final : public sp::ste::sp_ste_control::Service
 {
@@ -16,8 +19,8 @@ class sp_ste_control_class_client final : public sp::ste::sp_ste_control::Servic
       explicit
          sp_ste_control_class_client(
             std::shared_ptr<grpc::Channel> channel) :
-               __stub(sp::ste::sp_ste_control::NewStub(channel)) {};
-      int loopback();
+               stub_(sp::ste::sp_ste_control::NewStub(channel)) {};
+      int loopback(SPSingleMeasurementParams &parameters);
 //      grpc::Status
 //         check_current_values(grpc::ServerContext *context,
 //                              const sp::ste::null_message *null_value,
@@ -34,8 +37,7 @@ class sp_ste_control_class_client final : public sp::ste::sp_ste_control::Servic
 //                                       sp::ste::parameter_values *new_values)
 //         override;
    private:
-      std::unique_ptr<sp::ste::sp_ste_control::Stub> __stub;
+      std::unique_ptr<sp::ste::sp_ste_control::Stub> stub_;
 };
-
 
 #endif /* SP_STE_CLIENT_H_ */

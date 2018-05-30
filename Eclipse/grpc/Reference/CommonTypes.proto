@@ -1,0 +1,96 @@
+syntax = "proto3";
+option optimize_for = SPEED;
+
+service CommonControl
+{
+  /* Status Queries */
+
+  /* Control Queries */
+  rpc SetSampleLogState (SampleLogSetState) returns (GenericReply) {}
+  rpc SetFlSpType (FlSpSetType) returns (GenericReply) {}
+}
+
+//ENUMS
+//enum values must be a int32 value
+enum TestBedStatus
+{
+   //option allow_alias = true;
+   TB_STATUS_OK = 0;
+   TB_STATUS_ERROR = 1;
+}
+
+enum SampleLogState
+{
+    SAMPLE_LOG_DISABLE = 0;
+    SAMPLE_LOG_ENABLE = 1;
+}
+
+enum FlSpType
+{
+    FL_SP_TYPE_NORMAL = 0;
+    FL_SP_TYPE_TEST_MODS = 1;
+}
+
+//COMPOSITE TOP LEVEL MESSAGES
+message SampleLogSetState
+{
+    TestBedRpcHeader hdr = 1;
+    SampleLogState state = 2;
+}
+
+message FlSpSetType
+{
+    TestBedRpcHeader hdr = 1;
+    FlSpType type = 2;
+}
+
+message FlCommSetCwParams
+{
+    TestBedRpcHeader hdr = 1;
+    float baseFreqMhz = 2;
+}
+
+message FlSoundingSetCwParams
+{
+  TestBedRpcHeader hdr = 1;
+  int32 freq = 2;
+  uint32 amp = 3;
+  int32 step_size = 4;
+  uint32 start_samp = 5;
+  uint32 end_samp  = 6;
+}
+
+//SUB MESSAGE DEFINITIONS
+message GenericReply
+{
+   uint32 status = 1;
+}
+
+message TestBedRpcHeader
+{
+   string module = 1;
+   int32  core = 2;
+}
+
+message Complex
+{
+   float i = 1;
+   float q = 2;
+}
+
+message IfStats
+{
+   uint64 rxBytes = 1;
+   uint64 txBytes = 2;
+   uint64 rxPackets = 3;
+   uint64 txPackets = 4;
+   uint64 rxDropped = 5;
+   uint64 txDropped = 6;
+   uint64 rxErrors = 7;
+   uint64 txErrors = 8;
+}
+
+message null_message
+{
+
+}

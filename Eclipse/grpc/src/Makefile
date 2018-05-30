@@ -24,10 +24,10 @@ vpath %.proto $(PROTOS_PATH)
 
 all: system-check server client
 
-client: sp_ste.pb.o sp_ste.grpc.pb.o sp_ste_client.o sp_ste_client.h client.o
+client: sp_ste.pb.o sp_ste.grpc.pb.o sp_ste_client.o sp_ste_client.h sp_ste_typedefs.o sp_ste_typedefs.h client.o
 	$(CXX) $^ $(LDFLAGS) -o $@
 
-server: sp_ste.pb.o sp_ste.grpc.pb.o sp_ste_server.o sp_ste_server.h server.o
+server: sp_ste.pb.o sp_ste.grpc.pb.o sp_ste_server.o sp_ste_server.h sp_ste_typedefs.o sp_ste_typedefs.h server.o
 	$(CXX) $^ $(LDFLAGS) -o $@
 
 .PRECIOUS: %.grpc.pb.cc

@@ -1,0 +1,119 @@
+syntax = "proto3";
+option optimize_for = SPEED;
+
+import "../Reference/CommonTypes.proto";
+
+//The name of the package below is the name of the namespace for your functions
+//except . is replaced with :: obviously
+package PayloadSteControl;
+
+service Control
+{
+   // Control Commands
+   rpc PayloadSteRunSingleMeasurement (PayloadSteSingleMeasurementMsg) returns (GenericReply) {}
+   rpc PayloadSteRunMultipleMeasurements (PayloadSteMultipleMeasurementsMsg) returns (GenericReply) {}
+
+   // Status queries
+   rpc PayloadSteGetStatus (TestBedRpcHeader) returns (PayloadSteStatusMsg) {}
+}
+
+//ENUMS
+//enum values must be a int32 value
+enum PayloadSteState
+{
+   //option allow_alias = true;
+   PAYLOAD_STE_STATE_IDLE = 0;
+   PAYLOAD_STE_STATE_RUNNING = 1;
+}
+
+enum TxIdlePattern
+{
+   TX_IDLE_PATTERN_ZERO = 0;
+   TX_IDLE_PATTERN_RAMP = 1;
+   TX_IDLE_PATTERN_CW = 2; // Uses normal tone1 and tone2 parameters
+}
+
+//COMPOSITE TOP LEVEL MESSAGES
+message PayloadSteSingleMeasurementMsg
+{
+   TestBedRpcHeader hdr = 1;
+   PayloadSteSingleMeasurementRxParams rx = 2;
+   PayloadSteSingleMeasurementTxParams tx = 3;
+}
+
+message PayloadSteMultipleMeasurementsMsg
+{
+   TestBedRpcHeader hdr = 1;
+   PayloadSteSingleMeasurementRxParams rx_initial = 2;
+   PayloadSteSingleMeasurementTxParams tx_initial = 3;
+   PayloadSteTxSweepParams tx_sweep = 4;
+}
+
+message PayloadSteStatusMsg
+{
+   TestBedRpcHeader hdr = 1;
+   PayloadSteState state = 2;
+   uint32 tx_freq_step = 3;
+   uint32 gain_step = 4;
+   PayloadSteParameterEstimates pest = 5;
+}
+
+message PayloadSteSingleMeasurementTxParams
+{
+   float tx_freq1_Hz = 1;
+   float tx_phase1_rot = 2;
+   float tx_freq2_Hz = 3;
+   float tx_phase2_rot = 4;
+   float gain1 = 5;
+   float gain2 = 6;
+   float gain3 = 7; // For setting AWGN standard deviation
+   bool awgn_enable = 8;
+   bool notch_enable = 9; // AWGN has 50 MHz notch in center, for NPR testing
+   uint32 num_tx_samples_total = 10;
+   bool save_tx_iq = 11;
+   string filebasename = 12;
+   TxIdlePattern tx_idle_pattern = 13;
+}
+
+//SUB MESSAGE DEFINITIONS
+message PayloadSteSingleMeasurementRxParams
+{
+   uint32 fft_length_a = 1;
+   uint32 fft_length_b = 2;
+   uint32 fft_batches_a = 3;
+   uint32 fft_batches_b = 4;
+   float rx_rot_freq_Hz = 5;
+   uint32 decimation = 6;
+   uint32 num_rx_samples = 7;
+   bool save_iq = 8;
+   bool fft_a_enable = 9;
+   bool fft_b_enable = 10;
+   bool parameter_estimate_enable = 11;
+   string filebasename = 12;
+}
+
+message PayloadSteTxSweepParams
+{
+   float tx_freq_step_Hz = 1; // Both tx_freq1 and tx_freq1 move together
+   uint32 num_tx_freq_steps = 2;
+   float gain_step_dB = 3; // gain1/gain2/gain3 move together
+   uint32 num_gain_steps = 4;
+}
+
+message PayloadSteParameterEstimates
+{
+   bool estimates_valid = 1;
+
+   float f1_Hz = 2;
+   float a1 = 3;
+   float p1_deg = 4;
+
+   float f2_Hz = 5;
+   float a2 = 6;
+   float p2_deg = 7;
+}
+
+message null_message
+{
+
+}
