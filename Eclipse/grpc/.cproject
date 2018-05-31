@@ -85,8 +85,6 @@
                         					
                     </folderInfo>
                     					
-                    <fileInfo id="cdt.managedbuild.config.gnu.exe.debug.1624774772.2041382106" name="sp_ste.proto" rcbsApplicability="disable" resourcePath="TIMprotos/PayloadSetControl.proto" toolsToInvoke=""/>
-                    					
                     <sourceEntries>
                         						
                         <entry excluding="src|protos|TIMprotos|TIMsrc|src/main.cpp|protos/sp_ste.proto" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
@@ -184,8 +182,6 @@
                         </toolChain>
                         					
                     </folderInfo>
-                    					
-                    <fileInfo id="cdt.managedbuild.config.gnu.exe.release.1185853832.737965497" name="sp_ste.proto" rcbsApplicability="disable" resourcePath="TIMprotos/PayloadSetControl.proto" toolsToInvoke=""/>
                     					
                     <sourceEntries>
                         						

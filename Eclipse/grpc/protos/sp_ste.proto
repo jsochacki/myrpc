@@ -51,55 +51,34 @@ enum TxIdlePattern
 //COMPOSITE TOP LEVEL MESSAGES
 message set_parameters
 {
-   sp.ste.TestBedRpcHeader hdr = 1;
-   sp.ste.PayloadSteSingleMeasurementRxParams rx = 2;
-   sp.ste.PayloadSteSingleMeasurementTxParams tx = 3;
+   sp.ste.sp_ste_rpc_header hdr = 1;
+   sp.ste.sp_ste_rx_parameters_single_measurement rx_params = 2;
+   sp.ste.sp_ste_tx_parameters_single_measurement tx_params = 3;
 }
 
 message parameter_values
 {
-   sp.ste.TestBedRpcHeader hdr = 1;
-   sp.ste.PayloadSteSingleMeasurementRxParams rx = 2;
-   sp.ste.PayloadSteSingleMeasurementTxParams tx = 3;
+   sp.ste.sp_ste_rpc_header hdr = 1;
+   sp.ste.sp_ste_rx_parameters_single_measurement rx_params = 2;
+   sp.ste.sp_ste_tx_parameters_single_measurement tx_params = 3;
 }
 
-message TestBedRpcHeader
+message sp_ste_rpc_header
 {
    string module = 1;
    int32  core = 2;
 }
 
-//LOWER LEVEL MESSAGES
-message PayloadSteSingleMeasurementTxParams
-{
-   float tx_freq1_Hz = 1;
-   float tx_phase1_rot = 2;
-   float tx_freq2_Hz = 3;
-   float tx_phase2_rot = 4;
-   float gain1 = 5;
-   float gain2 = 6;
-   float gain3 = 7; // For setting AWGN standard deviation
-   bool awgn_enable = 8;
-   bool notch_enable = 9; // AWGN has 50 MHz notch in center, for NPR testing
-   uint32 num_tx_samples_total = 10;
-   uint32 num_tx_samples_per_batch = 11;
-   string filebasename = 12;
-   string filename_tx_samples = 13;
-   uint64 nextTxStartTime = 14;
-   TxIdlePattern tx_idle_pattern = 15;
-   //bool save_tx_iq = 11; //not yet implemented
-}
-
 //SUB MESSAGE DEFINITIONS
-message PayloadSteSingleMeasurementRxParams
+message sp_ste_rx_parameters_single_measurement
 {
    uint32 fft_length_a = 1;
    uint32 fft_length_b = 2;
    uint32 fft_batches_a = 3;
    uint32 fft_batches_b = 4;
-   float rx_rot_freq_Hz = 5;
-   uint32 decimation = 6;
-   uint32 num_rx_samples = 7;
+   uint32 decimation = 5;
+   uint32 num_rx_samples = 6;
+   float rx_rot_freq_hz = 7;
    bool save_iq = 8;
    bool fft_a_enable = 9;
    bool fft_b_enable = 10;
@@ -108,9 +87,28 @@ message PayloadSteSingleMeasurementRxParams
    string filename_fft_a = 13;
    string filename_fft_b = 14;
    string filename_rx_samples = 15;
-   uint64 nextRxStartTime = 16;
+   uint64 next_rx_start_time = 16;
 }
 
+message sp_ste_tx_parameters_single_measurement
+{
+   uint32 num_tx_samples_total = 1;
+   uint32 num_tx_samples_per_batch = 2;
+   float tx_freq1_hz = 3;
+   float tx_phase1_rot = 4;
+   float tx_freq2_hz = 5;
+   float tx_phase2_rot = 6;
+   float gain1 = 7;
+   float gain2 = 8;
+   float gain3 = 9; // For setting AWGN standard deviation
+   bool awgn_enable = 10;
+   bool notch_enable = 11; // AWGN has 50 MHz notch in center, for NPR testing
+   string filebasename = 12;
+   string filename_tx_samples = 13;
+   uint64 next_tx_start_time = 14;
+   TxIdlePattern tx_idle_pattern = 15;
+   //bool save_tx_iq = 11; //not yet implemented
+}
 
 message null_message
 {

@@ -100,10 +100,10 @@ float SPSingleMeasurementParams::get_element <float> (const int element_number)
 {
     switch(element_number)
     {
-        case 8: return rx_rot_freq_Hz;
-        case 9: return tx_freq1_Hz;
+        case 8: return rx_rot_freq_hz;
+        case 9: return tx_freq1_hz;
         case 10: return tx_phase1_rot;
-        case 11: return tx_freq2_Hz;
+        case 11: return tx_freq2_hz;
         case 12: return tx_phase2_rot;
         case 13: return gain1;
         case 14: return gain2;
@@ -124,10 +124,10 @@ void SPSingleMeasurementParams::set_element <float> (const int element_number,
 {
     switch(element_number)
     {
-        case 8: rx_rot_freq_Hz = element_value; break;
-        case 9: tx_freq1_Hz = element_value; break;
+        case 8: rx_rot_freq_hz = element_value; break;
+        case 9: tx_freq1_hz = element_value; break;
         case 10: tx_phase1_rot = element_value; break;
-        case 11: tx_freq2_Hz = element_value; break;
+        case 11: tx_freq2_hz = element_value; break;
         case 12: tx_phase2_rot = element_value; break;
         case 13: gain1 = element_value; break;
         case 14: gain2 = element_value; break;
@@ -190,10 +190,12 @@ std::string SPSingleMeasurementParams::get_element <std::string> (const int elem
 {
     switch(element_number)
     {
-        case 22: return filename_fft_a;
-        case 23: return filename_fft_b;
-        case 24: return filename_rx_samples;
-        case 25: return filename_tx_samples;
+        case 22: return rx_file_base_name;
+        case 23: return filename_fft_a;
+        case 24: return filename_fft_b;
+        case 25: return filename_rx_samples;
+        case 26: return tx_file_base_name;
+        case 27: return filename_tx_samples;
         default:
             {
                 std::cerr << "attempted to access a non existing element"
@@ -210,10 +212,12 @@ void SPSingleMeasurementParams::set_element <std::string> (const int element_num
 {
     switch(element_number)
     {
-        case 22: filename_fft_a = element_value; break;
-        case 23: filename_fft_b = element_value; break;
-        case 24: filename_rx_samples = element_value; break;
-        case 25: filename_tx_samples = element_value; break;
+        case 22: rx_file_base_name = element_value; break;
+        case 23: filename_fft_a = element_value; break;
+        case 24: filename_fft_b = element_value; break;
+        case 25: filename_rx_samples = element_value; break;
+        case 26: tx_file_base_name = element_value; break;
+        case 27: filename_tx_samples = element_value; break;
         default:
             {
                 std::cerr << "attempted to access a non existing element"
@@ -229,8 +233,8 @@ uint64_t SPSingleMeasurementParams::get_element <uint64_t> (const int element_nu
 {
     switch(element_number)
     {
-        case 26: return nextRxStartTime;
-        case 27: return nextTxStartTime;
+        case 28: return next_rx_start_time;
+        case 29: return next_tx_start_time;
         default:
             {
                 std::cerr << "attempted to access a non existing element"
@@ -247,8 +251,8 @@ void SPSingleMeasurementParams::set_element <uint64_t> (const int element_number
 {
     switch(element_number)
     {
-        case 26: nextRxStartTime = element_value; break;
-        case 27: nextTxStartTime = element_value; break;
+        case 28: next_rx_start_time = element_value; break;
+        case 29: next_tx_start_time = element_value; break;
         default:
             {
                 std::cerr << "attempted to access a non existing element"
@@ -265,7 +269,7 @@ IdlePatterns SPSingleMeasurementParams::get_element <IdlePatterns> (const int el
 {
     switch(element_number)
     {
-        case 28: return tx_idle_pattern;
+        case 30: return tx_idle_pattern;
         default:
             {
                 std::cerr << "attempted to access a non existing element"
@@ -283,7 +287,7 @@ void SPSingleMeasurementParams::set_element <IdlePatterns> (const int element_nu
 {
     switch(element_number)
     {
-        case 28: tx_idle_pattern = static_cast<IdlePatterns>(element_value); break;
+        case 30: tx_idle_pattern = static_cast<IdlePatterns>(element_value); break;
         default:
             {
                 std::cerr << "attempted to access a non existing element"
@@ -422,6 +426,14 @@ bool SPSingleMeasurementParams::load_in_file_data(InFileData &in_file_data)
         else
             std::cerr << "you have an invalid type in your setting file" << std::endl;
     }
+
+    //For Debug
+//    in_file_data.reset_count();
+//    for(int i = 0; i < in_file_data.get_element_count(); i++)
+//    {
+//       in_file_data.next_in_list(type, name, value);
+//       std::cout << type << name << value << std::endl;
+//    }
 
     if(element_count == number_of_elements) fully_initialized = true;
 

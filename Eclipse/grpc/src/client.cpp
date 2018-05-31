@@ -13,15 +13,6 @@ int main(int argc, char** argv)
 
    std::cout << std::boolalpha << teststruct.load_config_file(filename) << std::endl;
 
-           std::cout << "element " << teststruct.fft_batches_a
-                     << std::endl;
-           std::cout << "element " << teststruct.filename_fft_a
-                     << std::endl;
-           std::cout << "element " << teststruct.decimation
-                     << std::endl;
-           std::cout << "element " << teststruct.gain3
-                     << std::endl;
-
    sp_ste_control_class_client
       client_object(
          grpc::CreateChannel(COMMUNICATION_ADDRESS,

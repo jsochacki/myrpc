@@ -62,13 +62,13 @@ struct SPSingleMeasurementParams
       // Per-test TX inputs end
 
       // Per-test RX inputs begin
-      float rx_rot_freq_Hz = 0.0;
+      float rx_rot_freq_hz = 0.0;
       // Per-test RX inputs end
 
       // Per-test TX inputs begin
-      float tx_freq1_Hz = 0.0;
+      float tx_freq1_hz = 0.0;
       float tx_phase1_rot = 0.0;
-      float tx_freq2_Hz = 0.0;
+      float tx_freq2_hz = 0.0;
       float tx_phase2_rot = 0.0;
       float gain1 = 0.0;
       float gain2 = 0.0;
@@ -88,25 +88,27 @@ struct SPSingleMeasurementParams
       // Per-test TX inputs end
 
       // Per-test RX inputs begin
+      std::string rx_file_base_name = "empty"; //This is the base name
       std::string filename_fft_a = "empty"; //These are derived from the base name provided
       std::string filename_fft_b = "empty"; //These are derived from the base name provided
       std::string filename_rx_samples = "empty"; //These are derived from the base name provided
       // Per-test RX inputs end
 
       // Per-test TX inputs begin
+      std::string tx_file_base_name = "empty";
       std::string filename_tx_samples = "empty";
       // Per-test TX inputs end
 
       // Per-test RX inputs begin
-      uint64_t nextRxStartTime = 0.0; //This is not provided
+      uint64_t next_rx_start_time = 0.0; //This is not provided
       // Per-test RX inputs end
 
       // Per-test TX inputs begin
-      uint64_t nextTxStartTime = 0.0;
+      uint64_t next_tx_start_time = 0.0;
       // Per-test TX inputs end
 
       // Per-test TX inputs begin
-      IdlePatterns tx_idle_pattern = TX_IDLE_PATTERN_ZERO; // 0: Zeros, 1: Ramp, 2: Tone at tx_freq1_Hz
+      IdlePatterns tx_idle_pattern = TX_IDLE_PATTERN_ZERO; // 0: Zeros, 1: Ramp, 2: Tone at tx_freq1_hz
       // Per-test TX inputs end
 
       bool load_config_file(const std::string filename);
@@ -123,7 +125,7 @@ struct SPSingleMeasurementParams
 
    private:
       int element_count = 0;
-      int number_of_elements = 29;
+      int number_of_elements = 31;
       bool fully_initialized = false;
 };
 

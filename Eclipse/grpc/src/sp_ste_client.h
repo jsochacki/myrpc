@@ -20,7 +20,7 @@ class sp_ste_control_class_client final : public sp::ste::sp_ste_control::Servic
          sp_ste_control_class_client(
             std::shared_ptr<grpc::Channel> channel) :
                stub_(sp::ste::sp_ste_control::NewStub(channel)) {};
-      int loopback(SPSingleMeasurementParams &parameters);
+      int loopback(SPSingleMeasurementParams &);
 //      grpc::Status
 //         check_current_values(grpc::ServerContext *context,
 //                              const sp::ste::null_message *null_value,
