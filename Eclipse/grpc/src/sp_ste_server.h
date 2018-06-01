@@ -9,6 +9,20 @@
 
 #include "sp_ste.grpc.pb.h"
 
+#include "sp_ste_typedefs.h"
+
+void set_local_from_remote(
+         SPSingleMeasurementParams &,
+         sp::ste::sp_ste_rx_parameters_single_measurement &,
+         sp::ste::sp_ste_tx_parameters_single_measurement &);
+
+void set_remote_from_local(
+         SPSingleMeasurementParams &,
+         sp::ste::sp_ste_rx_parameters_single_measurement &,
+         sp::ste::sp_ste_tx_parameters_single_measurement &);
+
+void display_local_rpcd_struct_values(SPSingleMeasurementParams &);
+
 class sp_ste_control_class_server final : public sp::ste::sp_ste_control::Service
 {
    public:

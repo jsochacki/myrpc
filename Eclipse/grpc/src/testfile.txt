@@ -1,0 +1,59 @@
+#Per-test RX inputs
+uint32_t fft_length_a           1024
+uint32_t fft_length_b           1024
+uint32_t fft_batches_a          256
+uint32_t fft_batches_b          256
+
+#Per-test RX inputs
+uint32_t decimation             32
+uint32_t num_rx_samples         64800
+
+# Per-test TX inputs
+uint32_t num_tx_samples_total     64800
+uint32_t num_tx_samples_per_batch 64800
+
+
+#Per-test RX inputs
+float rx_rot_freq_hz            500
+
+# Per-test TX inputs
+float tx_freq1_hz                 500000
+float tx_phase1_rot               23
+float tx_freq2_hz                 500000
+float tx_phase2_rot               24
+float gain1                       23
+float gain2                       24
+float gain3                       25
+
+
+#Per-test RX inputs
+bool save_iq                    true
+bool fft_a_enable               true
+bool fft_b_enable               true
+bool parameter_estimate_enable  true
+
+# Per-test TX inputs
+bool awgn_enable                  true
+bool notch_enable                 true
+
+
+#Per-test RX inputs
+std::string rx_file_base_name   "base_filename.txt"
+std::string filename_fft_a      "filename_a.txt"
+std::string filename_fft_b      "filename_b.txt"
+std::string filename_rx_samples "filename_rx_samps.txt"
+
+# Per-test TX inputs
+std::string tx_file_base_name     "base_filename.txt"
+std::string filename_tx_samples   "filename_tx_samps.txt"
+
+
+#Per-test RX inputs
+uint64_t next_rx_start_time        53534
+
+# Per-test TX inputs
+uint64_t next_tx_start_time          543534
+
+
+# Per-test TX inputs
+IdlePatterns tx_idle_pattern      TX_IDLE_PATTERN_RAMP
