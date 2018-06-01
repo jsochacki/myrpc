@@ -12,6 +12,8 @@
 #include "sp_ste.grpc.pb.h"
 #include "sp_ste_typedefs.h"
 
+void set_remote_from_local(SPSingleMeasurementParams &, sp::ste::set_parameters &);
+
 class sp_ste_control_class_client final : public sp::ste::sp_ste_control::Service
 {
    public:

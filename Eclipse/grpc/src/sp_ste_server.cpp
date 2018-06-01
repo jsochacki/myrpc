@@ -138,39 +138,6 @@ grpc::Status
 
    set_local_from_remote(teststruct, rx_input_parameters, tx_input_parameters);
 
-   teststruct.fft_length_a = 123;
-   teststruct.fft_length_b = 123;
-   teststruct.fft_batches_a = 123;
-   teststruct.fft_batches_b = 123;
-   teststruct.decimation = 123;
-   teststruct.num_rx_samples = 123;
-   teststruct.rx_rot_freq_hz = 123;
-   teststruct.save_iq = 1;
-   teststruct.fft_a_enable = 1;
-   teststruct.fft_b_enable = 1;
-   teststruct.parameter_estimate_enable = 1;
-   teststruct.rx_file_base_name = "altered!";
-   teststruct.filename_fft_a = "altered!";
-   teststruct.filename_fft_b = "altered!";
-   teststruct.filename_rx_samples = "altered!";
-   teststruct.next_rx_start_time = 123;
-
-   teststruct.num_tx_samples_total = 123;
-   teststruct.num_tx_samples_per_batch = 123;
-   teststruct.tx_freq1_hz = 123;
-   teststruct.tx_phase1_rot = 123;
-   teststruct.tx_freq2_hz = 123;
-   teststruct.tx_phase2_rot = 123;
-   teststruct.gain1 = 123;
-   teststruct.gain2 = 123;
-   teststruct.gain3 = 123;
-   teststruct.awgn_enable = 1;
-   teststruct.notch_enable = 1;
-   teststruct.tx_file_base_name = "altered!";
-   teststruct.filename_tx_samples = "altered!";
-   teststruct.next_tx_start_time = 123;
-   teststruct.tx_idle_pattern = TX_IDLE_PATTERN_CW;
-
    set_remote_from_local(teststruct, rx_output_parameters, tx_output_parameters);
 
    display_local_rpcd_struct_values(teststruct);
