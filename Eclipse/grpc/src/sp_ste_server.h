@@ -18,8 +18,8 @@ void set_local_from_remote(
 
 void set_remote_from_local(
          SPSingleMeasurementParams &,
-         sp::ste::sp_ste_rx_parameters_single_measurement &,
-         sp::ste::sp_ste_tx_parameters_single_measurement &);
+         sp::ste::sp_ste_rx_parameters_single_measurement *,
+         sp::ste::sp_ste_tx_parameters_single_measurement *);
 
 void display_local_rpcd_struct_values(SPSingleMeasurementParams &);
 

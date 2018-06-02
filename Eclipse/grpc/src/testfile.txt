@@ -38,14 +38,14 @@ bool notch_enable                 true
 
 
 #Per-test RX inputs
-std::string rx_file_base_name   "base_filename.txt"
-std::string filename_fft_a      "filename_a.txt"
-std::string filename_fft_b      "filename_b.txt"
-std::string filename_rx_samples "filename_rx_samps.txt"
+std::string rx_file_base_name   base_filename.txt
+std::string filename_fft_a      filename_a.txt
+std::string filename_fft_b      filename_b.txt
+std::string filename_rx_samples filename_rx_samps.txt
 
 # Per-test TX inputs
-std::string tx_file_base_name     "base_filename.txt"
-std::string filename_tx_samples   "filename_tx_samps.txt"
+std::string tx_file_base_name     base_filename.txt
+std::string filename_tx_samples   filename_tx_samps.txt
 
 
 #Per-test RX inputs

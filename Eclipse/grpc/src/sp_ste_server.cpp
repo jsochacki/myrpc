@@ -47,41 +47,41 @@ void set_local_from_remote(
 
 void set_remote_from_local(
          SPSingleMeasurementParams &local_struct_ref,
-         sp::ste::sp_ste_rx_parameters_single_measurement &rx_output_parameters,
-         sp::ste::sp_ste_tx_parameters_single_measurement &tx_output_parameters)
+         sp::ste::sp_ste_rx_parameters_single_measurement *rx_output_parameters,
+         sp::ste::sp_ste_tx_parameters_single_measurement *tx_output_parameters)
 {
-   rx_output_parameters.set_fft_length_a(local_struct_ref.fft_length_a);
-   rx_output_parameters.set_fft_length_b(local_struct_ref.fft_length_b);
-   rx_output_parameters.set_fft_batches_a(local_struct_ref.fft_batches_a);
-   rx_output_parameters.set_fft_batches_b(local_struct_ref.fft_batches_b);
-   rx_output_parameters.set_decimation(local_struct_ref.decimation);
-   rx_output_parameters.set_num_rx_samples(local_struct_ref.num_rx_samples);
-   rx_output_parameters.set_rx_rot_freq_hz(local_struct_ref.rx_rot_freq_hz);
-   rx_output_parameters.set_save_iq(local_struct_ref.save_iq);
-   rx_output_parameters.set_fft_a_enable(local_struct_ref.fft_a_enable);
-   rx_output_parameters.set_fft_b_enable(local_struct_ref.fft_b_enable);
-   rx_output_parameters.set_parameter_estimate_enable(local_struct_ref.parameter_estimate_enable);
-   rx_output_parameters.set_filebasename(local_struct_ref.rx_file_base_name);
-   rx_output_parameters.set_filename_fft_a(local_struct_ref.filename_fft_a);
-   rx_output_parameters.set_filename_fft_b(local_struct_ref.filename_fft_b);
-   rx_output_parameters.set_filename_rx_samples(local_struct_ref.filename_rx_samples);
-   rx_output_parameters.set_next_rx_start_time(local_struct_ref.next_rx_start_time);
+   rx_output_parameters->set_fft_length_a(local_struct_ref.fft_length_a);
+   rx_output_parameters->set_fft_length_b(local_struct_ref.fft_length_b);
+   rx_output_parameters->set_fft_batches_a(local_struct_ref.fft_batches_a);
+   rx_output_parameters->set_fft_batches_b(local_struct_ref.fft_batches_b);
+   rx_output_parameters->set_decimation(local_struct_ref.decimation);
+   rx_output_parameters->set_num_rx_samples(local_struct_ref.num_rx_samples);
+   rx_output_parameters->set_rx_rot_freq_hz(local_struct_ref.rx_rot_freq_hz);
+   rx_output_parameters->set_save_iq(local_struct_ref.save_iq);
+   rx_output_parameters->set_fft_a_enable(local_struct_ref.fft_a_enable);
+   rx_output_parameters->set_fft_b_enable(local_struct_ref.fft_b_enable);
+   rx_output_parameters->set_parameter_estimate_enable(local_struct_ref.parameter_estimate_enable);
+   rx_output_parameters->set_filebasename(local_struct_ref.rx_file_base_name);
+   rx_output_parameters->set_filename_fft_a(local_struct_ref.filename_fft_a);
+   rx_output_parameters->set_filename_fft_b(local_struct_ref.filename_fft_b);
+   rx_output_parameters->set_filename_rx_samples(local_struct_ref.filename_rx_samples);
+   rx_output_parameters->set_next_rx_start_time(local_struct_ref.next_rx_start_time);
 
-   tx_output_parameters.set_num_tx_samples_total(local_struct_ref.num_tx_samples_total);
-   tx_output_parameters.set_num_tx_samples_per_batch(local_struct_ref.num_tx_samples_per_batch);
-   tx_output_parameters.set_tx_freq1_hz(local_struct_ref.tx_freq1_hz);
-   tx_output_parameters.set_tx_phase1_rot(local_struct_ref.tx_phase1_rot);
-   tx_output_parameters.set_tx_freq2_hz(local_struct_ref.tx_freq2_hz);
-   tx_output_parameters.set_tx_phase2_rot(local_struct_ref.tx_phase2_rot);
-   tx_output_parameters.set_gain1(local_struct_ref.gain1);
-   tx_output_parameters.set_gain2(local_struct_ref.gain2);
-   tx_output_parameters.set_gain3(local_struct_ref.gain3);
-   tx_output_parameters.set_awgn_enable(local_struct_ref.awgn_enable);
-   tx_output_parameters.set_notch_enable(local_struct_ref.notch_enable);
-   tx_output_parameters.set_filebasename(local_struct_ref.tx_file_base_name);
-   tx_output_parameters.set_filename_tx_samples(local_struct_ref.filename_tx_samples);
-   tx_output_parameters.set_next_tx_start_time(local_struct_ref.next_tx_start_time);
-   tx_output_parameters.set_tx_idle_pattern(static_cast<sp::ste::TxIdlePattern>(local_struct_ref.tx_idle_pattern));
+   tx_output_parameters->set_num_tx_samples_total(local_struct_ref.num_tx_samples_total);
+   tx_output_parameters->set_num_tx_samples_per_batch(local_struct_ref.num_tx_samples_per_batch);
+   tx_output_parameters->set_tx_freq1_hz(local_struct_ref.tx_freq1_hz);
+   tx_output_parameters->set_tx_phase1_rot(local_struct_ref.tx_phase1_rot);
+   tx_output_parameters->set_tx_freq2_hz(local_struct_ref.tx_freq2_hz);
+   tx_output_parameters->set_tx_phase2_rot(local_struct_ref.tx_phase2_rot);
+   tx_output_parameters->set_gain1(local_struct_ref.gain1);
+   tx_output_parameters->set_gain2(local_struct_ref.gain2);
+   tx_output_parameters->set_gain3(local_struct_ref.gain3);
+   tx_output_parameters->set_awgn_enable(local_struct_ref.awgn_enable);
+   tx_output_parameters->set_notch_enable(local_struct_ref.notch_enable);
+   tx_output_parameters->set_filebasename(local_struct_ref.tx_file_base_name);
+   tx_output_parameters->set_filename_tx_samples(local_struct_ref.filename_tx_samples);
+   tx_output_parameters->set_next_tx_start_time(local_struct_ref.next_tx_start_time);
+   tx_output_parameters->set_tx_idle_pattern(static_cast<sp::ste::TxIdlePattern>(local_struct_ref.tx_idle_pattern));
 }
 
 
@@ -131,8 +131,8 @@ grpc::Status
    sp::ste::sp_ste_rx_parameters_single_measurement rx_input_parameters = values_received->rx_params();
    sp::ste::sp_ste_tx_parameters_single_measurement tx_input_parameters = values_received->tx_params();
 
-   sp::ste::sp_ste_rx_parameters_single_measurement rx_output_parameters = values_returned->rx_params();
-   sp::ste::sp_ste_tx_parameters_single_measurement tx_output_parameters = values_returned->tx_params();
+   sp::ste::sp_ste_rx_parameters_single_measurement *rx_output_parameters = values_returned->mutable_rx_params();
+   sp::ste::sp_ste_tx_parameters_single_measurement *tx_output_parameters = values_returned->mutable_tx_params();
 
    SPSingleMeasurementParams teststruct;
 
@@ -142,7 +142,9 @@ grpc::Status
 
    display_local_rpcd_struct_values(teststruct);
 
-   values_returned->mutable_hdr()->set_module("loopback mode");
+   //values_returned->mutable_hdr()->set_module("loopback");
+   //grpc::Status status(grpc::StatusCode::UNIMPLEMENTED, "this is not yet implemented", "find more workers");
+   //return status;
 
    return grpc::Status::OK;
 }

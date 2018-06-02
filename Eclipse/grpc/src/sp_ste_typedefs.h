@@ -88,15 +88,15 @@ struct SPSingleMeasurementParams
       // Per-test TX inputs end
 
       // Per-test RX inputs begin
-      std::string rx_file_base_name = "empty"; //This is the base name
-      std::string filename_fft_a = "empty"; //These are derived from the base name provided
-      std::string filename_fft_b = "empty"; //These are derived from the base name provided
-      std::string filename_rx_samples = "empty"; //These are derived from the base name provided
+      std::string rx_file_base_name{"empty"}; //This is the base name
+      std::string filename_fft_a{"empty"}; //These are derived from the base name provided
+      std::string filename_fft_b{"empty"}; //These are derived from the base name provided
+      std::string filename_rx_samples{"empty"}; //These are derived from the base name provided
       // Per-test RX inputs end
 
       // Per-test TX inputs begin
-      std::string tx_file_base_name = "empty";
-      std::string filename_tx_samples = "empty";
+      std::string tx_file_base_name{"empty"};
+      std::string filename_tx_samples{"empty"};
       // Per-test TX inputs end
 
       // Per-test RX inputs begin

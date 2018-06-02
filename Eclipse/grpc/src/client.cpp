@@ -20,8 +20,8 @@ int main(int argc, char** argv)
                             )
                    );
 
-   std::cout << "client saw server say there are " << client_object.loopback(teststruct)
-             << " parameters" <<std::endl;
+   client_object.loopback(teststruct);
+
 
    std::cout << "the SPSingleMeasurementParams struct values are " << std::endl;
    std::cout << teststruct.fft_length_a << std::endl;

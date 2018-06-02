@@ -12,7 +12,7 @@
 #include "sp_ste.grpc.pb.h"
 #include "sp_ste_typedefs.h"
 
-void set_remote_from_local(SPSingleMeasurementParams &, sp::ste::set_parameters &);
+void set_outgoing(SPSingleMeasurementParams &, sp::ste::set_parameters &);
 
 class sp_ste_control_class_client final : public sp::ste::sp_ste_control::Service
 {
@@ -22,24 +22,16 @@ class sp_ste_control_class_client final : public sp::ste::sp_ste_control::Servic
          sp_ste_control_class_client(
             std::shared_ptr<grpc::Channel> channel) :
                stub_(sp::ste::sp_ste_control::NewStub(channel)) {};
-      int loopback(SPSingleMeasurementParams &);
-//      grpc::Status
-//         check_current_values(grpc::ServerContext *context,
-//                              const sp::ste::null_message *null_value,
-//                              sp::ste::parameter_values *current_values)
-//         override;
-//      grpc::Status
-//         issue_new_values_and_read_old(grpc::ServerContext *context,
-//                                       const sp::ste::set_parameters *new_parameters_to_set,
-//                                       sp::ste::parameter_values *old_values)
-//         override;
-//      grpc::Status
-//         issue_new_values_and_read_new(grpc::ServerContext *context,
-//                                       const sp::ste::set_parameters *new_parameters_to_set,
-//                                       sp::ste::parameter_values *new_values)
-//         override;
+      void loopback(SPSingleMeasurementParams &);
+//      SPSingleMeasurementParams check_current_values(SPSingleMeasurementParams &) override;
+//      SPSingleMeasurementParams issue_new_values_and_read_old(SPSingleMeasurementParams &) override;
+//      SPSingleMeasurementParams issue_new_values_and_read_new(SPSingleMeasurementParams &) override;
    private:
       std::unique_ptr<sp::ste::sp_ste_control::Stub> stub_;
 };
+
+bool parse_status(grpc::Status &&);
+
+void parse_remote_status_error(grpc::Status &&);
 
 #endif /* SP_STE_CLIENT_H_ */
