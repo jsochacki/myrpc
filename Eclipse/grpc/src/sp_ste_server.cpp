@@ -6,7 +6,9 @@
 ////I have no constructor at this point
 //sp_ste_control_class_server::sp_ste_control_class_server(const //}
 
-void set_local_from_remote(
+extern SPSingleMeasurementParams teststruct;
+
+void sp_ste_control_class_server::set_local_from_remote(
          SPSingleMeasurementParams &local_struct_ref,
          sp::ste::sp_ste_rx_parameters_single_measurement &rx_input_parameters,
          sp::ste::sp_ste_tx_parameters_single_measurement &tx_input_parameters)
@@ -45,7 +47,7 @@ void set_local_from_remote(
    local_struct_ref.tx_idle_pattern = static_cast<IdlePatterns>(tx_input_parameters.tx_idle_pattern());
 }
 
-void set_remote_from_local(
+void sp_ste_control_class_server::set_remote_from_local(
          SPSingleMeasurementParams &local_struct_ref,
          sp::ste::sp_ste_rx_parameters_single_measurement *rx_output_parameters,
          sp::ste::sp_ste_tx_parameters_single_measurement *tx_output_parameters)
@@ -85,7 +87,7 @@ void set_remote_from_local(
 }
 
 
-void display_local_rpcd_struct_values(SPSingleMeasurementParams &local_struct_ref)
+void sp_ste_control_class_server::display_local_rpcd_struct_values(SPSingleMeasurementParams &local_struct_ref)
 {
    std::cout << "the SPSingleMeasurementParams struct values are " << std::endl;
    std::cout << local_struct_ref.fft_length_a << std::endl;
@@ -134,7 +136,77 @@ grpc::Status
    sp::ste::sp_ste_rx_parameters_single_measurement *rx_output_parameters = values_returned->mutable_rx_params();
    sp::ste::sp_ste_tx_parameters_single_measurement *tx_output_parameters = values_returned->mutable_tx_params();
 
-   SPSingleMeasurementParams teststruct;
+   SPSingleMeasurementParams local_struct;
+
+   set_local_from_remote(local_struct, rx_input_parameters, tx_input_parameters);
+
+   set_remote_from_local(local_struct, rx_output_parameters, tx_output_parameters);
+
+   display_local_rpcd_struct_values(local_struct);
+
+   //values_returned->mutable_hdr()->set_module("loopback");
+   //grpc::Status status(grpc::StatusCode::UNIMPLEMENTED, "this is not yet implemented", "find more workers");
+   //return status;
+
+   return grpc::Status::OK;
+}
+
+grpc::Status
+   sp_ste_control_class_server::check_current_values(grpc::ServerContext *context,
+                                       const sp::ste::null_message *null_value,
+                                       sp::ste::parameter_values *values_returned)
+{
+
+   sp::ste::sp_ste_rx_parameters_single_measurement *rx_output_parameters = values_returned->mutable_rx_params();
+   sp::ste::sp_ste_tx_parameters_single_measurement *tx_output_parameters = values_returned->mutable_tx_params();
+
+   set_remote_from_local(teststruct, rx_output_parameters, tx_output_parameters);
+
+   display_local_rpcd_struct_values(teststruct);
+
+   return grpc::Status::OK;
+}
+
+grpc::Status
+   sp_ste_control_class_server::issue_new_values_and_read_old(
+                                 grpc::ServerContext *context,
+                                 const sp::ste::set_parameters *values_received,
+                                 sp::ste::parameter_values *values_returned)
+{
+   sp::ste::sp_ste_rx_parameters_single_measurement rx_input_parameters = values_received->rx_params();
+   sp::ste::sp_ste_tx_parameters_single_measurement tx_input_parameters = values_received->tx_params();
+
+   sp::ste::sp_ste_rx_parameters_single_measurement *rx_output_parameters = values_returned->mutable_rx_params();
+   sp::ste::sp_ste_tx_parameters_single_measurement *tx_output_parameters = values_returned->mutable_tx_params();
+
+   //SPSingleMeasurementParams teststruct;
+
+   set_remote_from_local(teststruct, rx_output_parameters, tx_output_parameters);
+
+   set_local_from_remote(teststruct, rx_input_parameters, tx_input_parameters);
+
+   display_local_rpcd_struct_values(teststruct);
+
+   //values_returned->mutable_hdr()->set_module("loopback");
+   //grpc::Status status(grpc::StatusCode::UNIMPLEMENTED, "this is not yet implemented", "find more workers");
+   //return status;
+
+   return grpc::Status::OK;
+}
+
+grpc::Status
+   sp_ste_control_class_server::issue_new_values_and_read_new(
+                                 grpc::ServerContext *context,
+                                 const sp::ste::set_parameters *values_received,
+                                 sp::ste::parameter_values *values_returned)
+{
+   sp::ste::sp_ste_rx_parameters_single_measurement rx_input_parameters = values_received->rx_params();
+   sp::ste::sp_ste_tx_parameters_single_measurement tx_input_parameters = values_received->tx_params();
+
+   sp::ste::sp_ste_rx_parameters_single_measurement *rx_output_parameters = values_returned->mutable_rx_params();
+   sp::ste::sp_ste_tx_parameters_single_measurement *tx_output_parameters = values_returned->mutable_tx_params();
+
+   //SPSingleMeasurementParams teststruct;
 
    set_local_from_remote(teststruct, rx_input_parameters, tx_input_parameters);
 

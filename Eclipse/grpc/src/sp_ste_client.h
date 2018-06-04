@@ -13,6 +13,7 @@
 #include "sp_ste_typedefs.h"
 
 void set_outgoing(SPSingleMeasurementParams &, sp::ste::set_parameters &);
+void update_local(SPSingleMeasurementParams &, sp::ste::parameter_values &);
 
 class sp_ste_control_class_client final : public sp::ste::sp_ste_control::Service
 {
@@ -22,10 +23,14 @@ class sp_ste_control_class_client final : public sp::ste::sp_ste_control::Servic
          sp_ste_control_class_client(
             std::shared_ptr<grpc::Channel> channel) :
                stub_(sp::ste::sp_ste_control::NewStub(channel)) {};
+      void set_outgoing(SPSingleMeasurementParams &, sp::ste::set_parameters &);
+      void update_local(SPSingleMeasurementParams &, sp::ste::parameter_values &);
+      bool parse_status(grpc::Status &&);
+      void parse_remote_status_error(grpc::Status &&);
       void loopback(SPSingleMeasurementParams &);
-//      SPSingleMeasurementParams check_current_values(SPSingleMeasurementParams &) override;
-//      SPSingleMeasurementParams issue_new_values_and_read_old(SPSingleMeasurementParams &) override;
-//      SPSingleMeasurementParams issue_new_values_and_read_new(SPSingleMeasurementParams &) override;
+      SPSingleMeasurementParams check_current_values(void);
+      SPSingleMeasurementParams issue_new_values_and_read_old(SPSingleMeasurementParams &);
+      SPSingleMeasurementParams issue_new_values_and_read_new(SPSingleMeasurementParams &);
    private:
       std::unique_ptr<sp::ste::sp_ste_control::Stub> stub_;
 };

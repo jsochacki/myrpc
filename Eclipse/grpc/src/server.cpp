@@ -4,6 +4,8 @@
 #include "communication_information.h"
 #include "sp_ste_server.h"
 
+SPSingleMeasurementParams teststruct;
+
 int main(int argc, char** argv)
 {
    run_rpc_server(COMMUNICATION_ADDRESS);
